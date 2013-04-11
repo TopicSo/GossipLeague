@@ -28,6 +28,11 @@
 {
     [super viewWillAppear:animated];
     self.title = @"Liga Gossip HUB";
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
     [self setUp];
 }
 
@@ -72,6 +77,7 @@
     PlayerEntity *player = [self.players objectAtIndex:indexPath.row];
     UserDetailVC *userDetailVC = [[UserDetailVC alloc] initWithPlayer:player];
     [self.navigationController pushViewController:userDetailVC animated:YES];
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (void)viewDidUnload {

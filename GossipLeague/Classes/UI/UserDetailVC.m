@@ -10,6 +10,8 @@
 #import "PlayerEntity.h"
 #import <CommonCrypto/CommonDigest.h>
 
+#import <AFNetworking/UIImageView+AFNetworking.h>
+
 @interface UserDetailVC ()
 @property (nonatomic, strong) PlayerEntity *player;
 @property (strong, nonatomic) IBOutlet UILabel *usernameLabel;
@@ -49,14 +51,8 @@
     
     NSURL *gravatarUrl = [NSURL URLWithString:[NSString
                                                stringWithFormat:@"http://gravatar.com/avatar/%@?s=%@",hash, @(250)]];
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        NSData *imageData = [NSData dataWithContentsOfURL:gravatarUrl];
-        if (imageData) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                self.avatarImageView.image = [UIImage imageWithData:imageData];
-            });
-        }
-    });
+    
+    [self.avatarImageView setImageWithURL:gravatarUrl];
 }
 
 - (NSString *)md5:(NSString *)input
