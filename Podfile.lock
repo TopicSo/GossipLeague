@@ -1,0 +1,17 @@
+
+PODS: 
+- Facebook-iOS-SDK (3.2.1)
+- Parse (1.2.3)
+- TestFlightSDK (1.2)
+
+COCOAPODS: 0.16.1
+
+DEPENDENCIES: 
+- Facebook-iOS-SDK (= 3.2.1)
+- Parse (~> 1.2.3)
+- TestFlightSDK (= 1.2)
+
+SPEC CHECKSUMS: 
+  Facebook-iOS-SDK: 514dc0d7d43358999267c88c088e4b5b339b7da1
+  TestFlightSDK: 29e194fb148e4861f92e4c1195b9697e1f3ad19a
+  Parse: 307158c6a39739a542cd5b8109b99338a29fad0b

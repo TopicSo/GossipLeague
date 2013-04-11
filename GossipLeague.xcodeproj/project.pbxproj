@@ -1,0 +1,480 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		092354B313A1D7EB00DA740F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 092354B213A1D7EB00DA740F /* CFNetwork.framework */; };
+		092354B513A1D7F000DA740F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 092354B413A1D7F000DA740F /* SystemConfiguration.framework */; };
+		092354B713A1D83C00DA740F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 092354B613A1D83C00DA740F /* MobileCoreServices.framework */; };
+		095ACE8613C68EA300566243 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 095ACE8513C68EA300566243 /* AudioToolbox.framework */; };
+		099CCEAD13F9E3760039A464 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 099CCEAC13F9E3760039A464 /* libz.1.1.3.dylib */; };
+		09ABC07213A1D52D009C3FCF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09ABC07113A1D52D009C3FCF /* UIKit.framework */; };
+		09ABC07413A1D52D009C3FCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09ABC07313A1D52D009C3FCF /* Foundation.framework */; };
+		09BEF34C13D51C3F001BBCDB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09BEF34B13D51C3F001BBCDB /* Security.framework */; };
+		2FCDD6B014A573F500295AAC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FCDD6AF14A573F500295AAC /* QuartzCore.framework */; };
+		360FD7F81715E4800053C9A3 /* UserDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360FD7F61715E4800053C9A3 /* UserDetailVC.m */; };
+		360FD7F91715E4800053C9A3 /* UserDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360FD7F71715E4800053C9A3 /* UserDetailVC.xib */; };
+		364C590B1716AD3600FEF4A6 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 364C590A1716AD3600FEF4A6 /* Icon.png */; };
+		36A1EBEF17010D3800F7A57B /* GossipLeagueAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A1EBE717010D3800F7A57B /* GossipLeagueAppDelegate.m */; };
+		36A1EBF017010D3800F7A57B /* GossipLeagueVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A1EBEA17010D3800F7A57B /* GossipLeagueVC.m */; };
+		36A1EBF117010D3800F7A57B /* GossipLeagueVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36A1EBEB17010D3800F7A57B /* GossipLeagueVC.xib */; };
+		36A1EBF217010D3800F7A57B /* TableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A1EBED17010D3800F7A57B /* TableCell.m */; };
+		36A1EBF317010D3800F7A57B /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36A1EBEE17010D3800F7A57B /* TableCell.xib */; };
+		36A1EBF817010D4600F7A57B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A1EBF517010D4600F7A57B /* Default-568h@2x.png */; };
+		36A1EBF917010D4600F7A57B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A1EBF617010D4600F7A57B /* Default.png */; };
+		36A1EBFA17010D4600F7A57B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A1EBF717010D4600F7A57B /* Default@2x.png */; };
+		36A1EC0017010D7500F7A57B /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36A1EBFC17010D7500F7A57B /* Entitlements.plist */; };
+		36A1EC0217010D7500F7A57B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A1EBFF17010D7500F7A57B /* main.m */; };
+		36A1EC0717010D8200F7A57B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 36A1EC0317010D8200F7A57B /* InfoPlist.strings */; };
+		36A1EC0817010D8200F7A57B /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36A1EC0517010D8200F7A57B /* MainWindow.xib */; };
+		36A1EC0B17010E0100F7A57B /* PlayerEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A1EC0A17010E0100F7A57B /* PlayerEntity.m */; };
+		36A1EC0E17010F8000F7A57B /* GameEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A1EC0D17010F8000F7A57B /* GameEntity.m */; };
+		4998650515BF305000803E05 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4998650415BF305000803E05 /* StoreKit.framework */; };
+		6332375415E438E900AE2736 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6332375315E438E900AE2736 /* libsqlite3.dylib */; };
+		6372FF531613CC3C002132AF /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6372FF521613CC3C002132AF /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		6372FF561613CC42002132AF /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6372FF551613CC42002132AF /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		6372FF581613CC47002132AF /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6372FF571613CC47002132AF /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		743D7B6D157DA60100084B67 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 743D7B6C157DA60100084B67 /* CoreGraphics.framework */; };
+		97E18B1F1624CB5700B17A67 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E18B1E1624CB5700B17A67 /* CoreLocation.framework */; };
+		E854EA5C4FFF41C88E4EB348 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 588C860EF36A46BFB9105A93 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		092354B213A1D7EB00DA740F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		092354B413A1D7F000DA740F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		092354B613A1D83C00DA740F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		095ACE8513C68EA300566243 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		099CCEAC13F9E3760039A464 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		09ABC06D13A1D52D009C3FCF /* GossipLeague.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GossipLeague.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		09ABC07113A1D52D009C3FCF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		09ABC07313A1D52D009C3FCF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		09BEF34B13D51C3F001BBCDB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		2FCDD6AF14A573F500295AAC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		360FD7F41715E0030053C9A3 /* TestFlightHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestFlightHeader.h; sourceTree = SOURCE_ROOT; };
+		360FD7F51715E4800053C9A3 /* UserDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailVC.h; sourceTree = "<group>"; };
+		360FD7F61715E4800053C9A3 /* UserDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailVC.m; sourceTree = "<group>"; };
+		360FD7F71715E4800053C9A3 /* UserDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserDetailVC.xib; sourceTree = "<group>"; };
+		364C590A1716AD3600FEF4A6 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		36A1EBE617010D3800F7A57B /* GossipLeagueAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GossipLeagueAppDelegate.h; path = GossipLeague/Classes/GossipLeagueAppDelegate.h; sourceTree = SOURCE_ROOT; };
+		36A1EBE717010D3800F7A57B /* GossipLeagueAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GossipLeagueAppDelegate.m; path = GossipLeague/Classes/GossipLeagueAppDelegate.m; sourceTree = SOURCE_ROOT; };
+		36A1EBE917010D3800F7A57B /* GossipLeagueVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GossipLeagueVC.h; sourceTree = "<group>"; };
+		36A1EBEA17010D3800F7A57B /* GossipLeagueVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GossipLeagueVC.m; sourceTree = "<group>"; };
+		36A1EBEB17010D3800F7A57B /* GossipLeagueVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GossipLeagueVC.xib; sourceTree = "<group>"; };
+		36A1EBEC17010D3800F7A57B /* TableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableCell.h; sourceTree = "<group>"; };
+		36A1EBED17010D3800F7A57B /* TableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableCell.m; sourceTree = "<group>"; };
+		36A1EBEE17010D3800F7A57B /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
+		36A1EBF517010D4600F7A57B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		36A1EBF617010D4600F7A57B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		36A1EBF717010D4600F7A57B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		36A1EBFC17010D7500F7A57B /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Entitlements.plist; path = GossipLeague/Entitlements.plist; sourceTree = "<group>"; };
+		36A1EBFD17010D7500F7A57B /* GossipLeague-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GossipLeague-Info.plist"; path = "GossipLeague/GossipLeague-Info.plist"; sourceTree = "<group>"; };
+		36A1EBFE17010D7500F7A57B /* GossipLeague-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "GossipLeague-Prefix.pch"; path = "GossipLeague/GossipLeague-Prefix.pch"; sourceTree = "<group>"; };
+		36A1EBFF17010D7500F7A57B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = GossipLeague/main.m; sourceTree = "<group>"; };
+		36A1EC0417010D8200F7A57B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = GossipLeague/en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		36A1EC0617010D8200F7A57B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = GossipLeague/en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		36A1EC0917010E0100F7A57B /* PlayerEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerEntity.h; sourceTree = "<group>"; };
+		36A1EC0A17010E0100F7A57B /* PlayerEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerEntity.m; sourceTree = "<group>"; };
+		36A1EC0C17010F8000F7A57B /* GameEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameEntity.h; sourceTree = "<group>"; };
+		36A1EC0D17010F8000F7A57B /* GameEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameEntity.m; sourceTree = "<group>"; };
+		4998650415BF305000803E05 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		588C860EF36A46BFB9105A93 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6332375315E438E900AE2736 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		6372FF521613CC3C002132AF /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		6372FF551613CC42002132AF /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		6372FF571613CC47002132AF /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		743D7B6C157DA60100084B67 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		97E18B1E1624CB5700B17A67 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B4452B5401F74F079D3003F5 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		09ABC06A13A1D52D009C3FCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97E18B1F1624CB5700B17A67 /* CoreLocation.framework in Frameworks */,
+				6372FF581613CC47002132AF /* AdSupport.framework in Frameworks */,
+				6372FF561613CC42002132AF /* Social.framework in Frameworks */,
+				6372FF531613CC3C002132AF /* Accounts.framework in Frameworks */,
+				6332375415E438E900AE2736 /* libsqlite3.dylib in Frameworks */,
+				4998650515BF305000803E05 /* StoreKit.framework in Frameworks */,
+				743D7B6D157DA60100084B67 /* CoreGraphics.framework in Frameworks */,
+				2FCDD6B014A573F500295AAC /* QuartzCore.framework in Frameworks */,
+				099CCEAD13F9E3760039A464 /* libz.1.1.3.dylib in Frameworks */,
+				09BEF34C13D51C3F001BBCDB /* Security.framework in Frameworks */,
+				095ACE8613C68EA300566243 /* AudioToolbox.framework in Frameworks */,
+				092354B713A1D83C00DA740F /* MobileCoreServices.framework in Frameworks */,
+				092354B513A1D7F000DA740F /* SystemConfiguration.framework in Frameworks */,
+				092354B313A1D7EB00DA740F /* CFNetwork.framework in Frameworks */,
+				09ABC07213A1D52D009C3FCF /* UIKit.framework in Frameworks */,
+				09ABC07413A1D52D009C3FCF /* Foundation.framework in Frameworks */,
+				E854EA5C4FFF41C88E4EB348 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09ABC06213A1D52D009C3FCF = {
+			isa = PBXGroup;
+			children = (
+				364C590A1716AD3600FEF4A6 /* Icon.png */,
+				09ABC07713A1D52D009C3FCF /* Classes */,
+				36A1EBFB17010D5800F7A57B /* Supporting Files */,
+				36A1EBF417010D4600F7A57B /* Resources */,
+				09ABC07013A1D52D009C3FCF /* Frameworks */,
+				09ABC06E13A1D52D009C3FCF /* Products */,
+				B4452B5401F74F079D3003F5 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		09ABC06E13A1D52D009C3FCF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				09ABC06D13A1D52D009C3FCF /* GossipLeague.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		09ABC07013A1D52D009C3FCF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6372FF571613CC47002132AF /* AdSupport.framework */,
+				6372FF551613CC42002132AF /* Social.framework */,
+				6372FF521613CC3C002132AF /* Accounts.framework */,
+				095ACE8513C68EA300566243 /* AudioToolbox.framework */,
+				092354B213A1D7EB00DA740F /* CFNetwork.framework */,
+				743D7B6C157DA60100084B67 /* CoreGraphics.framework */,
+				97E18B1E1624CB5700B17A67 /* CoreLocation.framework */,
+				09ABC07313A1D52D009C3FCF /* Foundation.framework */,
+				6332375315E438E900AE2736 /* libsqlite3.dylib */,
+				099CCEAC13F9E3760039A464 /* libz.1.1.3.dylib */,
+				092354B613A1D83C00DA740F /* MobileCoreServices.framework */,
+				2FCDD6AF14A573F500295AAC /* QuartzCore.framework */,
+				09BEF34B13D51C3F001BBCDB /* Security.framework */,
+				4998650415BF305000803E05 /* StoreKit.framework */,
+				092354B413A1D7F000DA740F /* SystemConfiguration.framework */,
+				09ABC07113A1D52D009C3FCF /* UIKit.framework */,
+				588C860EF36A46BFB9105A93 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		09ABC07713A1D52D009C3FCF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				36A1EBE617010D3800F7A57B /* GossipLeagueAppDelegate.h */,
+				36A1EBE717010D3800F7A57B /* GossipLeagueAppDelegate.m */,
+				360FD7F41715E0030053C9A3 /* TestFlightHeader.h */,
+				36A1EBE817010D3800F7A57B /* UI */,
+				36A1EBE417010D3800F7A57B /* BLL */,
+			);
+			name = Classes;
+			path = ParseStarterProject;
+			sourceTree = "<group>";
+		};
+		36A1EBE417010D3800F7A57B /* BLL */ = {
+			isa = PBXGroup;
+			children = (
+				36A1EBE517010D3800F7A57B /* Entities */,
+			);
+			name = BLL;
+			path = GossipLeague/Classes/BLL;
+			sourceTree = SOURCE_ROOT;
+		};
+		36A1EBE517010D3800F7A57B /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				36A1EC0917010E0100F7A57B /* PlayerEntity.h */,
+				36A1EC0A17010E0100F7A57B /* PlayerEntity.m */,
+				36A1EC0C17010F8000F7A57B /* GameEntity.h */,
+				36A1EC0D17010F8000F7A57B /* GameEntity.m */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		36A1EBE817010D3800F7A57B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				36A1EBE917010D3800F7A57B /* GossipLeagueVC.h */,
+				36A1EBEA17010D3800F7A57B /* GossipLeagueVC.m */,
+				36A1EBEB17010D3800F7A57B /* GossipLeagueVC.xib */,
+				36A1EBEC17010D3800F7A57B /* TableCell.h */,
+				36A1EBED17010D3800F7A57B /* TableCell.m */,
+				36A1EBEE17010D3800F7A57B /* TableCell.xib */,
+				360FD7F51715E4800053C9A3 /* UserDetailVC.h */,
+				360FD7F61715E4800053C9A3 /* UserDetailVC.m */,
+				360FD7F71715E4800053C9A3 /* UserDetailVC.xib */,
+			);
+			name = UI;
+			path = GossipLeague/Classes/UI;
+			sourceTree = SOURCE_ROOT;
+		};
+		36A1EBF417010D4600F7A57B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				36A1EBF517010D4600F7A57B /* Default-568h@2x.png */,
+				36A1EBF617010D4600F7A57B /* Default.png */,
+				36A1EBF717010D4600F7A57B /* Default@2x.png */,
+			);
+			name = Resources;
+			path = GossipLeague/Resources;
+			sourceTree = "<group>";
+		};
+		36A1EBFB17010D5800F7A57B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				36A1EC0317010D8200F7A57B /* InfoPlist.strings */,
+				36A1EC0517010D8200F7A57B /* MainWindow.xib */,
+				36A1EBFC17010D7500F7A57B /* Entitlements.plist */,
+				36A1EBFD17010D7500F7A57B /* GossipLeague-Info.plist */,
+				36A1EBFE17010D7500F7A57B /* GossipLeague-Prefix.pch */,
+				36A1EBFF17010D7500F7A57B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		09ABC06C13A1D52D009C3FCF /* GossipLeague */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09ABC08E13A1D52E009C3FCF /* Build configuration list for PBXNativeTarget "GossipLeague" */;
+			buildPhases = (
+				09ABC06913A1D52D009C3FCF /* Sources */,
+				09ABC06A13A1D52D009C3FCF /* Frameworks */,
+				09ABC06B13A1D52D009C3FCF /* Resources */,
+				F0AE68E9B586436683F63425 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GossipLeague;
+			productName = ParseStarterProject;
+			productReference = 09ABC06D13A1D52D009C3FCF /* GossipLeague.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		09ABC06413A1D52D009C3FCF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Gossip;
+			};
+			buildConfigurationList = 09ABC06713A1D52D009C3FCF /* Build configuration list for PBXProject "GossipLeague" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 09ABC06213A1D52D009C3FCF;
+			productRefGroup = 09ABC06E13A1D52D009C3FCF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				09ABC06C13A1D52D009C3FCF /* GossipLeague */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		09ABC06B13A1D52D009C3FCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36A1EBF117010D3800F7A57B /* GossipLeagueVC.xib in Resources */,
+				36A1EBF317010D3800F7A57B /* TableCell.xib in Resources */,
+				36A1EBF817010D4600F7A57B /* Default-568h@2x.png in Resources */,
+				36A1EBF917010D4600F7A57B /* Default.png in Resources */,
+				36A1EBFA17010D4600F7A57B /* Default@2x.png in Resources */,
+				36A1EC0017010D7500F7A57B /* Entitlements.plist in Resources */,
+				36A1EC0717010D8200F7A57B /* InfoPlist.strings in Resources */,
+				36A1EC0817010D8200F7A57B /* MainWindow.xib in Resources */,
+				360FD7F91715E4800053C9A3 /* UserDetailVC.xib in Resources */,
+				364C590B1716AD3600FEF4A6 /* Icon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F0AE68E9B586436683F63425 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		09ABC06913A1D52D009C3FCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36A1EBEF17010D3800F7A57B /* GossipLeagueAppDelegate.m in Sources */,
+				36A1EBF017010D3800F7A57B /* GossipLeagueVC.m in Sources */,
+				36A1EBF217010D3800F7A57B /* TableCell.m in Sources */,
+				36A1EC0217010D7500F7A57B /* main.m in Sources */,
+				36A1EC0B17010E0100F7A57B /* PlayerEntity.m in Sources */,
+				36A1EC0E17010F8000F7A57B /* GameEntity.m in Sources */,
+				360FD7F81715E4800053C9A3 /* UserDetailVC.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		36A1EC0317010D8200F7A57B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36A1EC0417010D8200F7A57B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		36A1EC0517010D8200F7A57B /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36A1EC0617010D8200F7A57B /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		09ABC08C13A1D52E009C3FCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		09ABC08D13A1D52E009C3FCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		09ABC08F13A1D52E009C3FCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4452B5401F74F079D3003F5 /* Pods.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Oriol Blanc Gimeno (7LER52YWTW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Oriol Blanc Gimeno (7LER52YWTW)";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GossipLeague/GossipLeague-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "GossipLeague/GossipLeague-Info.plist";
+				PRODUCT_NAME = GossipLeague;
+				PROVISIONING_PROFILE = "FBD16E03-3461-4897-8680-716E218CFF12";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FBD16E03-3461-4897-8680-716E218CFF12";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		09ABC09013A1D52E009C3FCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4452B5401F74F079D3003F5 /* Pods.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Oriol Blanc Gimeno";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Oriol Blanc Gimeno";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GossipLeague/GossipLeague-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "GossipLeague/GossipLeague-Info.plist";
+				PRODUCT_NAME = GossipLeague;
+				PROVISIONING_PROFILE = "92B256C6-3942-4C8F-9F3D-F5DCDD7B12CC";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "92B256C6-3942-4C8F-9F3D-F5DCDD7B12CC";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09ABC06713A1D52D009C3FCF /* Build configuration list for PBXProject "GossipLeague" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09ABC08C13A1D52E009C3FCF /* Debug */,
+				09ABC08D13A1D52E009C3FCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09ABC08E13A1D52E009C3FCF /* Build configuration list for PBXNativeTarget "GossipLeague" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09ABC08F13A1D52E009C3FCF /* Debug */,
+				09ABC09013A1D52E009C3FCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 09ABC06413A1D52D009C3FCF /* Project object */;
+}
