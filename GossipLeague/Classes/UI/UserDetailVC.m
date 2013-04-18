@@ -19,6 +19,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *gamesLabel;
 @property (strong, nonatomic) IBOutlet UILabel *winsLabel;
 @property (strong, nonatomic) IBOutlet UILabel *lostsLabel;
+@property (strong, nonatomic) IBOutlet UILabel *drawLabel;
 @end
 
 @implementation UserDetailVC
@@ -39,6 +40,7 @@
     self.gamesLabel.text = [NSString stringWithFormat:@"Games: %d", self.player.games];
     self.winsLabel.text = [NSString stringWithFormat:@"Wins: %d", self.player.winGames];
     self.lostsLabel.text = [NSString stringWithFormat:@"Losts: %d", self.player.lostGames];
+    self.drawLabel.text = [NSString stringWithFormat:@"Draw: %d", self.player.games - (self.player.lostGames + self.player.winGames)];
     [self loadGravatarImage];
 }
 
@@ -77,6 +79,8 @@
     [self setGamesLabel:nil];
     [self setWinsLabel:nil];
     [self setLostsLabel:nil];
+    [self setDrawLabel:nil];
+    
     [super viewDidUnload];
 }
 @end
