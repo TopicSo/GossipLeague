@@ -39,10 +39,10 @@
 
 - (void)setUp
 {
-    self.players = [[NSMutableArray alloc] init];
-    
     PFQuery *query = [PFQuery queryWithClassName:@"Player"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        
+        self.players = [[NSMutableArray alloc] init];
 
         self.players = [objects sortedArrayUsingComparator:^NSComparisonResult(PlayerEntity *player1, PlayerEntity *player2) {
             return player1.percentWins < player2.percentWins;
