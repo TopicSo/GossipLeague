@@ -23,7 +23,7 @@
 - (void)setPlayer:(PlayerEntity *)player position:(NSUInteger)position total:(NSUInteger)total
 {
     self.colorView.backgroundColor = [[self class] colorForItem:position total:total];
-    self.playerLabel.text = player.username;
+    self.playerLabel.text = [NSString stringWithFormat:@"%d - %@", position + 1, player.username];
     self.winsLabel.text = player.stringPercentWins;
 }
 
