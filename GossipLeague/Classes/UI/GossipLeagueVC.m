@@ -39,12 +39,12 @@
 
 - (void)setUp
 {
-    self.players = [[NSMutableArray alloc] init];
-    
     PFQuery *query = [PFQuery queryWithClassName:@"Player"];
     [query whereKey:@"games" greaterThanOrEqualTo:@3];
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        
+        self.players = [[NSMutableArray alloc] init];
 
         self.players = [objects sortedArrayUsingComparator:^NSComparisonResult(PlayerEntity *player1, PlayerEntity *player2) {
             
