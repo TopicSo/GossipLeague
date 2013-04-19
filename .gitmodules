@@ -1,0 +1,3 @@
+[submodule "OBConnection"]
+	path = OBConnection
+	url = git@github.com:oriolblanc/OBConnection.git

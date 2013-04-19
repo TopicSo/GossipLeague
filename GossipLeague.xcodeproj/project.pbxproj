@@ -33,6 +33,12 @@
 		36A1EC0817010D8200F7A57B /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36A1EC0517010D8200F7A57B /* MainWindow.xib */; };
 		36A1EC0B17010E0100F7A57B /* PlayerEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A1EC0A17010E0100F7A57B /* PlayerEntity.m */; };
 		36A1EC0E17010F8000F7A57B /* GameEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A1EC0D17010F8000F7A57B /* GameEntity.m */; };
+		36F3A8161721573E005E86ED /* OBCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F3A80F1721573E005E86ED /* OBCache.m */; };
+		36F3A8171721573E005E86ED /* OBConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F3A8111721573E005E86ED /* OBConnection.m */; };
+		36F3A8181721573E005E86ED /* OBRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F3A8131721573E005E86ED /* OBRequest.m */; };
+		36F3A8191721573E005E86ED /* OBRequestParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F3A8151721573E005E86ED /* OBRequestParameters.m */; };
+		36F3A81E17215789005E86ED /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F3A81C17215789005E86ED /* EGOCache.m */; };
+		36F3A81F17215789005E86ED /* README.mdown in Resources */ = {isa = PBXBuildFile; fileRef = 36F3A81D17215789005E86ED /* README.mdown */; };
 		4998650515BF305000803E05 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4998650415BF305000803E05 /* StoreKit.framework */; };
 		6332375415E438E900AE2736 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6332375315E438E900AE2736 /* libsqlite3.dylib */; };
 		6372FF531613CC3C002132AF /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6372FF521613CC3C002132AF /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -80,6 +86,17 @@
 		36A1EC0A17010E0100F7A57B /* PlayerEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerEntity.m; sourceTree = "<group>"; };
 		36A1EC0C17010F8000F7A57B /* GameEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameEntity.h; sourceTree = "<group>"; };
 		36A1EC0D17010F8000F7A57B /* GameEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameEntity.m; sourceTree = "<group>"; };
+		36F3A80E1721573E005E86ED /* OBCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBCache.h; sourceTree = "<group>"; };
+		36F3A80F1721573E005E86ED /* OBCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBCache.m; sourceTree = "<group>"; };
+		36F3A8101721573E005E86ED /* OBConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBConnection.h; sourceTree = "<group>"; };
+		36F3A8111721573E005E86ED /* OBConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBConnection.m; sourceTree = "<group>"; };
+		36F3A8121721573E005E86ED /* OBRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBRequest.h; sourceTree = "<group>"; };
+		36F3A8131721573E005E86ED /* OBRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBRequest.m; sourceTree = "<group>"; };
+		36F3A8141721573E005E86ED /* OBRequestParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBRequestParameters.h; sourceTree = "<group>"; };
+		36F3A8151721573E005E86ED /* OBRequestParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBRequestParameters.m; sourceTree = "<group>"; };
+		36F3A81B17215789005E86ED /* EGOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOCache.h; sourceTree = "<group>"; };
+		36F3A81C17215789005E86ED /* EGOCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOCache.m; sourceTree = "<group>"; };
+		36F3A81D17215789005E86ED /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.mdown; sourceTree = "<group>"; };
 		4998650415BF305000803E05 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		588C860EF36A46BFB9105A93 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6332375315E438E900AE2736 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -180,6 +197,7 @@
 		36A1EBE417010D3800F7A57B /* BLL */ = {
 			isa = PBXGroup;
 			children = (
+				36F3A80D1721573E005E86ED /* OBConnection */,
 				36A1EBE517010D3800F7A57B /* Entities */,
 			);
 			name = BLL;
@@ -237,6 +255,34 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
+		};
+		36F3A80D1721573E005E86ED /* OBConnection */ = {
+			isa = PBXGroup;
+			children = (
+				36F3A81A17215789005E86ED /* EGOCache */,
+				36F3A80E1721573E005E86ED /* OBCache.h */,
+				36F3A80F1721573E005E86ED /* OBCache.m */,
+				36F3A8101721573E005E86ED /* OBConnection.h */,
+				36F3A8111721573E005E86ED /* OBConnection.m */,
+				36F3A8121721573E005E86ED /* OBRequest.h */,
+				36F3A8131721573E005E86ED /* OBRequest.m */,
+				36F3A8141721573E005E86ED /* OBRequestParameters.h */,
+				36F3A8151721573E005E86ED /* OBRequestParameters.m */,
+			);
+			name = OBConnection;
+			path = OBConnection/OBConnection;
+			sourceTree = SOURCE_ROOT;
+		};
+		36F3A81A17215789005E86ED /* EGOCache */ = {
+			isa = PBXGroup;
+			children = (
+				36F3A81B17215789005E86ED /* EGOCache.h */,
+				36F3A81C17215789005E86ED /* EGOCache.m */,
+				36F3A81D17215789005E86ED /* README.mdown */,
+			);
+			name = EGOCache;
+			path = OBConnection/EGOCache;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -300,6 +346,7 @@
 				36A1EC0817010D8200F7A57B /* MainWindow.xib in Resources */,
 				360FD7F91715E4800053C9A3 /* UserDetailVC.xib in Resources */,
 				364C590B1716AD3600FEF4A6 /* Icon.png in Resources */,
+				36F3A81F17215789005E86ED /* README.mdown in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +381,11 @@
 				36A1EC0B17010E0100F7A57B /* PlayerEntity.m in Sources */,
 				36A1EC0E17010F8000F7A57B /* GameEntity.m in Sources */,
 				360FD7F81715E4800053C9A3 /* UserDetailVC.m in Sources */,
+				36F3A8161721573E005E86ED /* OBCache.m in Sources */,
+				36F3A8171721573E005E86ED /* OBConnection.m in Sources */,
+				36F3A8181721573E005E86ED /* OBRequest.m in Sources */,
+				36F3A8191721573E005E86ED /* OBRequestParameters.m in Sources */,
+				36F3A81E17215789005E86ED /* EGOCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,8 +498,8 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "GossipLeague/GossipLeague-Info.plist";
 				PRODUCT_NAME = GossipLeague;
-				PROVISIONING_PROFILE = "62E9EE28-D5ED-4A1D-BD4D-34FD4F9ED6DE";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "62E9EE28-D5ED-4A1D-BD4D-34FD4F9ED6DE";
+				PROVISIONING_PROFILE = "104DC95F-6E37-438B-AEC3-2BEAD179F42B";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "104DC95F-6E37-438B-AEC3-2BEAD179F42B";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
