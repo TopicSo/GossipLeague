@@ -1,7 +1,7 @@
 #import <Parse/Parse.h>
 #import "GossipLeagueAppDelegate.h"
 #import "GossipLeagueVC.h"
-
+#import "GossipGamesVC.h"
 #import "PlayerEntity.h"
 
 @implementation GossipLeagueAppDelegate
@@ -12,10 +12,16 @@
 
     [OBConnection registerWithBaseUrl:[NSURL URLWithString:@"http://gossip-league-api.herokuapp.com"]];
     
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[GossipLeagueVC alloc] init]];
-    self.window.rootViewController = navigationController;
-    [self.window makeKeyAndVisible];
+    self.tabBarController  = [[UITabBarController alloc] init];
     
+    UINavigationController *navigationLeagueController = [[UINavigationController alloc] initWithRootViewController:[[GossipLeagueVC alloc] init]];
+    UINavigationController *navigationGamesController = [[UINavigationController alloc] initWithRootViewController:[[GossipGamesVC alloc] init]];
+    
+    self.tabBarController.viewControllers = @[navigationLeagueController, navigationGamesController];
+    
+    self.window.rootViewController = self.tabBarController;
+    [self.window makeKeyAndVisible];
+
     [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
                                                     UIRemoteNotificationTypeAlert|
                                                     UIRemoteNotificationTypeSound];
