@@ -10,7 +10,7 @@
 #import "PlayerEntity.h"
 #import <CommonCrypto/CommonDigest.h>
 
-#import <AFNetworking/UIImageView+AFNetworking.h>
+#import "UIImageView+AFNetworking.h"
 
 @interface UserDetailVC ()
 @property (nonatomic, strong) PlayerEntity *player;

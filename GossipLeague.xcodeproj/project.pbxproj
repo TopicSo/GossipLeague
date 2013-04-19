@@ -40,6 +40,10 @@
 		36F3A81E17215789005E86ED /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F3A81C17215789005E86ED /* EGOCache.m */; };
 		36F3A81F17215789005E86ED /* README.mdown in Resources */ = {isa = PBXBuildFile; fileRef = 36F3A81D17215789005E86ED /* README.mdown */; };
 		4998650515BF305000803E05 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4998650415BF305000803E05 /* StoreKit.framework */; };
+		5BCC45E91721887700E8EE76 /* GossipGameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BCC45E41721887700E8EE76 /* GossipGameCell.m */; };
+		5BCC45EA1721887700E8EE76 /* GossipGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BCC45E51721887700E8EE76 /* GossipGameCell.xib */; };
+		5BCC45EB1721887700E8EE76 /* GossipGamesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BCC45E71721887700E8EE76 /* GossipGamesVC.m */; };
+		5BCC45EC1721887700E8EE76 /* GossipGamesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BCC45E81721887700E8EE76 /* GossipGamesVC.xib */; };
 		6332375415E438E900AE2736 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6332375315E438E900AE2736 /* libsqlite3.dylib */; };
 		6372FF531613CC3C002132AF /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6372FF521613CC3C002132AF /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6372FF561613CC42002132AF /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6372FF551613CC42002132AF /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -99,6 +103,12 @@
 		36F3A81D17215789005E86ED /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.mdown; sourceTree = "<group>"; };
 		4998650415BF305000803E05 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		588C860EF36A46BFB9105A93 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BCC45E31721887700E8EE76 /* GossipGameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GossipGameCell.h; sourceTree = "<group>"; };
+		5BCC45E41721887700E8EE76 /* GossipGameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GossipGameCell.m; sourceTree = "<group>"; };
+		5BCC45E51721887700E8EE76 /* GossipGameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GossipGameCell.xib; sourceTree = "<group>"; };
+		5BCC45E61721887700E8EE76 /* GossipGamesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GossipGamesVC.h; sourceTree = "<group>"; };
+		5BCC45E71721887700E8EE76 /* GossipGamesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GossipGamesVC.m; sourceTree = "<group>"; };
+		5BCC45E81721887700E8EE76 /* GossipGamesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GossipGamesVC.xib; sourceTree = "<group>"; };
 		6332375315E438E900AE2736 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		6372FF521613CC3C002132AF /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		6372FF551613CC42002132AF /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -218,6 +228,7 @@
 		36A1EBE817010D3800F7A57B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				5BCC45E21721887700E8EE76 /* GossipGamesVC */,
 				36A1EBE917010D3800F7A57B /* GossipLeagueVC.h */,
 				36A1EBEA17010D3800F7A57B /* GossipLeagueVC.m */,
 				36A1EBEB17010D3800F7A57B /* GossipLeagueVC.xib */,
@@ -284,6 +295,19 @@
 			path = OBConnection/EGOCache;
 			sourceTree = SOURCE_ROOT;
 		};
+		5BCC45E21721887700E8EE76 /* GossipGamesVC */ = {
+			isa = PBXGroup;
+			children = (
+				5BCC45E31721887700E8EE76 /* GossipGameCell.h */,
+				5BCC45E41721887700E8EE76 /* GossipGameCell.m */,
+				5BCC45E51721887700E8EE76 /* GossipGameCell.xib */,
+				5BCC45E61721887700E8EE76 /* GossipGamesVC.h */,
+				5BCC45E71721887700E8EE76 /* GossipGamesVC.m */,
+				5BCC45E81721887700E8EE76 /* GossipGamesVC.xib */,
+			);
+			path = GossipGamesVC;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -347,6 +371,8 @@
 				360FD7F91715E4800053C9A3 /* UserDetailVC.xib in Resources */,
 				364C590B1716AD3600FEF4A6 /* Icon.png in Resources */,
 				36F3A81F17215789005E86ED /* README.mdown in Resources */,
+				5BCC45EA1721887700E8EE76 /* GossipGameCell.xib in Resources */,
+				5BCC45EC1721887700E8EE76 /* GossipGamesVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +412,8 @@
 				36F3A8181721573E005E86ED /* OBRequest.m in Sources */,
 				36F3A8191721573E005E86ED /* OBRequestParameters.m in Sources */,
 				36F3A81E17215789005E86ED /* EGOCache.m in Sources */,
+				5BCC45E91721887700E8EE76 /* GossipGameCell.m in Sources */,
+				5BCC45EB1721887700E8EE76 /* GossipGamesVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +501,7 @@
 				GCC_PREFIX_HEADER = "GossipLeague/GossipLeague-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "GossipLeague/GossipLeague-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = GossipLeague;
 				PROVISIONING_PROFILE = "FBD16E03-3461-4897-8680-716E218CFF12";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FBD16E03-3461-4897-8680-716E218CFF12";
@@ -497,6 +526,7 @@
 				GCC_PREFIX_HEADER = "GossipLeague/GossipLeague-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "GossipLeague/GossipLeague-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = GossipLeague;
 				PROVISIONING_PROFILE = "104DC95F-6E37-438B-AEC3-2BEAD179F42B";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "104DC95F-6E37-438B-AEC3-2BEAD179F42B";
