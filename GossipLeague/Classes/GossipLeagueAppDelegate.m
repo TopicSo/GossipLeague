@@ -10,20 +10,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-    [Parse setApplicationId:TESTFLIGHT_APPLICATION_ID
-                  clientKey:TESTFLIGHT_CLIENT_ID];
-    [PlayerEntity registerSubclass];
-
-    [PFUser enableAutomaticUser];
-    
-    PFACL *defaultACL = [PFACL ACL];
-
-    // If you would like all objects to be private by default, remove this line.
-    [defaultACL setPublicReadAccess:YES];
-    
-    [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
-    
-    // Override point for customization after application launch.
+    [OBConnection registerWithBaseUrl:[NSURL URLWithString:@"http://gossip-league-api.herokuapp.com"]];
     
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[GossipLeagueVC alloc] init]];
     self.window.rootViewController = navigationController;
@@ -49,8 +36,7 @@
 */
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken {
-    [PFPush storeDeviceToken:newDeviceToken];
-    [PFPush subscribeToChannelInBackground:@"" target:self selector:@selector(subscribeFinished:error:)];
+
 }
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
@@ -63,7 +49,7 @@
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    [PFPush handlePush:userInfo];
+ 
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

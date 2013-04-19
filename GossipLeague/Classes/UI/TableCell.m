@@ -24,7 +24,7 @@
 {
     self.colorView.backgroundColor = [[self class] colorForItem:position total:total];
     self.playerLabel.text = [NSString stringWithFormat:@"%d - %@", position + 1, player.username];
-    self.winsLabel.text = player.stringPercentWins;
+    self.winsLabel.text = [NSString stringWithFormat:@"%.0f", player.score];
 }
 
 + (UIColor *)colorForItem:(NSUInteger)item total:(NSUInteger)totalItems

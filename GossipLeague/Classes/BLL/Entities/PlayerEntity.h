@@ -8,18 +8,17 @@
 
 #import <Parse/Parse.h>
 
-@interface PlayerEntity : PFObject <PFSubclassing>
+@interface PlayerEntity : NSObject
 
-@property (nonatomic, readonly) NSString *username;
-@property (nonatomic, readonly) NSUInteger winGames;
-@property (nonatomic, readonly) NSUInteger lostGames;
-@property (nonatomic, readonly) NSUInteger games;
+@property (nonatomic, strong) NSString *username;
+@property (nonatomic, strong) NSString *email;
+@property (nonatomic, assign) double score;
 
-@property (nonatomic, readonly) float percentWins;
-@property (nonatomic, readonly) float percentLosts;
+@property (nonatomic, assign) NSUInteger winGames;
+@property (nonatomic, assign) NSUInteger lostGames;
+@property (nonatomic, assign) NSUInteger games;
+@property (nonatomic, assign) NSUInteger drawGames;
 
-@property (nonatomic, readonly) NSString *stringPercentWins;
-@property (nonatomic, readonly) NSString *stringPercentLosts;
-@property (nonatomic, readonly) NSString *mail;
+- (id)initWithDictionary:(NSDictionary *)dictionary;
 
 @end

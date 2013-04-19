@@ -39,20 +39,22 @@
 
 - (void)setUp
 {
-    PFQuery *query = [PFQuery queryWithClassName:@"Player"];
-    [query whereKey:@"games" greaterThanOrEqualTo:@3];
+    OBRequest *request = [OBRequest requestWithType:OBRequestMethodTypeMethodGET resource:@"players/ranking" parameters:nil isPublic:YES];
     
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+    [OBConnection makeRequest:request success:^(id data, BOOL cached) {
         
-        self.players = [[NSMutableArray alloc] init];
-
-        self.players = [objects sortedArrayUsingComparator:^NSComparisonResult(PlayerEntity *player1, PlayerEntity *player2) {
-            
-            return player1.percentWins < player2.percentWins;
-        }];
+        NSMutableArray *array = [NSMutableArray array];
+        
+        for (NSDictionary *tmpPlayer in [data objectForKey:@"players"]) {
+            PlayerEntity *player = [[PlayerEntity alloc] initWithDictionary:tmpPlayer];
+            [array addObject:player];
+        }
+        
+        self.players = [NSArray arrayWithArray:array];
         
         [self.tableView reloadData];
-    }];
+        
+    } error:NULL];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

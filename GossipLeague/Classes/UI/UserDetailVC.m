@@ -46,7 +46,7 @@
 
 - (void)loadGravatarImage
 {
-    NSString *hash = [self md5:self.player.mail];
+    NSString *hash = [self md5:self.player.email];
     if (!hash) {
         return;
     }

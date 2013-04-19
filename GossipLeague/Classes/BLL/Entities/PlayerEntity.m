@@ -10,73 +10,52 @@
 
 @implementation PlayerEntity
 
-- (NSString *)username
+- (id)initWithDictionary:(NSDictionary *)dictionary
 {
-    return [self objectForKey:@"username"];
+    if ((self = [self init]))
+    {
+        if ([dictionary isKindOfClass:[NSDictionary class]])
+            [self parseDictionary:dictionary];
+    }
+    
+    return self;
 }
 
-- (NSUInteger)games
+- (void)parseDictionary:(NSDictionary *)feed
 {
-    return [[self objectForKey:@"games"] intValue];
-}
-
-- (NSUInteger)winGames
-{
-    return [[self objectForKey:@"wins"] intValue];
-}
-
-- (NSUInteger)lostGames
-{
-    return [[self objectForKey:@"losts"] intValue];
-}
-
-- (float)percentWins
-{
-    float games = self.games;
-    return self.winGames / games * 100;
-}
-
-- (float)percentLosts
-{
-    float games = self.games;
-    return self.lostGames / games * 100;
-}
-
-- (NSString *)stringPercentWins
-{
-    return [NSString stringWithFormat:@"%.1f%%", self.percentWins];
-}
-
-- (NSString *)stringPercentLosts
-{
-    return [NSString stringWithFormat:@"%.1f%%", self.percentLosts];
-}
-
-- (NSString *)mail
-{
-    return [self objectForKey:@"mail"];
-}
-
-#pragma mark - Subclassing
-
-+ (id)object
-{
-    return [[self alloc] init];
-}
-
-+ (id)objectWithoutDataWithObjectId:(NSString *)objectId
-{
-    return [[super class] objectWithoutDataWithObjectId:objectId];
-}
-
-+ (NSString *)parseClassName
-{
-    return @"Player";
-}
-
-+ (PFQuery *)query
-{
-    return [[super class] query];
+    if([[feed allKeys] count] == 0) return;
+    
+    [feed enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        
+        if ([key isEqualToString:@"username"])
+        {
+            self.username = [NSString stringWithFormat:@"%@",obj];
+        }
+        else if ([key isEqualToString:@"email"])
+        {
+            self.email = [NSString stringWithFormat:@"%@",obj];
+        }
+        else if (([key isEqualToString:@"score"]))
+        {
+            self.score = [obj doubleValue];
+        }
+        else if (([key isEqualToString:@"countWins"]))
+        {
+            self.winGames = [obj intValue];
+        }
+        else if (([key isEqualToString:@"countLosts"]))
+        {
+            self.lostGames = [obj intValue];
+        }
+        else if (([key isEqualToString:@"countGames"]))
+        {
+            self.games = [obj intValue];
+        }
+        else if (([key isEqualToString:@"countDraws"]))
+        {
+            self.drawGames = [obj intValue];
+        }
+    }];
 }
 
 @end
