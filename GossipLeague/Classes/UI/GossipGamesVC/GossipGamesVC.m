@@ -36,6 +36,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.tableView.rowHeight = 50;
     [self initializeRefreshControl];
     [self setUp];
 }
@@ -71,7 +72,6 @@
     
     GossipGameCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        
         UINib *cellNib = [UINib nibWithNibName:@"GossipGameCell" bundle:nil];
         cell = [[cellNib instantiateWithOwner:self options:nil] objectAtIndex:0];
     }

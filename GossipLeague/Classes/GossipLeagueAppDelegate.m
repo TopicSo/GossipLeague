@@ -15,7 +15,9 @@
     self.tabBarController  = [[UITabBarController alloc] init];
     
     UINavigationController *navigationLeagueController = [[UINavigationController alloc] initWithRootViewController:[[GossipLeagueVC alloc] init]];
+    navigationLeagueController.tabBarItem.image = [UIImage imageNamed:@"sock"];
     UINavigationController *navigationGamesController = [[UINavigationController alloc] initWithRootViewController:[[GossipGamesVC alloc] init]];
+    navigationGamesController.tabBarItem.image = [UIImage imageNamed:@"soccer"];
     
     self.tabBarController.viewControllers = @[navigationLeagueController, navigationGamesController];
     

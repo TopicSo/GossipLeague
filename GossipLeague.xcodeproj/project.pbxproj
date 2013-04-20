@@ -16,6 +16,11 @@
 		09ABC07413A1D52D009C3FCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09ABC07313A1D52D009C3FCF /* Foundation.framework */; };
 		09BEF34C13D51C3F001BBCDB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09BEF34B13D51C3F001BBCDB /* Security.framework */; };
 		2FCDD6B014A573F500295AAC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FCDD6AF14A573F500295AAC /* QuartzCore.framework */; };
+		360E9BDE1721DF1900522891 /* RobertoBaggio.png in Resources */ = {isa = PBXBuildFile; fileRef = 360E9BDD1721DF1900522891 /* RobertoBaggio.png */; };
+		360E9BE21721E9BC00522891 /* UserDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 360E9BE11721E9BC00522891 /* UserDetailCell.m */; };
+		360E9BE41721EA6200522891 /* UserDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360E9BE31721EA6200522891 /* UserDetailCell.xib */; };
+		360E9BE71721F46100522891 /* soccer.png in Resources */ = {isa = PBXBuildFile; fileRef = 360E9BE51721F46100522891 /* soccer.png */; };
+		360E9BE81721F46100522891 /* sock.png in Resources */ = {isa = PBXBuildFile; fileRef = 360E9BE61721F46100522891 /* sock.png */; };
 		360FD7F81715E4800053C9A3 /* UserDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360FD7F61715E4800053C9A3 /* UserDetailVC.m */; };
 		360FD7F91715E4800053C9A3 /* UserDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360FD7F71715E4800053C9A3 /* UserDetailVC.xib */; };
 		364C590B1716AD3600FEF4A6 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 364C590A1716AD3600FEF4A6 /* Icon.png */; };
@@ -64,6 +69,12 @@
 		09ABC07313A1D52D009C3FCF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		09BEF34B13D51C3F001BBCDB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		2FCDD6AF14A573F500295AAC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		360E9BDD1721DF1900522891 /* RobertoBaggio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RobertoBaggio.png; sourceTree = "<group>"; };
+		360E9BE01721E9BC00522891 /* UserDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailCell.h; sourceTree = "<group>"; };
+		360E9BE11721E9BC00522891 /* UserDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailCell.m; sourceTree = "<group>"; };
+		360E9BE31721EA6200522891 /* UserDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserDetailCell.xib; sourceTree = "<group>"; };
+		360E9BE51721F46100522891 /* soccer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = soccer.png; sourceTree = "<group>"; };
+		360E9BE61721F46100522891 /* sock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sock.png; sourceTree = "<group>"; };
 		360FD7F41715E0030053C9A3 /* TestFlightHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestFlightHeader.h; sourceTree = SOURCE_ROOT; };
 		360FD7F51715E4800053C9A3 /* UserDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailVC.h; sourceTree = "<group>"; };
 		360FD7F61715E4800053C9A3 /* UserDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailVC.m; sourceTree = "<group>"; };
@@ -204,6 +215,19 @@
 			path = ParseStarterProject;
 			sourceTree = "<group>";
 		};
+		360E9BDF1721E92F00522891 /* User Detail */ = {
+			isa = PBXGroup;
+			children = (
+				360FD7F51715E4800053C9A3 /* UserDetailVC.h */,
+				360FD7F61715E4800053C9A3 /* UserDetailVC.m */,
+				360FD7F71715E4800053C9A3 /* UserDetailVC.xib */,
+				360E9BE01721E9BC00522891 /* UserDetailCell.h */,
+				360E9BE11721E9BC00522891 /* UserDetailCell.m */,
+				360E9BE31721EA6200522891 /* UserDetailCell.xib */,
+			);
+			name = "User Detail";
+			sourceTree = "<group>";
+		};
 		36A1EBE417010D3800F7A57B /* BLL */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,9 +259,7 @@
 				36A1EBEC17010D3800F7A57B /* TableCell.h */,
 				36A1EBED17010D3800F7A57B /* TableCell.m */,
 				36A1EBEE17010D3800F7A57B /* TableCell.xib */,
-				360FD7F51715E4800053C9A3 /* UserDetailVC.h */,
-				360FD7F61715E4800053C9A3 /* UserDetailVC.m */,
-				360FD7F71715E4800053C9A3 /* UserDetailVC.xib */,
+				360E9BDF1721E92F00522891 /* User Detail */,
 			);
 			name = UI;
 			path = GossipLeague/Classes/UI;
@@ -246,6 +268,9 @@
 		36A1EBF417010D4600F7A57B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				360E9BE51721F46100522891 /* soccer.png */,
+				360E9BE61721F46100522891 /* sock.png */,
+				360E9BDD1721DF1900522891 /* RobertoBaggio.png */,
 				36A1EBF517010D4600F7A57B /* Default-568h@2x.png */,
 				36A1EBF617010D4600F7A57B /* Default.png */,
 				36A1EBF717010D4600F7A57B /* Default@2x.png */,
@@ -373,6 +398,10 @@
 				36F3A81F17215789005E86ED /* README.mdown in Resources */,
 				5BCC45EA1721887700E8EE76 /* GossipGameCell.xib in Resources */,
 				5BCC45EC1721887700E8EE76 /* GossipGamesVC.xib in Resources */,
+				360E9BDE1721DF1900522891 /* RobertoBaggio.png in Resources */,
+				360E9BE41721EA6200522891 /* UserDetailCell.xib in Resources */,
+				360E9BE71721F46100522891 /* soccer.png in Resources */,
+				360E9BE81721F46100522891 /* sock.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +443,7 @@
 				36F3A81E17215789005E86ED /* EGOCache.m in Sources */,
 				5BCC45E91721887700E8EE76 /* GossipGameCell.m in Sources */,
 				5BCC45EB1721887700E8EE76 /* GossipGamesVC.m in Sources */,
+				360E9BE21721E9BC00522891 /* UserDetailCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

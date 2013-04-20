@@ -13,11 +13,14 @@
 @property (nonatomic, strong) NSString *username;
 @property (nonatomic, strong) NSString *email;
 @property (nonatomic, assign) double score;
+@property (nonatomic, copy) NSString *avatarURL;
 
 @property (nonatomic, assign) NSUInteger winGames;
 @property (nonatomic, assign) NSUInteger lostGames;
 @property (nonatomic, assign) NSUInteger games;
 @property (nonatomic, assign) NSUInteger drawGames;
+@property (nonatomic, assign) NSUInteger scoredGoals;
+@property (nonatomic, assign) NSUInteger concededGoals;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 

@@ -18,6 +18,8 @@
 @property (weak, nonatomic) IBOutlet UIView *playerAIndicator;
 @property (weak, nonatomic) IBOutlet UIView *playerBIndicator;
 @property (weak, nonatomic) IBOutlet UILabel *gameDate;
+
+@property (strong, nonatomic) NSDateFormatter *dateFormatter;
 @end
 
 @implementation GossipGameCell
@@ -49,9 +51,18 @@
     
     self.golsALabel.text = [NSString stringWithFormat:@"%u", game.golsLocal];
     self.golsBLabel.text = [NSString stringWithFormat:@"%u", game.golsVisitor];
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"dd/MM/yyyy hh:mm"];
-    self.gameDate.text = [dateFormatter stringFromDate:game.playedOn];
+    self.gameDate.text = [self.dateFormatter stringFromDate:game.playedOn];
+}
+
+#pragma mark - Getters
+- (NSDateFormatter *)dateFormatter
+{
+    if (!_dateFormatter) {
+        _dateFormatter = [[NSDateFormatter alloc] init];
+        [_dateFormatter setDateFormat:@"dd/MM/yyyy hh:mm"];
+    }
+    
+    return _dateFormatter;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

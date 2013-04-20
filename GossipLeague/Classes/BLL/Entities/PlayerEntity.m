@@ -41,20 +41,33 @@
         }
         else if (([key isEqualToString:@"countWins"]))
         {
-            self.winGames = [obj intValue];
+            self.winGames = [obj unsignedIntValue];
         }
         else if (([key isEqualToString:@"countLosts"]))
         {
-            self.lostGames = [obj intValue];
+            self.lostGames = [obj unsignedIntValue];
         }
         else if (([key isEqualToString:@"countGames"]))
         {
-            self.games = [obj intValue];
+            self.games = [obj unsignedIntValue];
         }
         else if (([key isEqualToString:@"countDraws"]))
         {
-            self.drawGames = [obj intValue];
+            self.drawGames = [obj unsignedIntValue];
         }
+        else if (([key isEqualToString:@"avatar"]))
+        {
+            self.avatarURL = [NSString stringWithFormat:@"%@", obj];
+        }
+        else if (([key isEqualToString:@"scoredGoals"]))
+        {
+            self.scoredGoals = [obj unsignedIntValue];
+        }
+        else if (([key isEqualToString:@"concededGoals"]))
+        {
+            self.concededGoals = [obj unsignedIntValue]; 
+        }
+        
     }];
 }
 
