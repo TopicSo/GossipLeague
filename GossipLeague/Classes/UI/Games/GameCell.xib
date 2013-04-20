@@ -196,6 +196,7 @@
 								<string key="NSFrame">{{315, 0}, {5, 50}}</string>
 								<reference key="NSSuperview" ref="727298430"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">3</int>
@@ -230,6 +231,7 @@
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<int key="IBUISelectionStyle">0</int>
 				<reference key="IBUIContentView" ref="727298430"/>
+				<string key="IBUIReuseIdentifier">CellGameIdentifier</string>
 				<real value="51" key="IBUIRowHeight"/>
 			</object>
 		</array>
