@@ -6,6 +6,9 @@
 //  Copyright (c) 2013 Gossip. All rights reserved.
 //
 
+#import <MTLModel.h>
+#import <MTLJSONAdapter.h>
+
 typedef NS_ENUM(NSUInteger, GameResult) {
     GameResultLocalWins,
     GameResultVisitorWins,
@@ -14,7 +17,7 @@ typedef NS_ENUM(NSUInteger, GameResult) {
 
 @class PlayerEntity;
 
-@interface GameEntity : NSObject
+@interface GameEntity : MTLModel <MTLJSONSerializing>
 
 @property (nonatomic, strong) PlayerEntity *local;
 @property (nonatomic, strong) PlayerEntity *visitor;
@@ -22,7 +25,6 @@ typedef NS_ENUM(NSUInteger, GameResult) {
 @property (nonatomic, assign) NSUInteger golsVisitor;
 @property (nonatomic, strong) NSDate *playedOn;
 
-- (id)initWithDictionary:(NSDictionary *)dictionary;
-
 - (GameResult)gameResult;
+
 @end

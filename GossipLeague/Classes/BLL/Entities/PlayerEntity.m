@@ -10,9 +10,9 @@
 
 @implementation PlayerEntity
 
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
++ (NSDictionary *)JSONKeyPathsByPropertyKey
+{
     return @{
-             @"concededGoals": @"countConcededGoals",
              @"username": @"username",
              @"email": @"email",
              @"score": @"score",
@@ -22,6 +22,7 @@
              @"drawGames": @"countDraws",
              @"avatarURL": @"avatar",
              @"scoredGoals": @"countScoredGoals",
+             @"concededGoals": @"countConcededGoals"
              };
 }
 
