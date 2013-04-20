@@ -6,11 +6,11 @@
 //  Copyright (c) 2013 Gossip. All rights reserved.
 //
 
-#import "GossipGameCell.h"
+#import "GameCell.h"
 #import "GameEntity.h"
 #import "PlayerEntity.h"
 
-@interface GossipGameCell ()
+@interface GameCell ()
 @property (weak, nonatomic) IBOutlet UILabel *playerALabel;
 @property (weak, nonatomic) IBOutlet UILabel *golsALabel;
 @property (weak, nonatomic) IBOutlet UILabel *playerBLabel;
@@ -22,7 +22,7 @@
 @property (strong, nonatomic) NSDateFormatter *dateFormatter;
 @end
 
-@implementation GossipGameCell
+@implementation GameCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -38,15 +38,20 @@
     self.playerALabel.text = game.local.username;
     self.playerBLabel.text = game.visitor.username;
     
-    if (game.golsLocal > game.golsVisitor) {
-        self.playerAIndicator.backgroundColor = [UIColor greenColor];
-        self.playerBIndicator.backgroundColor = [UIColor redColor];
-    } else if (game.golsLocal < game.golsVisitor) {
-        self.playerAIndicator.backgroundColor = [UIColor redColor];
-        self.playerBIndicator.backgroundColor = [UIColor greenColor];
-    } else {
-        self.playerAIndicator.backgroundColor = [UIColor yellowColor];
-        self.playerBIndicator.backgroundColor = [UIColor yellowColor];
+    GameResult gameResult = [game gameResult];
+    switch (gameResult) {
+        case GameResultLocalWins:
+            self.playerAIndicator.backgroundColor = [UIColor greenColor];
+            self.playerBIndicator.backgroundColor = [UIColor redColor];
+            break;
+        case GameResultVisitorWins:
+            self.playerAIndicator.backgroundColor = [UIColor redColor];
+            self.playerBIndicator.backgroundColor = [UIColor greenColor];
+            break;
+        default:
+            self.playerAIndicator.backgroundColor = [UIColor yellowColor];
+            self.playerBIndicator.backgroundColor = [UIColor yellowColor];
+            break;
     }
     
     self.golsALabel.text = [NSString stringWithFormat:@"%u", game.golsLocal];

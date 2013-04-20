@@ -6,6 +6,12 @@
 //  Copyright (c) 2013 Gossip. All rights reserved.
 //
 
+typedef NS_ENUM(NSUInteger, GameResult) {
+    GameResultLocalWins,
+    GameResultVisitorWins,
+    GameResultDraw
+};
+
 @class PlayerEntity;
 
 @interface GameEntity : NSObject
@@ -18,4 +24,5 @@
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 
+- (GameResult)gameResult;
 @end

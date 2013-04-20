@@ -17,18 +17,10 @@
 		09BEF34C13D51C3F001BBCDB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09BEF34B13D51C3F001BBCDB /* Security.framework */; };
 		2FCDD6B014A573F500295AAC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FCDD6AF14A573F500295AAC /* QuartzCore.framework */; };
 		360E9BDE1721DF1900522891 /* RobertoBaggio.png in Resources */ = {isa = PBXBuildFile; fileRef = 360E9BDD1721DF1900522891 /* RobertoBaggio.png */; };
-		360E9BE21721E9BC00522891 /* UserDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 360E9BE11721E9BC00522891 /* UserDetailCell.m */; };
-		360E9BE41721EA6200522891 /* UserDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360E9BE31721EA6200522891 /* UserDetailCell.xib */; };
 		360E9BE71721F46100522891 /* soccer.png in Resources */ = {isa = PBXBuildFile; fileRef = 360E9BE51721F46100522891 /* soccer.png */; };
 		360E9BE81721F46100522891 /* sock.png in Resources */ = {isa = PBXBuildFile; fileRef = 360E9BE61721F46100522891 /* sock.png */; };
-		360FD7F81715E4800053C9A3 /* UserDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 360FD7F61715E4800053C9A3 /* UserDetailVC.m */; };
-		360FD7F91715E4800053C9A3 /* UserDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360FD7F71715E4800053C9A3 /* UserDetailVC.xib */; };
 		364C590B1716AD3600FEF4A6 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 364C590A1716AD3600FEF4A6 /* Icon.png */; };
 		36A1EBEF17010D3800F7A57B /* GossipLeagueAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A1EBE717010D3800F7A57B /* GossipLeagueAppDelegate.m */; };
-		36A1EBF017010D3800F7A57B /* GossipLeagueVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A1EBEA17010D3800F7A57B /* GossipLeagueVC.m */; };
-		36A1EBF117010D3800F7A57B /* GossipLeagueVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36A1EBEB17010D3800F7A57B /* GossipLeagueVC.xib */; };
-		36A1EBF217010D3800F7A57B /* TableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A1EBED17010D3800F7A57B /* TableCell.m */; };
-		36A1EBF317010D3800F7A57B /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36A1EBEE17010D3800F7A57B /* TableCell.xib */; };
 		36A1EBF817010D4600F7A57B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A1EBF517010D4600F7A57B /* Default-568h@2x.png */; };
 		36A1EBF917010D4600F7A57B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A1EBF617010D4600F7A57B /* Default.png */; };
 		36A1EBFA17010D4600F7A57B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A1EBF717010D4600F7A57B /* Default@2x.png */; };
@@ -45,10 +37,18 @@
 		36F3A81E17215789005E86ED /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F3A81C17215789005E86ED /* EGOCache.m */; };
 		36F3A81F17215789005E86ED /* README.mdown in Resources */ = {isa = PBXBuildFile; fileRef = 36F3A81D17215789005E86ED /* README.mdown */; };
 		4998650515BF305000803E05 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4998650415BF305000803E05 /* StoreKit.framework */; };
-		5BCC45E91721887700E8EE76 /* GossipGameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BCC45E41721887700E8EE76 /* GossipGameCell.m */; };
-		5BCC45EA1721887700E8EE76 /* GossipGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BCC45E51721887700E8EE76 /* GossipGameCell.xib */; };
-		5BCC45EB1721887700E8EE76 /* GossipGamesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BCC45E71721887700E8EE76 /* GossipGamesVC.m */; };
-		5BCC45EC1721887700E8EE76 /* GossipGamesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BCC45E81721887700E8EE76 /* GossipGamesVC.xib */; };
+		5B798A4D17229EEA00C9BE1A /* GameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B798A4817229EEA00C9BE1A /* GameCell.m */; };
+		5B798A4E17229EEA00C9BE1A /* GameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B798A4917229EEA00C9BE1A /* GameCell.xib */; };
+		5B798A4F17229EEA00C9BE1A /* GamesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B798A4B17229EEA00C9BE1A /* GamesVC.m */; };
+		5B798A5017229EEA00C9BE1A /* GamesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B798A4C17229EEA00C9BE1A /* GamesVC.xib */; };
+		5B798A5717229F2000C9BE1A /* LeagueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B798A5217229F1B00C9BE1A /* LeagueCell.m */; };
+		5B798A5817229F2000C9BE1A /* LeagueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B798A5317229F1C00C9BE1A /* LeagueCell.xib */; };
+		5B798A5917229F2000C9BE1A /* LeagueVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B798A5517229F1D00C9BE1A /* LeagueVC.m */; };
+		5B798A5A17229F2000C9BE1A /* LeagueVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B798A5617229F1E00C9BE1A /* LeagueVC.xib */; };
+		5B798A6117229F3B00C9BE1A /* UserDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B798A5C17229F3A00C9BE1A /* UserDetailCell.m */; };
+		5B798A6217229F3B00C9BE1A /* UserDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B798A5D17229F3A00C9BE1A /* UserDetailCell.xib */; };
+		5B798A6317229F3B00C9BE1A /* UserDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B798A5F17229F3A00C9BE1A /* UserDetailVC.m */; };
+		5B798A6417229F3B00C9BE1A /* UserDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B798A6017229F3B00C9BE1A /* UserDetailVC.xib */; };
 		6332375415E438E900AE2736 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6332375315E438E900AE2736 /* libsqlite3.dylib */; };
 		6372FF531613CC3C002132AF /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6372FF521613CC3C002132AF /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6372FF561613CC42002132AF /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6372FF551613CC42002132AF /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -70,24 +70,12 @@
 		09BEF34B13D51C3F001BBCDB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		2FCDD6AF14A573F500295AAC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		360E9BDD1721DF1900522891 /* RobertoBaggio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RobertoBaggio.png; sourceTree = "<group>"; };
-		360E9BE01721E9BC00522891 /* UserDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailCell.h; sourceTree = "<group>"; };
-		360E9BE11721E9BC00522891 /* UserDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailCell.m; sourceTree = "<group>"; };
-		360E9BE31721EA6200522891 /* UserDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserDetailCell.xib; sourceTree = "<group>"; };
 		360E9BE51721F46100522891 /* soccer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = soccer.png; sourceTree = "<group>"; };
 		360E9BE61721F46100522891 /* sock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sock.png; sourceTree = "<group>"; };
 		360FD7F41715E0030053C9A3 /* TestFlightHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestFlightHeader.h; sourceTree = SOURCE_ROOT; };
-		360FD7F51715E4800053C9A3 /* UserDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailVC.h; sourceTree = "<group>"; };
-		360FD7F61715E4800053C9A3 /* UserDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailVC.m; sourceTree = "<group>"; };
-		360FD7F71715E4800053C9A3 /* UserDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserDetailVC.xib; sourceTree = "<group>"; };
 		364C590A1716AD3600FEF4A6 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		36A1EBE617010D3800F7A57B /* GossipLeagueAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GossipLeagueAppDelegate.h; path = GossipLeague/Classes/GossipLeagueAppDelegate.h; sourceTree = SOURCE_ROOT; };
 		36A1EBE717010D3800F7A57B /* GossipLeagueAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GossipLeagueAppDelegate.m; path = GossipLeague/Classes/GossipLeagueAppDelegate.m; sourceTree = SOURCE_ROOT; };
-		36A1EBE917010D3800F7A57B /* GossipLeagueVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GossipLeagueVC.h; sourceTree = "<group>"; };
-		36A1EBEA17010D3800F7A57B /* GossipLeagueVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GossipLeagueVC.m; sourceTree = "<group>"; };
-		36A1EBEB17010D3800F7A57B /* GossipLeagueVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GossipLeagueVC.xib; sourceTree = "<group>"; };
-		36A1EBEC17010D3800F7A57B /* TableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableCell.h; sourceTree = "<group>"; };
-		36A1EBED17010D3800F7A57B /* TableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableCell.m; sourceTree = "<group>"; };
-		36A1EBEE17010D3800F7A57B /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
 		36A1EBF517010D4600F7A57B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		36A1EBF617010D4600F7A57B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		36A1EBF717010D4600F7A57B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -114,12 +102,24 @@
 		36F3A81D17215789005E86ED /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.mdown; sourceTree = "<group>"; };
 		4998650415BF305000803E05 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		588C860EF36A46BFB9105A93 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BCC45E31721887700E8EE76 /* GossipGameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GossipGameCell.h; sourceTree = "<group>"; };
-		5BCC45E41721887700E8EE76 /* GossipGameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GossipGameCell.m; sourceTree = "<group>"; };
-		5BCC45E51721887700E8EE76 /* GossipGameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GossipGameCell.xib; sourceTree = "<group>"; };
-		5BCC45E61721887700E8EE76 /* GossipGamesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GossipGamesVC.h; sourceTree = "<group>"; };
-		5BCC45E71721887700E8EE76 /* GossipGamesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GossipGamesVC.m; sourceTree = "<group>"; };
-		5BCC45E81721887700E8EE76 /* GossipGamesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GossipGamesVC.xib; sourceTree = "<group>"; };
+		5B798A4717229EE900C9BE1A /* GameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameCell.h; path = GossipLeague/Classes/UI/Games/GameCell.h; sourceTree = SOURCE_ROOT; };
+		5B798A4817229EEA00C9BE1A /* GameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameCell.m; path = GossipLeague/Classes/UI/Games/GameCell.m; sourceTree = SOURCE_ROOT; };
+		5B798A4917229EEA00C9BE1A /* GameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GameCell.xib; path = GossipLeague/Classes/UI/Games/GameCell.xib; sourceTree = SOURCE_ROOT; };
+		5B798A4A17229EEA00C9BE1A /* GamesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GamesVC.h; path = GossipLeague/Classes/UI/Games/GamesVC.h; sourceTree = SOURCE_ROOT; };
+		5B798A4B17229EEA00C9BE1A /* GamesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GamesVC.m; path = GossipLeague/Classes/UI/Games/GamesVC.m; sourceTree = SOURCE_ROOT; };
+		5B798A4C17229EEA00C9BE1A /* GamesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GamesVC.xib; path = GossipLeague/Classes/UI/Games/GamesVC.xib; sourceTree = SOURCE_ROOT; };
+		5B798A5117229F1B00C9BE1A /* LeagueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeagueCell.h; path = Chart/LeagueCell.h; sourceTree = "<group>"; };
+		5B798A5217229F1B00C9BE1A /* LeagueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeagueCell.m; path = Chart/LeagueCell.m; sourceTree = "<group>"; };
+		5B798A5317229F1C00C9BE1A /* LeagueCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LeagueCell.xib; path = Chart/LeagueCell.xib; sourceTree = "<group>"; };
+		5B798A5417229F1C00C9BE1A /* LeagueVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeagueVC.h; path = Chart/LeagueVC.h; sourceTree = "<group>"; };
+		5B798A5517229F1D00C9BE1A /* LeagueVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeagueVC.m; path = Chart/LeagueVC.m; sourceTree = "<group>"; };
+		5B798A5617229F1E00C9BE1A /* LeagueVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LeagueVC.xib; path = Chart/LeagueVC.xib; sourceTree = "<group>"; };
+		5B798A5B17229F3A00C9BE1A /* UserDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDetailCell.h; path = User/UserDetailCell.h; sourceTree = "<group>"; };
+		5B798A5C17229F3A00C9BE1A /* UserDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDetailCell.m; path = User/UserDetailCell.m; sourceTree = "<group>"; };
+		5B798A5D17229F3A00C9BE1A /* UserDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserDetailCell.xib; path = User/UserDetailCell.xib; sourceTree = "<group>"; };
+		5B798A5E17229F3A00C9BE1A /* UserDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDetailVC.h; path = User/UserDetailVC.h; sourceTree = "<group>"; };
+		5B798A5F17229F3A00C9BE1A /* UserDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDetailVC.m; path = User/UserDetailVC.m; sourceTree = "<group>"; };
+		5B798A6017229F3B00C9BE1A /* UserDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserDetailVC.xib; path = User/UserDetailVC.xib; sourceTree = "<group>"; };
 		6332375315E438E900AE2736 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		6372FF521613CC3C002132AF /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		6372FF551613CC42002132AF /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -215,17 +215,17 @@
 			path = ParseStarterProject;
 			sourceTree = "<group>";
 		};
-		360E9BDF1721E92F00522891 /* User Detail */ = {
+		360E9BDF1721E92F00522891 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				360FD7F51715E4800053C9A3 /* UserDetailVC.h */,
-				360FD7F61715E4800053C9A3 /* UserDetailVC.m */,
-				360FD7F71715E4800053C9A3 /* UserDetailVC.xib */,
-				360E9BE01721E9BC00522891 /* UserDetailCell.h */,
-				360E9BE11721E9BC00522891 /* UserDetailCell.m */,
-				360E9BE31721EA6200522891 /* UserDetailCell.xib */,
+				5B798A5B17229F3A00C9BE1A /* UserDetailCell.h */,
+				5B798A5C17229F3A00C9BE1A /* UserDetailCell.m */,
+				5B798A5D17229F3A00C9BE1A /* UserDetailCell.xib */,
+				5B798A5E17229F3A00C9BE1A /* UserDetailVC.h */,
+				5B798A5F17229F3A00C9BE1A /* UserDetailVC.m */,
+				5B798A6017229F3B00C9BE1A /* UserDetailVC.xib */,
 			);
-			name = "User Detail";
+			name = User;
 			sourceTree = "<group>";
 		};
 		36A1EBE417010D3800F7A57B /* BLL */ = {
@@ -252,14 +252,9 @@
 		36A1EBE817010D3800F7A57B /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				5BCC45E21721887700E8EE76 /* GossipGamesVC */,
-				36A1EBE917010D3800F7A57B /* GossipLeagueVC.h */,
-				36A1EBEA17010D3800F7A57B /* GossipLeagueVC.m */,
-				36A1EBEB17010D3800F7A57B /* GossipLeagueVC.xib */,
-				36A1EBEC17010D3800F7A57B /* TableCell.h */,
-				36A1EBED17010D3800F7A57B /* TableCell.m */,
-				36A1EBEE17010D3800F7A57B /* TableCell.xib */,
-				360E9BDF1721E92F00522891 /* User Detail */,
+				5BCC45E21721887700E8EE76 /* Games */,
+				5B798A46172299E600C9BE1A /* Chart */,
+				360E9BDF1721E92F00522891 /* User */,
 			);
 			name = UI;
 			path = GossipLeague/Classes/UI;
@@ -320,16 +315,30 @@
 			path = OBConnection/EGOCache;
 			sourceTree = SOURCE_ROOT;
 		};
-		5BCC45E21721887700E8EE76 /* GossipGamesVC */ = {
+		5B798A46172299E600C9BE1A /* Chart */ = {
 			isa = PBXGroup;
 			children = (
-				5BCC45E31721887700E8EE76 /* GossipGameCell.h */,
-				5BCC45E41721887700E8EE76 /* GossipGameCell.m */,
-				5BCC45E51721887700E8EE76 /* GossipGameCell.xib */,
-				5BCC45E61721887700E8EE76 /* GossipGamesVC.h */,
-				5BCC45E71721887700E8EE76 /* GossipGamesVC.m */,
-				5BCC45E81721887700E8EE76 /* GossipGamesVC.xib */,
+				5B798A5117229F1B00C9BE1A /* LeagueCell.h */,
+				5B798A5217229F1B00C9BE1A /* LeagueCell.m */,
+				5B798A5317229F1C00C9BE1A /* LeagueCell.xib */,
+				5B798A5417229F1C00C9BE1A /* LeagueVC.h */,
+				5B798A5517229F1D00C9BE1A /* LeagueVC.m */,
+				5B798A5617229F1E00C9BE1A /* LeagueVC.xib */,
 			);
+			name = Chart;
+			sourceTree = "<group>";
+		};
+		5BCC45E21721887700E8EE76 /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				5B798A4717229EE900C9BE1A /* GameCell.h */,
+				5B798A4817229EEA00C9BE1A /* GameCell.m */,
+				5B798A4917229EEA00C9BE1A /* GameCell.xib */,
+				5B798A4A17229EEA00C9BE1A /* GamesVC.h */,
+				5B798A4B17229EEA00C9BE1A /* GamesVC.m */,
+				5B798A4C17229EEA00C9BE1A /* GamesVC.xib */,
+			);
+			name = Games;
 			path = GossipGamesVC;
 			sourceTree = "<group>";
 		};
@@ -385,23 +394,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36A1EBF117010D3800F7A57B /* GossipLeagueVC.xib in Resources */,
-				36A1EBF317010D3800F7A57B /* TableCell.xib in Resources */,
 				36A1EBF817010D4600F7A57B /* Default-568h@2x.png in Resources */,
 				36A1EBF917010D4600F7A57B /* Default.png in Resources */,
 				36A1EBFA17010D4600F7A57B /* Default@2x.png in Resources */,
 				36A1EC0017010D7500F7A57B /* Entitlements.plist in Resources */,
 				36A1EC0717010D8200F7A57B /* InfoPlist.strings in Resources */,
 				36A1EC0817010D8200F7A57B /* MainWindow.xib in Resources */,
-				360FD7F91715E4800053C9A3 /* UserDetailVC.xib in Resources */,
 				364C590B1716AD3600FEF4A6 /* Icon.png in Resources */,
 				36F3A81F17215789005E86ED /* README.mdown in Resources */,
-				5BCC45EA1721887700E8EE76 /* GossipGameCell.xib in Resources */,
-				5BCC45EC1721887700E8EE76 /* GossipGamesVC.xib in Resources */,
 				360E9BDE1721DF1900522891 /* RobertoBaggio.png in Resources */,
-				360E9BE41721EA6200522891 /* UserDetailCell.xib in Resources */,
 				360E9BE71721F46100522891 /* soccer.png in Resources */,
 				360E9BE81721F46100522891 /* sock.png in Resources */,
+				5B798A4E17229EEA00C9BE1A /* GameCell.xib in Resources */,
+				5B798A5017229EEA00C9BE1A /* GamesVC.xib in Resources */,
+				5B798A5817229F2000C9BE1A /* LeagueCell.xib in Resources */,
+				5B798A5A17229F2000C9BE1A /* LeagueVC.xib in Resources */,
+				5B798A6217229F3B00C9BE1A /* UserDetailCell.xib in Resources */,
+				5B798A6417229F3B00C9BE1A /* UserDetailVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,20 +439,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				36A1EBEF17010D3800F7A57B /* GossipLeagueAppDelegate.m in Sources */,
-				36A1EBF017010D3800F7A57B /* GossipLeagueVC.m in Sources */,
-				36A1EBF217010D3800F7A57B /* TableCell.m in Sources */,
 				36A1EC0217010D7500F7A57B /* main.m in Sources */,
 				36A1EC0B17010E0100F7A57B /* PlayerEntity.m in Sources */,
 				36A1EC0E17010F8000F7A57B /* GameEntity.m in Sources */,
-				360FD7F81715E4800053C9A3 /* UserDetailVC.m in Sources */,
 				36F3A8161721573E005E86ED /* OBCache.m in Sources */,
 				36F3A8171721573E005E86ED /* OBConnection.m in Sources */,
 				36F3A8181721573E005E86ED /* OBRequest.m in Sources */,
 				36F3A8191721573E005E86ED /* OBRequestParameters.m in Sources */,
 				36F3A81E17215789005E86ED /* EGOCache.m in Sources */,
-				5BCC45E91721887700E8EE76 /* GossipGameCell.m in Sources */,
-				5BCC45EB1721887700E8EE76 /* GossipGamesVC.m in Sources */,
-				360E9BE21721E9BC00522891 /* UserDetailCell.m in Sources */,
+				5B798A4D17229EEA00C9BE1A /* GameCell.m in Sources */,
+				5B798A4F17229EEA00C9BE1A /* GamesVC.m in Sources */,
+				5B798A5717229F2000C9BE1A /* LeagueCell.m in Sources */,
+				5B798A5917229F2000C9BE1A /* LeagueVC.m in Sources */,
+				5B798A6117229F3B00C9BE1A /* UserDetailCell.m in Sources */,
+				5B798A6317229F3B00C9BE1A /* UserDetailVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
