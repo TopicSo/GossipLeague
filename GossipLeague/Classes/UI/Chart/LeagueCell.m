@@ -6,11 +6,11 @@
 //  Copyright (c) 2013 Gossip. All rights reserved.
 //
 
-#import "TableCell.h"
+#import "LeagueCell.h"
 
 #import "PlayerEntity.h"
 
-@interface TableCell ()
+@interface LeagueCell ()
     @property (strong, nonatomic) IBOutlet UIView *colorView;
     @property (strong, nonatomic) IBOutlet UILabel *playerLabel;
     @property (strong, nonatomic) IBOutlet UILabel *winsLabel;
@@ -18,7 +18,7 @@
     + (UIColor *)colorForItem:(NSUInteger)item total:(NSUInteger)totalItems;
 @end
 
-@implementation TableCell
+@implementation LeagueCell
 
 - (void)setPlayer:(PlayerEntity *)player position:(NSUInteger)position total:(NSUInteger)total
 {

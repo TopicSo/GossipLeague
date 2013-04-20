@@ -47,9 +47,20 @@
         {
             self.playedOn = [NSDate dateWithTimeIntervalSince1970:[obj unsignedIntegerValue]];
         }
-        
-        
     }];
+}
+
+#pragma mark - Utils
+
+- (GameResult)gameResult
+{
+    if (self.golsLocal > self.golsVisitor) {
+        return GameResultLocalWins;
+    } else if (self.golsLocal < self.golsVisitor) {
+        return GameResultVisitorWins;
+    }
+    
+    return GameResultDraw;
 }
 
 @end

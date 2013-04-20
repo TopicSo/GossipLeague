@@ -1,5 +1,5 @@
 //
-//  GossipGamesVC.h
+//  GossipGameCell.h
 //  GossipLeague
 //
 //  Created by Giuseppe Basile on 19/04/13.
@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+@class GameEntity;
+@interface GameCell : UITableViewCell
 
-@interface GossipGamesVC : UIViewController
+- (void)setGame:(GameEntity *)game;
 
 @end
