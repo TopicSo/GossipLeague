@@ -8,6 +8,8 @@
 #import "GameEntity.h"
 #import "PlayerEntity.h"
 
+#import <MTLJSONAdapter.h>
+
 @implementation GameEntity
 
 - (id)initWithDictionary:(NSDictionary *)dictionary
@@ -29,11 +31,11 @@
         
         if ([key isEqualToString:@"local"])
         {
-            self.local = [[PlayerEntity alloc] initWithDictionary:obj];
+            self.local = [MTLJSONAdapter modelOfClass:[PlayerEntity class] fromJSONDictionary:obj error:nil];
         }
         else if ([key isEqualToString:@"visitor"])
         {
-            self.visitor = [[PlayerEntity alloc] initWithDictionary:obj];
+            self.visitor = [MTLJSONAdapter modelOfClass:[PlayerEntity class] fromJSONDictionary:obj error:nil];
         }
         else if (([key isEqualToString:@"localGoals"]))
         {

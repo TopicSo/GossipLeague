@@ -6,9 +6,10 @@
 //  Copyright (c) 2013 Gossip. All rights reserved.
 //
 
-#import <Parse/Parse.h>
+#import <MTLModel.h>
+#import <MTLJSONAdapter.h>
 
-@interface PlayerEntity : NSObject
+@interface PlayerEntity : MTLModel <MTLJSONSerializing>
 
 @property (nonatomic, strong) NSString *username;
 @property (nonatomic, strong) NSString *email;
@@ -21,7 +22,5 @@
 @property (nonatomic, assign) NSUInteger drawGames;
 @property (nonatomic, assign) NSUInteger scoredGoals;
 @property (nonatomic, assign) NSUInteger concededGoals;
-
-- (id)initWithDictionary:(NSDictionary *)dictionary;
 
 @end
