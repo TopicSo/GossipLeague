@@ -8,7 +8,7 @@
 
 @class PlayerEntity;
 
-@interface TableCell : UITableViewCell
+@interface LeagueCell : UITableViewCell
 
 - (void)setPlayer:(PlayerEntity *)player position:(NSUInteger)position total:(NSUInteger)total;
 

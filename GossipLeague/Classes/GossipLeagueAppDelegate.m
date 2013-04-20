@@ -1,47 +1,32 @@
 #import <Parse/Parse.h>
 #import "GossipLeagueAppDelegate.h"
-#import "GossipLeagueVC.h"
-#import "GossipGamesVC.h"
+#import "LeagueVC.h"
+#import "GamesVC.h"
 #import "PlayerEntity.h"
 
 @implementation GossipLeagueAppDelegate
 
 #pragma mark - UIApplicationDelegate
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
-    [OBConnection registerWithBaseUrl:[NSURL URLWithString:@"http://gossip-league-api.herokuapp.com"]];
-    
-    self.tabBarController  = [[UITabBarController alloc] init];
-    
-    UINavigationController *navigationLeagueController = [[UINavigationController alloc] initWithRootViewController:[[GossipLeagueVC alloc] init]];
-    navigationLeagueController.tabBarItem.image = [UIImage imageNamed:@"sock"];
-    UINavigationController *navigationGamesController = [[UINavigationController alloc] initWithRootViewController:[[GossipGamesVC alloc] init]];
-    navigationGamesController.tabBarItem.image = [UIImage imageNamed:@"soccer"];
-    
-    self.tabBarController.viewControllers = @[navigationLeagueController, navigationGamesController];
+    [self setup:application];
+    [self createGossipLeagueTabBarControlloer];
     
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
 
-    [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
-                                                    UIRemoteNotificationTypeAlert|
-                                                    UIRemoteNotificationTypeSound];
+    
     return YES;
 }
 
-/*
- 
-///////////////////////////////////////////////////////////
-// Uncomment this method if you are using Facebook
-///////////////////////////////////////////////////////////
- 
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
-    sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    return [PFFacebookUtils handleOpenURL:url];
-} 
- 
-*/
+- (void)setup:(UIApplication *)application
+{
+    [OBConnection registerWithBaseUrl:[NSURL URLWithString:@"http://gossip-league-api.herokuapp.com"]];
+    [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
+     UIRemoteNotificationTypeAlert|
+     UIRemoteNotificationTypeSound];
+}
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken {
 
@@ -94,16 +79,28 @@
      */
 }
 
-
-#pragma mark - ()
-
-- (void)subscribeFinished:(NSNumber *)result error:(NSError *)error {
-    if ([result boolValue]) {
-        NSLog(@"ParseStarterProject successfully subscribed to push notifications on the broadcast channel.");
-    } else {
-        NSLog(@"ParseStarterProject failed to subscribe to push notifications on the broadcast channel.");
-    }
+#pragma mark - View Controllers
+- (void)createGossipLeagueTabBarControlloer
+{
+    self.tabBarController  = [[UITabBarController alloc] init];
+    self.tabBarController.viewControllers = @[
+                                              [self createNavigationChartsController],
+                                              [self createNavigationGamesController]
+                                              ];
 }
 
+- (UINavigationController *)createNavigationChartsController
+{
+    UINavigationController *navigationChartsController = [[UINavigationController alloc] initWithRootViewController:[[LeagueVC alloc] init]];
+    navigationChartsController.tabBarItem.image = [UIImage imageNamed:@"sock"];
+    return navigationChartsController;
+}
+
+- (UINavigationController *)createNavigationGamesController
+{
+    UINavigationController *navigationGamesController = [[UINavigationController alloc] initWithRootViewController:[[GamesVC alloc] init]];
+    navigationGamesController.tabBarItem.image = [UIImage imageNamed:@"soccer"];
+    return navigationGamesController;
+}
 
 @end

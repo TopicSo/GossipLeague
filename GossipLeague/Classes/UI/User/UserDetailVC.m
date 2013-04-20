@@ -13,7 +13,7 @@
 
 #import "UIImageView+AFNetworking.h"
 
-static NSString * const CellIdentifier = @"UserDetailCell";
+static NSString * const CellIUserdentifier = @"UserDetailCell";
 
 @interface UserDetailVC ()
 @property (nonatomic, strong) PlayerEntity *player;
@@ -47,7 +47,7 @@ static NSString * const CellIdentifier = @"UserDetailCell";
     
     self.tableView.backgroundView = nil;
     [self.tableView registerNib:[UINib nibWithNibName:@"UserDetailCell" bundle:nil]
-         forCellReuseIdentifier:CellIdentifier];
+         forCellReuseIdentifier:CellIUserdentifier];
 }
 
 #pragma mark - Table View Delegate
@@ -59,7 +59,7 @@ static NSString * const CellIdentifier = @"UserDetailCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UserDetailCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    UserDetailCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIUserdentifier];
     
     NSArray *leftValues = @[@"Games", @"Wins", @"Draws", @"Losts", @"Goals Scored", @"Goals Conceded"];
     NSArray *rightValues = @[@(self.player.games), @(self.player.winGames), @(self.player.drawGames), @(self.player.lostGames), @(self.player.scoredGoals), @(self.player.concededGoals)];
@@ -69,7 +69,6 @@ static NSString * const CellIdentifier = @"UserDetailCell";
     
     return cell;
 }
-
 
 - (void)viewDidUnload {
     [self setUsernameLabel:nil];
