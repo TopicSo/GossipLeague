@@ -59,7 +59,7 @@ static NSString * const CellGameIdentifier = @"CellGameIdentifier";
         NSMutableArray *array = [NSMutableArray array];
         
         for (NSDictionary *tmpGame in [data objectForKey:@"games"]) {
-            GameEntity *game = [[GameEntity alloc] initWithDictionary:tmpGame];
+            GameEntity *game = [MTLJSONAdapter modelOfClass:[GameEntity class] fromJSONDictionary:tmpGame error:nil];
             [array addObject:game];
         }
         
