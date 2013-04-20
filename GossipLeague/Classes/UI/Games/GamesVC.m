@@ -10,6 +10,8 @@
 #import "GameEntity.h"
 #import "GameCell.h"
 
+static NSString * const CellGameIdentifier = @"CellGameIdentifier";
+
 @interface GamesVC ()
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
@@ -36,12 +38,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.tableView.rowHeight = 50;
     [self initializeRefreshControl];
-    [self setUp];
+    [self setupTableView];
+    [self reloadData];
 }
 
-- (void)setUp
+- (void)setupTableView
+{
+    self.tableView.rowHeight = 50;
+    [self.tableView registerNib:[UINib nibWithNibName:@"GameCell" bundle:nil]
+         forCellReuseIdentifier:CellGameIdentifier];
+}
+
+- (void)reloadData
 {
     OBRequest *request = [OBRequest requestWithType:OBRequestMethodTypeMethodGET resource:@"games/" parameters:nil isPublic:YES];
     
@@ -67,15 +76,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"GossipGameCell";
-    
-    GameCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        UINib *cellNib = [UINib nibWithNibName:@"GossipGameCell" bundle:nil];
-        cell = [[cellNib instantiateWithOwner:self options:nil] objectAtIndex:0];
-    }
-    
+{    
+    GameCell *cell = [tableView dequeueReusableCellWithIdentifier:CellGameIdentifier];
     [cell setGame:[self.games objectAtIndex:indexPath.row]];
     
     return cell;
@@ -115,7 +117,7 @@
 {
     refresh.attributedTitle = [[NSAttributedString alloc] initWithString:@"Refreshing data..."];
     
-    [self setUp];
+    [self reloadData];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"MMM d, h:mm a"];
