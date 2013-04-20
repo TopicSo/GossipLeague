@@ -1,7 +1,7 @@
 @class LeagueVC;
 @class GamesVC;
 
-@interface GossipLeagueAppDelegate : NSObject <UIApplicationDelegate> {
+@interface GossipLeagueAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate> {
 
 }
 

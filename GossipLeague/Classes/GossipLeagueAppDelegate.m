@@ -4,6 +4,13 @@
 #import "GamesVC.h"
 #import "PlayerEntity.h"
 
+#import <AVFoundation/AVFoundation.h>
+
+@interface GossipLeagueAppDelegate ()
+@property (nonatomic, strong) AVAudioPlayer *player;
+@end
+
+
 @implementation GossipLeagueAppDelegate
 
 #pragma mark - UIApplicationDelegate
@@ -87,6 +94,7 @@
                                               [self createNavigationChartsController],
                                               [self createNavigationGamesController]
                                               ];
+   [self easterEggPEPE];
 }
 
 - (UINavigationController *)createNavigationChartsController
@@ -101,6 +109,47 @@
     UINavigationController *navigationGamesController = [[UINavigationController alloc] initWithRootViewController:[[GamesVC alloc] init]];
     navigationGamesController.tabBarItem.image = [UIImage imageNamed:@"soccer"];
     return navigationGamesController;
+}
+
+#pragma mark - Easter egg
+- (void) easterEggPEPE
+{
+    self.tabBarController.delegate = self;
+}
+
+- (void) tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"theme"
+                                                                  ofType:@"mp3"];
+        NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:soundFilePath];
+        NSError *theError = nil;
+        self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL
+                                                             error:&theError];
+    });
+    
+    static NSUInteger tabTaps;
+    double delayInSeconds = 1.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        tabTaps = 0;
+    });
+    
+    tabTaps += 1;
+    
+    if (tabTaps == 5) {
+        if (!self.player.isPlaying) {
+            [self.player play];
+        }
+    }
+    
+    if (tabTaps == 2) {
+        if (self.player.isPlaying) {
+            [self.player stop];
+        }
+
+    }
 }
 
 @end
