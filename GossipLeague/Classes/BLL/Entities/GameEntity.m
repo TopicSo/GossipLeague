@@ -7,47 +7,29 @@
 //
 #import "GameEntity.h"
 #import "PlayerEntity.h"
+#import <NSValueTransformer+MTLPredefinedTransformerAdditions.h>
 
 @implementation GameEntity
 
-- (id)initWithDictionary:(NSDictionary *)dictionary
++ (NSDictionary *)JSONKeyPathsByPropertyKey
 {
-    if ((self = [self init]))
-    {
-        if ([dictionary isKindOfClass:[NSDictionary class]])
-            [self parseDictionary:dictionary];
-    }
-    
-    return self;
+    return @{
+             @"local": @"local",
+             @"visitor": @"visitor",
+             @"golsLocal": @"localGoals",
+             @"golsVisitor": @"visitorGoals",
+             @"playedOn": @"playedOn"
+             };
 }
 
-- (void)parseDictionary:(NSDictionary *)feed
++ (NSValueTransformer *)localJSONTransformer
 {
-    if([[feed allKeys] count] == 0) return;
-    
-    [feed enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-        
-        if ([key isEqualToString:@"local"])
-        {
-            self.local = [[PlayerEntity alloc] initWithDictionary:obj];
-        }
-        else if ([key isEqualToString:@"visitor"])
-        {
-            self.visitor = [[PlayerEntity alloc] initWithDictionary:obj];
-        }
-        else if (([key isEqualToString:@"localGoals"]))
-        {
-            self.golsLocal = [obj unsignedIntegerValue];
-        }
-        else if (([key isEqualToString:@"visitorGoals"]))
-        {
-            self.golsVisitor = [obj unsignedIntegerValue];
-        }
-        else if (([key isEqualToString:@"playedOn"]))
-        {
-            self.playedOn = [NSDate dateWithTimeIntervalSince1970:[obj unsignedIntegerValue]];
-        }
-    }];
+    return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:[PlayerEntity class]];
+}
+
++ (NSValueTransformer *)visitorJSONTransformer
+{
+    return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:[PlayerEntity class]];
 }
 
 #pragma mark - Utils
