@@ -59,11 +59,11 @@
         {
             self.avatarURL = [NSString stringWithFormat:@"%@", obj];
         }
-        else if (([key isEqualToString:@"scoredGoals"]))
+        else if (([key isEqualToString:@"countScoredGoals"]))
         {
             self.scoredGoals = [obj unsignedIntValue];
         }
-        else if (([key isEqualToString:@"concededGoals"]))
+        else if (([key isEqualToString:@"countConcededGoals"]))
         {
             self.concededGoals = [obj unsignedIntValue]; 
         }

@@ -43,50 +43,15 @@ static NSString * const CellIdentifier = @"UserDetailCell";
     [self.scrollView addSubview:self.containerView];
     self.scrollView.contentSize = self.containerView.bounds.size;
     self.usernameLabel.text = self.player.username;
+    [self.avatarImageView setImageWithURL:[NSURL URLWithString:self.player.avatarURL]];
     
     self.tableView.backgroundView = nil;
     [self.tableView registerNib:[UINib nibWithNibName:@"UserDetailCell" bundle:nil]
          forCellReuseIdentifier:CellIdentifier];
-    
-//    self.gamesLabel.text = [NSString stringWithFormat:@"Games: %d", self.player.games];
-//    self.winsLabel.text = [NSString stringWithFormat:@"Wins: %d", self.player.winGames];
-//    self.lostsLabel.text = [NSString stringWithFormat:@"Losts: %d", self.player.lostGames];
-//    self.drawLabel.text = [NSString stringWithFormat:@"Draw: %d", self.player.games - (self.player.lostGames + self.player.winGames)];
-    
-    
-    [self loadGravatarImage];
-}
-
-- (void)loadGravatarImage
-{
-    NSString *hash = [self md5:self.player.email];
-    if (!hash) {
-        return;
-    }
-    
-    NSURL *gravatarUrl = [NSURL URLWithString:[NSString
-                                               stringWithFormat:@"http://gravatar.com/avatar/%@?s=%@",hash, @(250)]];
-    
-    [self.avatarImageView setImageWithURL:gravatarUrl];
-}
-
-- (NSString *)md5:(NSString *)input
-{
-    if (!input) {
-        return nil;
-    }
-    const char *cStr = [input UTF8String];
-    unsigned char digest[16];
-    CC_MD5(cStr, strlen(cStr), digest ); // This is the md5 call
-    
-    NSMutableString *output = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
-    
-    for(int i = 0; i < CC_MD5_DIGEST_LENGTH; i++)
-        [output appendFormat:@"%02x", digest[i]];
-    return  output;
 }
 
 #pragma mark - Table View Delegate
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 6;
