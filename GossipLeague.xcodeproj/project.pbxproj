@@ -536,8 +536,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Oriol Blanc Gimeno (7LER52YWTW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Oriol Blanc Gimeno (7LER52YWTW)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -550,8 +550,8 @@
 				INFOPLIST_FILE = "GossipLeague/GossipLeague-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = GossipLeague;
-				PROVISIONING_PROFILE = "FBD16E03-3461-4897-8680-716E218CFF12";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FBD16E03-3461-4897-8680-716E218CFF12";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
