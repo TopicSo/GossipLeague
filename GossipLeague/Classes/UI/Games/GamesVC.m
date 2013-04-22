@@ -54,19 +54,18 @@ static NSString * const CellGameIdentifier = @"CellGameIdentifier";
 {
     OBRequest *request = [OBRequest requestWithType:OBRequestMethodTypeMethodGET resource:@"games/" parameters:nil isPublic:YES];
     
-    [OBConnection makeRequest:request success:^(id data, BOOL cached) {
-        
-        NSMutableArray *array = [NSMutableArray array];
+    [OBConnection makeRequest:request withCacheKey:NSStringFromClass([self class]) parseBlock:^id(NSDictionary *data) {
+        NSMutableArray *parsedGames = [NSMutableArray array];
         
         for (NSDictionary *tmpGame in [data objectForKey:@"games"]) {
             GameEntity *game = [MTLJSONAdapter modelOfClass:[GameEntity class] fromJSONDictionary:tmpGame error:nil];
-            [array addObject:game];
+            [parsedGames addObject:game];
         }
         
-        self.games = [[array reverseObjectEnumerator] allObjects];
-        
+        return parsedGames;
+    } success:^(NSArray *parsedGames, BOOL cached) {
+        self.games = [[parsedGames reverseObjectEnumerator] allObjects];
         [self.tableView reloadData];
-        
     } error:NULL];
 }
 

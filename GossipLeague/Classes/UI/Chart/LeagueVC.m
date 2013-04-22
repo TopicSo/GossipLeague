@@ -40,19 +40,18 @@ static NSString * const CellLeagueIdentifier = @"TableLeagueCell";
 {
     OBRequest *request = [OBRequest requestWithType:OBRequestMethodTypeMethodGET resource:@"players/ranking" parameters:nil isPublic:YES];
     
-    [OBConnection makeRequest:request success:^(id data, BOOL cached) {
-        
-        NSMutableArray *array = [NSMutableArray array];
+    [OBConnection makeRequest:request withCacheKey:NSStringFromClass([self class]) parseBlock:^id(NSDictionary *data) {
+        NSMutableArray *parsedPlayers = [NSMutableArray array];
         
         for (NSDictionary *tmpPlayer in [data objectForKey:@"players"]) {
             PlayerEntity *player = [MTLJSONAdapter modelOfClass:[PlayerEntity class] fromJSONDictionary:tmpPlayer error:nil];
-            [array addObject:player];
+            [parsedPlayers addObject:player];
         }
         
-        self.players = [NSArray arrayWithArray:array];
-        
+        return parsedPlayers;
+    } success:^(NSArray *parsedPlayers, BOOL cached) {
+        self.players = [NSArray arrayWithArray:parsedPlayers];
         [self.tableView reloadData];
-        
     } error:NULL];
 }
 
