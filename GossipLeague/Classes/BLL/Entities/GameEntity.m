@@ -8,6 +8,7 @@
 #import "GameEntity.h"
 #import "PlayerEntity.h"
 #import <NSValueTransformer+MTLPredefinedTransformerAdditions.h>
+#import "MTLValueTransformer.h"
 
 @implementation GameEntity
 
@@ -31,6 +32,23 @@
 {
     return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:[PlayerEntity class]];
 }
+
+
++ (NSValueTransformer *)playedOnJSONTransformer {
+    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^(NSString *str) {
+        return [NSDate dateWithTimeIntervalSince1970:[str longLongValue]];
+    } reverseBlock:^(NSDate *date) {
+        return @([date timeIntervalSince1970]);
+    }];
+}
+
++ (NSDateFormatter *)dateFormatter {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
+    dateFormatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss'Z'";
+    return dateFormatter;
+}
+
 
 #pragma mark - Utils
 
