@@ -11,6 +11,7 @@
 
 @interface PlayerEntity : MTLModel <MTLJSONSerializing>
 
+@property (nonatomic, strong) NSString *idUser;
 @property (nonatomic, strong) NSString *username;
 @property (nonatomic, strong) NSString *email;
 @property (nonatomic, assign) double score;

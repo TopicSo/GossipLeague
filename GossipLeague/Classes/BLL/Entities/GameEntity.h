@@ -19,11 +19,11 @@ typedef NS_ENUM(NSUInteger, GameResult) {
 
 @interface GameEntity : MTLModel <MTLJSONSerializing>
 
-@property (nonatomic, strong) PlayerEntity *local;
-@property (nonatomic, strong) PlayerEntity *visitor;
-@property (nonatomic, assign) NSUInteger golsLocal;
-@property (nonatomic, assign) NSUInteger golsVisitor;
-@property (nonatomic, strong) NSDate *playedOn;
+@property (nonatomic, strong) PlayerEntity  *local;
+@property (nonatomic, strong) PlayerEntity  *visitor;
+@property (nonatomic, assign) NSUInteger    golsLocal;
+@property (nonatomic, assign) NSUInteger    golsVisitor;
+@property (nonatomic, strong) NSDate        *playedOn;
 
 - (GameResult)gameResult;
 
