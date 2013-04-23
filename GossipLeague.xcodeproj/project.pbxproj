@@ -57,6 +57,13 @@
 		6372FF581613CC47002132AF /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6372FF571613CC47002132AF /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		743D7B6D157DA60100084B67 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 743D7B6C157DA60100084B67 /* CoreGraphics.framework */; };
 		97E18B1F1624CB5700B17A67 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E18B1E1624CB5700B17A67 /* CoreLocation.framework */; };
+		CD431334172678F9005D42E3 /* ComperatorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD431332172678F9005D42E3 /* ComperatorVC.m */; };
+		CD431335172678F9005D42E3 /* ComperatorVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD431333172678F9005D42E3 /* ComperatorVC.xib */; };
+		CD4313391726800B005D42E3 /* ComperatorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4313381726800B005D42E3 /* ComperatorCell.m */; };
+		CD43133B17268025005D42E3 /* ComperatorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD43133A17268025005D42E3 /* ComperatorCell.xib */; };
+		CD43134017268632005D42E3 /* ComperatorDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD43133E17268632005D42E3 /* ComperatorDetailVC.m */; };
+		CD43134117268632005D42E3 /* ComperatorDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD43133F17268632005D42E3 /* ComperatorDetailVC.xib */; };
+		CD4313431726C3F0005D42E3 /* vs.png in Resources */ = {isa = PBXBuildFile; fileRef = CD4313421726C3F0005D42E3 /* vs.png */; };
 		E854EA5C4FFF41C88E4EB348 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 588C860EF36A46BFB9105A93 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -74,7 +81,6 @@
 		360E9BDD1721DF1900522891 /* RobertoBaggio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RobertoBaggio.png; sourceTree = "<group>"; };
 		360E9BE51721F46100522891 /* soccer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = soccer.png; sourceTree = "<group>"; };
 		360E9BE61721F46100522891 /* sock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sock.png; sourceTree = "<group>"; };
-		360FD7F41715E0030053C9A3 /* TestFlightHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestFlightHeader.h; sourceTree = SOURCE_ROOT; };
 		364C590A1716AD3600FEF4A6 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../../Icon.png; sourceTree = "<group>"; };
 		36A1EBE617010D3800F7A57B /* GossipLeagueAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GossipLeagueAppDelegate.h; path = GossipLeague/Classes/GossipLeagueAppDelegate.h; sourceTree = SOURCE_ROOT; };
 		36A1EBE717010D3800F7A57B /* GossipLeagueAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GossipLeagueAppDelegate.m; path = GossipLeague/Classes/GossipLeagueAppDelegate.m; sourceTree = SOURCE_ROOT; };
@@ -131,6 +137,16 @@
 		743D7B6C157DA60100084B67 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		97E18B1E1624CB5700B17A67 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B4452B5401F74F079D3003F5 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		CD431331172678F9005D42E3 /* ComperatorVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComperatorVC.h; path = Comperator/ComperatorVC.h; sourceTree = "<group>"; };
+		CD431332172678F9005D42E3 /* ComperatorVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComperatorVC.m; path = Comperator/ComperatorVC.m; sourceTree = "<group>"; };
+		CD431333172678F9005D42E3 /* ComperatorVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ComperatorVC.xib; path = Comperator/ComperatorVC.xib; sourceTree = "<group>"; };
+		CD4313371726800B005D42E3 /* ComperatorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComperatorCell.h; path = Comperator/ComperatorCell/ComperatorCell.h; sourceTree = "<group>"; };
+		CD4313381726800B005D42E3 /* ComperatorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComperatorCell.m; path = Comperator/ComperatorCell/ComperatorCell.m; sourceTree = "<group>"; };
+		CD43133A17268025005D42E3 /* ComperatorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ComperatorCell.xib; path = Comperator/ComperatorCell/ComperatorCell.xib; sourceTree = "<group>"; };
+		CD43133D17268632005D42E3 /* ComperatorDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComperatorDetailVC.h; path = Comperator/ComperatorDetailVC/ComperatorDetailVC.h; sourceTree = "<group>"; };
+		CD43133E17268632005D42E3 /* ComperatorDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComperatorDetailVC.m; path = Comperator/ComperatorDetailVC/ComperatorDetailVC.m; sourceTree = "<group>"; };
+		CD43133F17268632005D42E3 /* ComperatorDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ComperatorDetailVC.xib; path = Comperator/ComperatorDetailVC/ComperatorDetailVC.xib; sourceTree = "<group>"; };
+		CD4313421726C3F0005D42E3 /* vs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vs.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,7 +228,6 @@
 			children = (
 				36A1EBE617010D3800F7A57B /* GossipLeagueAppDelegate.h */,
 				36A1EBE717010D3800F7A57B /* GossipLeagueAppDelegate.m */,
-				360FD7F41715E0030053C9A3 /* TestFlightHeader.h */,
 				36A1EBE817010D3800F7A57B /* UI */,
 				36A1EBE417010D3800F7A57B /* BLL */,
 			);
@@ -257,6 +272,7 @@
 		36A1EBE817010D3800F7A57B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				CD431330172678C9005D42E3 /* Comperator */,
 				5BCC45E21721887700E8EE76 /* Games */,
 				5B798A46172299E600C9BE1A /* Chart */,
 				360E9BDF1721E92F00522891 /* User */,
@@ -268,6 +284,7 @@
 		36A1EBF417010D4600F7A57B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CD4313421726C3F0005D42E3 /* vs.png */,
 				364C590A1716AD3600FEF4A6 /* Icon.png */,
 				5B798A691722AB1600C9BE1A /* theme.mp3 */,
 				360E9BE51721F46100522891 /* soccer.png */,
@@ -349,6 +366,38 @@
 			path = GossipGamesVC;
 			sourceTree = "<group>";
 		};
+		CD431330172678C9005D42E3 /* Comperator */ = {
+			isa = PBXGroup;
+			children = (
+				CD43133C1726860B005D42E3 /* ComperatorDetailVC */,
+				CD43133617267FE7005D42E3 /* ComperatorCell */,
+				CD431331172678F9005D42E3 /* ComperatorVC.h */,
+				CD431332172678F9005D42E3 /* ComperatorVC.m */,
+				CD431333172678F9005D42E3 /* ComperatorVC.xib */,
+			);
+			name = Comperator;
+			sourceTree = "<group>";
+		};
+		CD43133617267FE7005D42E3 /* ComperatorCell */ = {
+			isa = PBXGroup;
+			children = (
+				CD4313371726800B005D42E3 /* ComperatorCell.h */,
+				CD4313381726800B005D42E3 /* ComperatorCell.m */,
+				CD43133A17268025005D42E3 /* ComperatorCell.xib */,
+			);
+			name = ComperatorCell;
+			sourceTree = "<group>";
+		};
+		CD43133C1726860B005D42E3 /* ComperatorDetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				CD43133D17268632005D42E3 /* ComperatorDetailVC.h */,
+				CD43133E17268632005D42E3 /* ComperatorDetailVC.m */,
+				CD43133F17268632005D42E3 /* ComperatorDetailVC.xib */,
+			);
+			name = ComperatorDetailVC;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -419,6 +468,10 @@
 				5B798A6217229F3B00C9BE1A /* UserDetailCell.xib in Resources */,
 				5B798A6417229F3B00C9BE1A /* UserDetailVC.xib in Resources */,
 				5B798A6A1722AB1600C9BE1A /* theme.mp3 in Resources */,
+				CD431335172678F9005D42E3 /* ComperatorVC.xib in Resources */,
+				CD43133B17268025005D42E3 /* ComperatorCell.xib in Resources */,
+				CD43134117268632005D42E3 /* ComperatorDetailVC.xib in Resources */,
+				CD4313431726C3F0005D42E3 /* vs.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +514,9 @@
 				5B798A5917229F2000C9BE1A /* LeagueVC.m in Sources */,
 				5B798A6117229F3B00C9BE1A /* UserDetailCell.m in Sources */,
 				5B798A6317229F3B00C9BE1A /* UserDetailVC.m in Sources */,
+				CD431334172678F9005D42E3 /* ComperatorVC.m in Sources */,
+				CD4313391726800B005D42E3 /* ComperatorCell.m in Sources */,
+				CD43134017268632005D42E3 /* ComperatorDetailVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
