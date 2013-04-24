@@ -19,6 +19,7 @@
 		360E9BDE1721DF1900522891 /* RobertoBaggio.png in Resources */ = {isa = PBXBuildFile; fileRef = 360E9BDD1721DF1900522891 /* RobertoBaggio.png */; };
 		360E9BE71721F46100522891 /* soccer.png in Resources */ = {isa = PBXBuildFile; fileRef = 360E9BE51721F46100522891 /* soccer.png */; };
 		360E9BE81721F46100522891 /* sock.png in Resources */ = {isa = PBXBuildFile; fileRef = 360E9BE61721F46100522891 /* sock.png */; };
+		361E49FE172877EE000B0B41 /* UIColor+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 361E49FD172877EE000B0B41 /* UIColor+Colors.m */; };
 		364C590B1716AD3600FEF4A6 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 364C590A1716AD3600FEF4A6 /* Icon.png */; };
 		36A1EBEF17010D3800F7A57B /* GossipLeagueAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A1EBE717010D3800F7A57B /* GossipLeagueAppDelegate.m */; };
 		36A1EBF817010D4600F7A57B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A1EBF517010D4600F7A57B /* Default-568h@2x.png */; };
@@ -81,6 +82,8 @@
 		360E9BDD1721DF1900522891 /* RobertoBaggio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RobertoBaggio.png; sourceTree = "<group>"; };
 		360E9BE51721F46100522891 /* soccer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = soccer.png; sourceTree = "<group>"; };
 		360E9BE61721F46100522891 /* sock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sock.png; sourceTree = "<group>"; };
+		361E49FC172877EE000B0B41 /* UIColor+Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Colors.h"; path = "UI-Additions/UIColor+Colors.h"; sourceTree = "<group>"; };
+		361E49FD172877EE000B0B41 /* UIColor+Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Colors.m"; path = "UI-Additions/UIColor+Colors.m"; sourceTree = "<group>"; };
 		364C590A1716AD3600FEF4A6 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../../Icon.png; sourceTree = "<group>"; };
 		36A1EBE617010D3800F7A57B /* GossipLeagueAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GossipLeagueAppDelegate.h; path = GossipLeague/Classes/GossipLeagueAppDelegate.h; sourceTree = SOURCE_ROOT; };
 		36A1EBE717010D3800F7A57B /* GossipLeagueAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GossipLeagueAppDelegate.m; path = GossipLeague/Classes/GossipLeagueAppDelegate.m; sourceTree = SOURCE_ROOT; };
@@ -248,6 +251,15 @@
 			name = User;
 			sourceTree = "<group>";
 		};
+		361E49FB1728779D000B0B41 /* UI-Additions */ = {
+			isa = PBXGroup;
+			children = (
+				361E49FC172877EE000B0B41 /* UIColor+Colors.h */,
+				361E49FD172877EE000B0B41 /* UIColor+Colors.m */,
+			);
+			name = "UI-Additions";
+			sourceTree = "<group>";
+		};
 		36A1EBE417010D3800F7A57B /* BLL */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +284,7 @@
 		36A1EBE817010D3800F7A57B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				361E49FB1728779D000B0B41 /* UI-Additions */,
 				CD431330172678C9005D42E3 /* Comperator */,
 				5BCC45E21721887700E8EE76 /* Games */,
 				5B798A46172299E600C9BE1A /* Chart */,
@@ -517,6 +530,7 @@
 				CD431334172678F9005D42E3 /* ComperatorVC.m in Sources */,
 				CD4313391726800B005D42E3 /* ComperatorCell.m in Sources */,
 				CD43134017268632005D42E3 /* ComperatorDetailVC.m in Sources */,
+				361E49FE172877EE000B0B41 /* UIColor+Colors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -631,8 +645,8 @@
 				INFOPLIST_FILE = "GossipLeague/GossipLeague-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = GossipLeague;
-				PROVISIONING_PROFILE = "104DC95F-6E37-438B-AEC3-2BEAD179F42B";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "104DC95F-6E37-438B-AEC3-2BEAD179F42B";
+				PROVISIONING_PROFILE = "3D5B2C90-8E53-4FFA-BDA4-E8BCD33242D3";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3D5B2C90-8E53-4FFA-BDA4-E8BCD33242D3";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
