@@ -10,4 +10,19 @@
 
 @implementation UIFont (Common)
 
++ (UIFont *)fontForUsernameInCell
+{
+    return [UIFont fontWithName:@"FreightSans-Bold" size:18.0];
+}
+
++ (UIFont *)fontForDateInCell
+{
+    return [UIFont fontWithName:@"FreightSans-LightSC" size:18.0];
+}
+
++ (UIFont *)fontForGoalsInCell
+{
+    return [UIFont fontWithName:@"AlfaSlabOne-Regular" size:23.0];
+}
+
 @end

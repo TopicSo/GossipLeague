@@ -10,4 +10,8 @@
 
 @interface UIFont (Common)
 
++ (UIFont *)fontForUsernameInCell;
++ (UIFont *)fontForDateInCell;
++ (UIFont *)fontForGoalsInCell;
+
 @end
