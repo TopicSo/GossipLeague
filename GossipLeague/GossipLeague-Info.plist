@@ -41,6 +41,12 @@
 	<true/>
 	<key>NSMainNibFile</key>
 	<string>MainWindow</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Champagne &amp; Limousines Bold Italic.ttf</string>
+		<string>Droid Serif Bold.ttf</string>
+		<string>Droid Serif BoldItalic.ttf</string>
+	</array>
 	<key>UIPrerenderedIcon</key>
 	<true/>
 	<key>UISupportedInterfaceOrientations</key>
