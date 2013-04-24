@@ -10,4 +10,17 @@
 
 @interface UIColor (Colors)
 
++ (UIColor *)colorBackgroundTableView;
++ (UIColor *)colorTopShadowCell;
++ (UIColor *)colorBottomShadowCell;
+
+// card colors
++ (UIColor *)colorWinCard;
++ (UIColor *)colorLostCard;
++ (UIColor *)colorDrawCard;
+
+// label colors
++ (UIColor *)colorWinLabel;
++ (UIColor *)colorLostLabel;
++ (UIColor *)colorDrawLabel;
 @end
