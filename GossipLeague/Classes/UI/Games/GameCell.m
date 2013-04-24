@@ -10,27 +10,52 @@
 #import "GameEntity.h"
 #import "PlayerEntity.h"
 
+#import <QuartzCore/QuartzCore.h>
+
 @interface GameCell ()
-@property (weak, nonatomic) IBOutlet UILabel *playerALabel;
-@property (weak, nonatomic) IBOutlet UILabel *golsALabel;
-@property (weak, nonatomic) IBOutlet UILabel *playerBLabel;
-@property (weak, nonatomic) IBOutlet UILabel *golsBLabel;
-@property (weak, nonatomic) IBOutlet UIView *playerAIndicator;
-@property (weak, nonatomic) IBOutlet UIView *playerBIndicator;
+
+// main
+@property (strong, nonatomic) NSDateFormatter *dateFormatter;
+@property (strong, nonatomic) IBOutlet UIView *topShadow;
+@property (strong, nonatomic) IBOutlet UIView *bottonShadow;
+@property (strong, nonatomic) IBOutlet UIView *scoreView;
 @property (weak, nonatomic) IBOutlet UILabel *gameDate;
 
-@property (strong, nonatomic) NSDateFormatter *dateFormatter;
+// player A
+@property (weak, nonatomic) IBOutlet UILabel *playerALabel;
+@property (weak, nonatomic) IBOutlet UILabel *goalsALabel;
+
+// player B
+@property (weak, nonatomic) IBOutlet UILabel *playerBLabel;
+@property (weak, nonatomic) IBOutlet UILabel *goalsBLabel;
+
 @end
 
 @implementation GameCell
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+- (void)awakeFromNib
 {
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        // Initialization code
-    }
-    return self;
+    // shadows
+    self.topShadow.backgroundColor = [UIColor colorTopShadowCell];
+    self.bottonShadow.backgroundColor = [UIColor colorBottomShadowCell];
+    
+    self.scoreView.layer.cornerRadius = 4.0f;
+    self.scoreView.layer.shadowOffset = CGSizeMake(0, -1);
+    self.goalsALabel.layer.cornerRadius = 2.0f;
+    self.goalsBLabel.layer.cornerRadius = 2.0f;
+    
+    // labels
+    self.playerALabel.font = [UIFont fontForUsernameInCell];
+    self.playerALabel.backgroundColor = [UIColor colorBackgroundTableView];
+    
+    self.playerBLabel.font = [UIFont fontForUsernameInCell];
+    self.playerBLabel.backgroundColor = [UIColor colorBackgroundTableView];
+
+    self.goalsALabel.font = [UIFont fontForGoalsInCell];
+    self.goalsALabel.backgroundColor = [UIColor colorBackgroundTableView];
+    
+    self.goalsBLabel.font = [UIFont fontForGoalsInCell];
+    self.goalsBLabel.backgroundColor = [UIColor colorBackgroundTableView];
 }
 
 - (void)setGame:(GameEntity *)game
@@ -41,21 +66,27 @@
     GameResult gameResult = [game gameResult];
     switch (gameResult) {
         case GameResultLocalWins:
-            self.playerAIndicator.backgroundColor = [UIColor greenColor];
-            self.playerBIndicator.backgroundColor = [UIColor redColor];
+            self.playerALabel.textColor = [UIColor colorWinLabel];
+            self.goalsALabel.backgroundColor = [UIColor colorWinCard];
+            self.playerBLabel.textColor = [UIColor colorLostLabel];
+            self.goalsBLabel.backgroundColor = [UIColor colorLostCard];
             break;
         case GameResultVisitorWins:
-            self.playerAIndicator.backgroundColor = [UIColor redColor];
-            self.playerBIndicator.backgroundColor = [UIColor greenColor];
+            self.playerALabel.textColor = [UIColor colorLostLabel];
+            self.goalsALabel.backgroundColor = [UIColor colorLostCard];
+            self.playerBLabel.textColor = [UIColor colorWinLabel];
+            self.goalsBLabel.backgroundColor = [UIColor colorWinCard];
             break;
         default:
-            self.playerAIndicator.backgroundColor = [UIColor yellowColor];
-            self.playerBIndicator.backgroundColor = [UIColor yellowColor];
+            self.playerALabel.textColor = [UIColor colorDrawLabel];
+            self.goalsALabel.backgroundColor = [UIColor colorDrawCard];
+            self.playerBLabel.textColor = [UIColor colorDrawLabel];
+            self.goalsBLabel.backgroundColor = [UIColor colorDrawCard];
             break;
     }
     
-    self.golsALabel.text = [NSString stringWithFormat:@"%u", game.golsLocal];
-    self.golsBLabel.text = [NSString stringWithFormat:@"%u", game.golsVisitor];
+    self.goalsALabel.text = [NSString stringWithFormat:@"%u", game.golsLocal];
+    self.goalsBLabel.text = [NSString stringWithFormat:@"%u", game.golsVisitor];
     self.gameDate.text = [self.dateFormatter stringFromDate:game.playedOn];
 }
 

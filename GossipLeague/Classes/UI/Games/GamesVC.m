@@ -38,14 +38,16 @@ static NSString * const CellGameIdentifier = @"CellGameIdentifier";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     [self initializeRefreshControl];
     [self setupTableView];
     [self reloadData];
+    
+    self.tableView.backgroundColor = [UIColor colorBackgroundTableView];
 }
 
 - (void)setupTableView
 {
-    self.tableView.rowHeight = 50;
     [self.tableView registerNib:[UINib nibWithNibName:@"GameCell" bundle:nil]
          forCellReuseIdentifier:CellGameIdentifier];
 }
@@ -82,26 +84,15 @@ static NSString * const CellGameIdentifier = @"CellGameIdentifier";
     return cell;
 }
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    GameEntity *game = [self.games objectAtIndex:indexPath.row];
-//    UserDetailVC *userDetailVC = [[UserDetailVC alloc] initWithPlayer:player];
-//    [self.navigationController pushViewController:userDetailVC animated:YES];
-//    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-//}
-
-- (void)viewDidUnload {
+- (void)viewDidUnload
+{
     [self setTableView:nil];
+    
     [super viewDidUnload];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 #pragma mark - Refresh Control
+
 - (void)initializeRefreshControl
 {
     // Initialize Refresh Control
