@@ -131,7 +131,7 @@
 {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"theme"
+        NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"champions-theme"
                                                                   ofType:@"mp3"];
         NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:soundFilePath];
         NSError *theError = nil;
