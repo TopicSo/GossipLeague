@@ -16,10 +16,10 @@
 
 // main
 @property (strong, nonatomic) NSDateFormatter *dateFormatter;
-@property (strong, nonatomic) IBOutlet UIView *topShadow;
-@property (strong, nonatomic) IBOutlet UIView *bottonShadow;
-@property (strong, nonatomic) IBOutlet UIView *scoreView;
-@property (weak, nonatomic) IBOutlet UILabel *gameDate;
+@property (weak, nonatomic) IBOutlet UIView *topShadow;
+@property (weak, nonatomic) IBOutlet UIView *bottonShadow;
+@property (weak, nonatomic) IBOutlet UIView *scoreView;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 
 // player A
 @property (weak, nonatomic) IBOutlet UILabel *playerALabel;
@@ -45,6 +45,10 @@
     self.goalsBLabel.layer.cornerRadius = 2.0f;
     
     // labels
+    
+    self.dateLabel.font = [UIFont fontForDateInCell];
+    self.dateLabel.textColor = [UIColor colorDateLabel];
+    
     self.playerALabel.font = [UIFont fontForUsernameInCell];
     self.playerALabel.backgroundColor = [UIColor colorBackgroundTableView];
     
@@ -87,7 +91,7 @@
     
     self.goalsALabel.text = [NSString stringWithFormat:@"%u", game.golsLocal];
     self.goalsBLabel.text = [NSString stringWithFormat:@"%u", game.golsVisitor];
-    self.gameDate.text = [self.dateFormatter stringFromDate:game.playedOn];
+    self.dateLabel.text = [self.dateFormatter stringFromDate:game.playedOn];
 }
 
 #pragma mark - Getters
@@ -95,7 +99,7 @@
 {
     if (!_dateFormatter) {
         _dateFormatter = [[NSDateFormatter alloc] init];
-        [_dateFormatter setDateFormat:@"dd/MM/yyyy hh:mm"];
+        [_dateFormatter setDateFormat:@"dd/MM/yyyy·hh:mm"];
     }
     
     return _dateFormatter;
