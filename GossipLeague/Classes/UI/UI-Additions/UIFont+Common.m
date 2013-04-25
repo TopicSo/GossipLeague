@@ -10,19 +10,21 @@
 
 @implementation UIFont (Common)
 
+#pragma mark - Cells
+
 + (UIFont *)fontForUsernameInCell
 {
-    return [UIFont fontWithName:@"FreightSans-Bold" size:18.0];
+    return [UIFont fontWithName:@"FreightSansBold" size:18.0];
 }
 
 + (UIFont *)fontForDateInCell
 {
-    return [UIFont fontWithName:@"FreightSans-LightSC" size:18.0];
+    return [UIFont fontWithName:@"FreightSansLightSC" size:10.0];
 }
 
 + (UIFont *)fontForGoalsInCell
 {
-    return [UIFont fontWithName:@"AlfaSlabOne-Regular" size:23.0];
+    return [UIFont fontWithName:@"AlfaSlabOne-Regular" size:21.0];
 }
 
 @end

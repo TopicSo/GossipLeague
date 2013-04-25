@@ -10,6 +10,8 @@
 
 @implementation UIColor (Colors)
 
+#pragma mark - Views
+
 + (UIColor *)colorBackgroundTableView
 {
     return [UIColor colorWithRed:53/255.0 green:39/255.0 blue:35/255.0 alpha:1.0];
@@ -25,6 +27,8 @@
     return [UIColor colorWithRed:39/255.0 green:28/255.0 blue:25/255.0 alpha:1.0];
 }
 
+#pragma mark - Cards
+
 + (UIColor *)colorWinCard
 {
     return [UIColor colorWithRed:54/255.0 green:155/255.0 blue:93/255.0 alpha:1.0];
@@ -38,6 +42,13 @@
 + (UIColor *)colorDrawCard
 {
     return [UIColor colorWithRed:156/255.0 green:155/255.0 blue:68/255.0 alpha:1.0];
+}
+
+#pragma mark - Labels
+
++ (UIColor *)colorDateLabel
+{
+    return [UIColor colorWithRed:166/255.0 green:138/255.0 blue:131/255.0 alpha:1.0];
 }
 
 + (UIColor *)colorWinLabel

@@ -20,6 +20,7 @@
 + (UIColor *)colorDrawCard;
 
 // label colors
++ (UIColor *)colorDateLabel;
 + (UIColor *)colorWinLabel;
 + (UIColor *)colorLostLabel;
 + (UIColor *)colorDrawLabel;
