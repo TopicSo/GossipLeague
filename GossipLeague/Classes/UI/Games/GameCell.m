@@ -50,16 +50,21 @@
     self.dateLabel.textColor = [UIColor colorDateLabel];
     
     self.playerALabel.font = [UIFont fontForUsernameInCell];
-    self.playerALabel.backgroundColor = [UIColor colorBackgroundTableView];
+    //self.playerALabel.backgroundColor = [UIColor colorBackgroundTableView];
     
     self.playerBLabel.font = [UIFont fontForUsernameInCell];
-    self.playerBLabel.backgroundColor = [UIColor colorBackgroundTableView];
+    //self.playerBLabel.backgroundColor = [UIColor colorBackgroundTableView];
 
     self.goalsALabel.font = [UIFont fontForGoalsInCell];
     self.goalsALabel.backgroundColor = [UIColor colorBackgroundTableView];
     
     self.goalsBLabel.font = [UIFont fontForGoalsInCell];
     self.goalsBLabel.backgroundColor = [UIColor colorBackgroundTableView];
+    
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = self.bounds;
+    gradient.colors = [NSArray arrayWithObjects:(id) [[UIColor colorWithWhite:0 alpha:0.01] CGColor], (id) [[UIColor colorWithWhite:0 alpha:0.1] CGColor], nil];
+    [self.layer insertSublayer:gradient atIndex:0];
 }
 
 - (void)setGame:(GameEntity *)game

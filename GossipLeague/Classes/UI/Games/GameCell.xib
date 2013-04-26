@@ -46,7 +46,7 @@
 								<string key="NSFrameSize">{320, 1}</string>
 								<reference key="NSSuperview" ref="727298430"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="232963988"/>
+								<reference key="NSNextKeyView" ref="612898973"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">3</int>
@@ -63,7 +63,6 @@
 								<string key="NSFrame">{{0, 64}, {320, 1}}</string>
 								<reference key="NSSuperview" ref="727298430"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">3</int>
@@ -80,9 +79,9 @@
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="760694671"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
-								<object class="NSColor" key="IBUIBackgroundColor" id="219846539">
+								<object class="NSColor" key="IBUIBackgroundColor" id="1029609781">
 									<int key="NSColorSpace">3</int>
-									<bytes key="NSWhite">MQA</bytes>
+									<bytes key="NSWhite">MCAwAA</bytes>
 								</object>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -90,14 +89,17 @@
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<string key="IBUIText">Player A</string>
-								<reference key="IBUITextColor" ref="219846539"/>
+								<object class="NSColor" key="IBUITextColor" id="219846539">
+									<int key="NSColorSpace">3</int>
+									<bytes key="NSWhite">MQA</bytes>
+								</object>
 								<reference key="IBUIHighlightedColor" ref="219846539"/>
 								<int key="IBUIBaselineAdjustment">0</int>
-								<object class="IBUIFontDescription" key="IBUIFontDescription" id="84371345">
+								<object class="IBUIFontDescription" key="IBUIFontDescription" id="427785796">
 									<int key="type">1</int>
 									<double key="pointSize">18</double>
 								</object>
-								<object class="NSFont" key="IBUIFont" id="883539408">
+								<object class="NSFont" key="IBUIFont" id="251018732">
 									<string key="NSName">Helvetica</string>
 									<double key="NSSize">18</double>
 									<int key="NSfFlags">16</int>
@@ -112,7 +114,7 @@
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="874230644"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
-								<reference key="IBUIBackgroundColor" ref="219846539"/>
+								<reference key="IBUIBackgroundColor" ref="1029609781"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<int key="IBUIContentMode">7</int>
@@ -123,11 +125,11 @@
 								<reference key="IBUIHighlightedColor" ref="219846539"/>
 								<int key="IBUIBaselineAdjustment">0</int>
 								<int key="IBUITextAlignment">2</int>
-								<reference key="IBUIFontDescription" ref="84371345"/>
-								<reference key="IBUIFont" ref="883539408"/>
+								<reference key="IBUIFontDescription" ref="427785796"/>
+								<reference key="IBUIFont" ref="251018732"/>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
-							<object class="IBUILabel" id="232963988">
+							<object class="IBUILabel" id="612898973">
 								<reference key="NSNextResponder" ref="727298430"/>
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{20, 8}, {95, 20}}</string>
@@ -135,6 +137,7 @@
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="539968116"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
+								<reference key="IBUIBackgroundColor" ref="1029609781"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<int key="IBUIContentMode">7</int>
@@ -184,10 +187,7 @@
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="721852966"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
-								<object class="NSColor" key="IBUIBackgroundColor" id="1029609781">
-									<int key="NSColorSpace">3</int>
-									<bytes key="NSWhite">MCAwAA</bytes>
-								</object>
+								<reference key="IBUIBackgroundColor" ref="1029609781"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<int key="IBUIContentMode">7</int>
@@ -207,7 +207,7 @@
 									<int key="type">1</int>
 									<double key="pointSize">17</double>
 								</object>
-								<object class="NSFont" key="IBUIFont" id="365026660">
+								<object class="NSFont" key="IBUIFont" id="32095456">
 									<string key="NSName">Helvetica</string>
 									<double key="NSSize">17</double>
 									<int key="NSfFlags">16</int>
@@ -236,7 +236,7 @@
 								<int key="IBUIBaselineAdjustment">0</int>
 								<int key="IBUITextAlignment">1</int>
 								<reference key="IBUIFontDescription" ref="741626119"/>
-								<reference key="IBUIFont" ref="365026660"/>
+								<reference key="IBUIFont" ref="32095456"/>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
 						</array>
@@ -328,7 +328,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">dateLabel</string>
 						<reference key="source" ref="631355608"/>
-						<reference key="destination" ref="232963988"/>
+						<reference key="destination" ref="612898973"/>
 					</object>
 					<int key="connectionID">126</int>
 				</object>
@@ -363,7 +363,7 @@
 							<reference ref="874230644"/>
 							<reference ref="721852966"/>
 							<reference ref="491471541"/>
-							<reference ref="232963988"/>
+							<reference ref="612898973"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -414,7 +414,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">125</int>
-						<reference key="object" ref="232963988"/>
+						<reference key="object" ref="612898973"/>
 						<reference key="parent" ref="631355608"/>
 						<string key="objectName">Date</string>
 					</object>
