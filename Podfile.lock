@@ -1,27 +1,30 @@
-PODS:
-  - AFNetworking (1.2.1)
-  - Facebook-iOS-SDK (3.2.1)
-  - libextobjc/EXTKeyPathCoding (0.2.5):
-    - libextobjc/RuntimeExtensions
-  - libextobjc/EXTScope (0.2.5):
-    - libextobjc/RuntimeExtensions
-  - libextobjc/RuntimeExtensions (0.2.5)
-  - Mantle (1.0):
-    - libextobjc/EXTKeyPathCoding
-    - libextobjc/EXTScope
-  - TestFlightSDK (1.2)
 
-DEPENDENCIES:
-  - AFNetworking (~> 1.2.0)
-  - Facebook-iOS-SDK (= 3.2.1)
-  - Mantle (~> 1.0)
-  - TestFlightSDK (= 1.2)
+DEPENDENCIES: 
+- AFNetworking (~> 1.2.0)
+- Facebook-iOS-SDK (= 3.2.1)
+- Mantle (~> 1.0)
+- TestFlightSDK (= 1.2)
 
-SPEC CHECKSUMS:
-  AFNetworking: 616da0028916ce296f5c3cef74e5552eb4e10e13
+PODS: 
+- AFNetworking (1.2.1)
+- Facebook-iOS-SDK (3.2.1)
+- Mantle (1.0): 
+  - libextobjc/EXTKeyPathCoding
+  - libextobjc/EXTScope
+- TestFlightSDK (1.2)
+- libextobjc/EXTKeyPathCoding (0.2.5): 
+  - libextobjc/RuntimeExtensions
+- libextobjc/EXTScope (0.2.5): 
+  - libextobjc/RuntimeExtensions
+- libextobjc/RuntimeExtensions (0.2.5)
+
+COCOAPODS: 0.16.1
+
+SPEC CHECKSUMS: 
   Facebook-iOS-SDK: 514dc0d7d43358999267c88c088e4b5b339b7da1
-  libextobjc: 2cbc74caf8bdc74a86fdf24673f773c83424ea98
-  Mantle: aa9860e40cc365a094ef60fec46848fee7b03ca7
   TestFlightSDK: 29e194fb148e4861f92e4c1195b9697e1f3ad19a
-
-COCOAPODS: 0.18.1
+  Mantle: aa9860e40cc365a094ef60fec46848fee7b03ca7
+  libextobjc/EXTScope: 2cbc74caf8bdc74a86fdf24673f773c83424ea98
+  libextobjc/EXTKeyPathCoding: 2cbc74caf8bdc74a86fdf24673f773c83424ea98
+  libextobjc/RuntimeExtensions: 2cbc74caf8bdc74a86fdf24673f773c83424ea98
+  AFNetworking: 616da0028916ce296f5c3cef74e5552eb4e10e13
