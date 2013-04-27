@@ -32,7 +32,7 @@
 - (void)setPlayerToCell:(PlayerEntity*)player
 {
     [self.labelName setText:player.username];
-    [self.labelScore setText:[NSString stringWithFormat:@"%f",player.score]];
+    [self.labelScore setText:[NSString stringWithFormat:@"%.0f", player.score]];
     self.selectionStyle = UITableViewCellSelectionStyleGray;
 }
 
