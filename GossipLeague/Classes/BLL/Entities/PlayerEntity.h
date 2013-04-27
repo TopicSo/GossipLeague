@@ -24,4 +24,9 @@
 @property (nonatomic, assign) NSUInteger scoredGoals;
 @property (nonatomic, assign) NSUInteger concededGoals;
 
+@property (nonatomic, assign, readonly) double winGamesPor100;
+@property (nonatomic, assign, readonly) double lostGamesPor100;
+@property (nonatomic, assign, readonly) double drawGamesPor100;
+@property (nonatomic, assign, readonly) double goalsRatio;
+
 @end

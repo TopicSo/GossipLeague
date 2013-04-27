@@ -13,13 +13,8 @@
 
 @interface ComperatorVC ()
 
-@property (nonatomic,strong) IBOutlet UITableView   *tableViewPlayer1;
-@property (nonatomic,strong) IBOutlet UITableView   *tableViewPlayer2;
+@property (nonatomic,strong) IBOutlet UITableView   *playerTable;
 @property (nonatomic,strong) NSMutableArray         *playersArray;
-
-//Entities
-@property (nonatomic,strong) PlayerEntity           *playerSelected1;
-@property (nonatomic,strong) PlayerEntity           *playerSelected2;
 
 @end
 
@@ -37,10 +32,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"Comperator";
-    
-    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithTitle:@"Compare" style:UIBarButtonItemStyleBordered target:self action:@selector(goToResult:)];
-    [self.navigationItem setRightBarButtonItem:barButton];
+    self.title = @"Comparator";
+    [self initializeRefreshControl];
     [self reloadData];
 }
 
@@ -53,10 +46,8 @@
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.tableViewPlayer1 reloadData];
-    [self.tableViewPlayer2 reloadData];
+    [self.playerTable reloadData];
 }
-
 
 - (void)reloadData
 {
@@ -74,8 +65,7 @@
     } success:^(NSArray *parsedPlayers, BOOL cached)
     {
         self.playersArray = [NSArray arrayWithArray:parsedPlayers];
-        [self.tableViewPlayer1 reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
-        [self.tableViewPlayer2 reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
+        [self.playerTable reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
 
     } error:NULL];
 }
@@ -86,37 +76,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Actions
-- (IBAction)goToResult:(id)sender
-{
-    UIAlertView *alert;
-    if (self.playerSelected1 == nil)
-    {
-        alert = [[UIAlertView alloc] initWithTitle:@"Hey!" message:@"Player 1 not selected" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-        [alert show];
-    }
-    else if (self.playerSelected2 == nil)
-    {
-        alert = [[UIAlertView alloc] initWithTitle:@"Hey!" message:@"Player 2 not selected" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-        [alert show];
-    }
-    else if (self.playerSelected1 == self.playerSelected2)
-    {
-        alert = [[UIAlertView alloc] initWithTitle:@"Hey!" message:@"Forever alone!" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-        [alert show];
-    }else
-    {
-        ComperatorDetailVC *comperatorDetailVC = [[ComperatorDetailVC alloc] initWithNibName:@"ComperatorDetailVC" bundle:nil player1:self.playerSelected1 player2:self.playerSelected2];
-        [self.navigationController pushViewController:comperatorDetailVC animated:YES];
-    }
-}
-
 
 #pragma mark - TV delegate & dataSource
-
-#pragma mark -
-#pragma mark Table view methods
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
 	return 1;
@@ -157,16 +118,42 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (tableView == self.tableViewPlayer1)
-    {
-        self.playerSelected1 = [self.playersArray objectAtIndex:indexPath.row];
+    NSArray *selectedRows = [tableView indexPathsForSelectedRows];
+    if (selectedRows.count == 2) {
+        NSIndexPath *index1 = [selectedRows objectAtIndex:0];
+        NSIndexPath *index2 = [selectedRows objectAtIndex:1];
+        
+        PlayerEntity *player1 = [self.playersArray objectAtIndex:index1.row];
+        PlayerEntity *player2 =[self.playersArray objectAtIndex:index2.row];
+        
+        ComperatorDetailVC *comperatorDetailVC = [[ComperatorDetailVC alloc] initWithNibName:@"ComperatorDetailVC" bundle:nil player1:player1 player2:player2];
+        [self.navigationController pushViewController:comperatorDetailVC animated:YES];
     }
-    else
-    {
-        self.playerSelected2 = [self.playersArray objectAtIndex:indexPath.row];
-    }
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+#pragma mark - Refresh Control
+- (void)initializeRefreshControl
+{
+    // Initialize Refresh Control
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    // Configure Refresh Control
+    [refreshControl addTarget:self action:@selector(refreshContent:) forControlEvents:UIControlEventValueChanged];
+    // Configure View Controller
+    [self.playerTable addSubview:refreshControl];
+}
+
+- (void)refreshContent:(UIRefreshControl *)refresh
+{
+    refresh.attributedTitle = [[NSAttributedString alloc] initWithString:@"Refreshing data..."];
+    
+    [self reloadData];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"MMM d, h:mm a"];
+    NSString *lastUpdated = [NSString stringWithFormat:@"Last updated on %@",
+                             [formatter stringFromDate:[NSDate date]]];
+    refresh.attributedTitle = [[NSAttributedString alloc] initWithString:lastUpdated];
+    [refresh endRefreshing];
+}
 
 @end

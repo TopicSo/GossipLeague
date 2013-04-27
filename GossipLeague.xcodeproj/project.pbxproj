@@ -37,6 +37,9 @@
 		36F3A81E17215789005E86ED /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F3A81C17215789005E86ED /* EGOCache.m */; };
 		36F3A81F17215789005E86ED /* README.mdown in Resources */ = {isa = PBXBuildFile; fileRef = 36F3A81D17215789005E86ED /* README.mdown */; };
 		4998650515BF305000803E05 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4998650415BF305000803E05 /* StoreKit.framework */; };
+		5B018593172C1B40001C6F06 /* ComparatorInfoDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B018592172C1B40001C6F06 /* ComparatorInfoDetailCell.xib */; };
+		5B018596172C1B99001C6F06 /* ComparatorInfoDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B018595172C1B99001C6F06 /* ComparatorInfoDetailCell.m */; };
+		5B01859C172C2B2C001C6F06 /* ComparatorGamesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01859B172C2B2C001C6F06 /* ComparatorGamesVC.m */; };
 		5B798A4D17229EEA00C9BE1A /* GameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B798A4817229EEA00C9BE1A /* GameCell.m */; };
 		5B798A4E17229EEA00C9BE1A /* GameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B798A4917229EEA00C9BE1A /* GameCell.xib */; };
 		5B798A4F17229EEA00C9BE1A /* GamesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B798A4B17229EEA00C9BE1A /* GamesVC.m */; };
@@ -110,6 +113,11 @@
 		36F3A81D17215789005E86ED /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.mdown; sourceTree = "<group>"; };
 		4998650415BF305000803E05 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		588C860EF36A46BFB9105A93 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B018592172C1B40001C6F06 /* ComparatorInfoDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ComparatorInfoDetailCell.xib; path = Comperator/ComperatorDetailVC/ComparatorInfoDetailCell.xib; sourceTree = "<group>"; };
+		5B018594172C1B99001C6F06 /* ComparatorInfoDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComparatorInfoDetailCell.h; path = Comperator/ComperatorDetailVC/ComparatorInfoDetailCell.h; sourceTree = "<group>"; };
+		5B018595172C1B99001C6F06 /* ComparatorInfoDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComparatorInfoDetailCell.m; path = Comperator/ComperatorDetailVC/ComparatorInfoDetailCell.m; sourceTree = "<group>"; };
+		5B01859A172C2B2C001C6F06 /* ComparatorGamesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComparatorGamesVC.h; path = Comperator/ComperatorDetailVC/Games/ComparatorGamesVC.h; sourceTree = "<group>"; };
+		5B01859B172C2B2C001C6F06 /* ComparatorGamesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComparatorGamesVC.m; path = Comperator/ComperatorDetailVC/Games/ComparatorGamesVC.m; sourceTree = "<group>"; };
 		5B798A4717229EE900C9BE1A /* GameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameCell.h; path = GossipLeague/Classes/UI/Games/GameCell.h; sourceTree = SOURCE_ROOT; };
 		5B798A4817229EEA00C9BE1A /* GameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameCell.m; path = GossipLeague/Classes/UI/Games/GameCell.m; sourceTree = SOURCE_ROOT; };
 		5B798A4917229EEA00C9BE1A /* GameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GameCell.xib; path = GossipLeague/Classes/UI/Games/GameCell.xib; sourceTree = SOURCE_ROOT; };
@@ -339,6 +347,15 @@
 			path = OBConnection/EGOCache;
 			sourceTree = SOURCE_ROOT;
 		};
+		5B018599172C2B04001C6F06 /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				5B01859A172C2B2C001C6F06 /* ComparatorGamesVC.h */,
+				5B01859B172C2B2C001C6F06 /* ComparatorGamesVC.m */,
+			);
+			name = Games;
+			sourceTree = "<group>";
+		};
 		5B798A46172299E600C9BE1A /* Chart */ = {
 			isa = PBXGroup;
 			children = (
@@ -391,9 +408,13 @@
 		CD43133C1726860B005D42E3 /* ComperatorDetailVC */ = {
 			isa = PBXGroup;
 			children = (
+				5B018599172C2B04001C6F06 /* Games */,
 				CD43133D17268632005D42E3 /* ComperatorDetailVC.h */,
 				CD43133E17268632005D42E3 /* ComperatorDetailVC.m */,
 				CD43133F17268632005D42E3 /* ComperatorDetailVC.xib */,
+				5B018594172C1B99001C6F06 /* ComparatorInfoDetailCell.h */,
+				5B018595172C1B99001C6F06 /* ComparatorInfoDetailCell.m */,
+				5B018592172C1B40001C6F06 /* ComparatorInfoDetailCell.xib */,
 			);
 			name = ComperatorDetailVC;
 			sourceTree = "<group>";
@@ -472,6 +493,7 @@
 				CD43133B17268025005D42E3 /* ComperatorCell.xib in Resources */,
 				CD43134117268632005D42E3 /* ComperatorDetailVC.xib in Resources */,
 				CD4313431726C3F0005D42E3 /* vs.png in Resources */,
+				5B018593172C1B40001C6F06 /* ComparatorInfoDetailCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +539,8 @@
 				CD431334172678F9005D42E3 /* ComperatorVC.m in Sources */,
 				CD4313391726800B005D42E3 /* ComperatorCell.m in Sources */,
 				CD43134017268632005D42E3 /* ComperatorDetailVC.m in Sources */,
+				5B018596172C1B99001C6F06 /* ComparatorInfoDetailCell.m in Sources */,
+				5B01859C172C2B2C001C6F06 /* ComparatorGamesVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

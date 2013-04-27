@@ -12,18 +12,11 @@
 
 static NSString * const CellGameIdentifier = @"CellGameIdentifier";
 
-@interface GamesVC ()
-
-@property (strong, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) NSArray *games;
-
-@end
-
 @implementation GamesVC
 
 - (id)init
 {
-    self = [super init];
+    self = [super initWithNibName:@"GamesVC" bundle:nil];
     if (self) {
         self.title = @"Partidos";
     }
@@ -81,14 +74,6 @@ static NSString * const CellGameIdentifier = @"CellGameIdentifier";
     return cell;
 }
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    GameEntity *game = [self.games objectAtIndex:indexPath.row];
-//    UserDetailVC *userDetailVC = [[UserDetailVC alloc] initWithPlayer:player];
-//    [self.navigationController pushViewController:userDetailVC animated:YES];
-//    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-//}
-
 - (void)viewDidUnload {
     [self setTableView:nil];
     [super viewDidUnload];
@@ -124,6 +109,5 @@ static NSString * const CellGameIdentifier = @"CellGameIdentifier";
     refresh.attributedTitle = [[NSAttributedString alloc] initWithString:lastUpdated];
     [refresh endRefreshing];
 }
-
 
 @end

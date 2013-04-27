@@ -51,7 +51,6 @@ static NSString * const CellIUserdentifier = @"UserDetailCell";
 }
 
 #pragma mark - Table View Delegate
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 6;
