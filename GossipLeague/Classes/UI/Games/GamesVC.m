@@ -64,7 +64,6 @@ static NSString * const CellGameIdentifier = @"CellGameIdentifier";
         
         return parsedGames;
     } success:^(NSArray *parsedGames, BOOL cached) {
-        self.games = [[parsedGames reverseObjectEnumerator] allObjects];
         [self.tableView reloadData];
     } error:NULL];
 }
