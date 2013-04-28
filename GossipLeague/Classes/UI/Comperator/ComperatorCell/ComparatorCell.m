@@ -1,15 +1,15 @@
 //
-//  ComperatorCell.m
+//  ComparatorCell.m
 //  GossipLeague
 //
 //  Created by Valenti on 23/04/13.
 //  Copyright (c) 2013 Gossip. All rights reserved.
 //
 
-#import "ComperatorCell.h"
+#import "ComparatorCell.h"
 #import "PlayerEntity.h"
 
-@implementation ComperatorCell
+@implementation ComparatorCell
 @synthesize labelName = _labelName;
 @synthesize labelScore = _labelScore;
 

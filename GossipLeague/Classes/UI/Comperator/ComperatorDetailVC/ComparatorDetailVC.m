@@ -1,12 +1,12 @@
 //
-//  ComperatorDetailVC.m
+//  ComparatorDetailVC.m
 //  GossipLeague
 //
 //  Created by Valenti on 23/04/13.
 //  Copyright (c) 2013 Gossip. All rights reserved.
 //
 
-#import "ComperatorDetailVC.h"
+#import "ComparatorDetailVC.h"
 #import "PlayerEntity.h"
 #import "GameEntity.h"
 #import "GameCell.h"
@@ -17,7 +17,7 @@
 static NSString * const CellGameIdentifier = @"CellGameIdentifier";
 static NSString * const CellInformationIdentifier = @"ComparatorInfoDetailCell";
 
-@interface ComperatorDetailVC ()
+@interface ComparatorDetailVC ()
 
 //Entities
 @property (nonatomic,strong) PlayerEntity *player1;
@@ -34,7 +34,7 @@ static NSString * const CellInformationIdentifier = @"ComparatorInfoDetailCell";
 
 @end
 
-@implementation ComperatorDetailVC
+@implementation ComparatorDetailVC
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil player1:(PlayerEntity*)player1 player2:(PlayerEntity*)player2
 {
@@ -64,8 +64,8 @@ static NSString * const CellInformationIdentifier = @"ComparatorInfoDetailCell";
 
 - (void)goToGames
 {
-    ComparatorGamesVC *comperatorGamesVC = [[ComparatorGamesVC alloc] initWithPlayer:self.player1 andPlayer:self.player2];
-    [self.navigationController pushViewController:comperatorGamesVC animated:YES];
+    ComparatorGamesVC *comparatorGamesVC = [[ComparatorGamesVC alloc] initWithPlayer:self.player1 andPlayer:self.player2];
+    [self.navigationController pushViewController:comparatorGamesVC animated:YES];
 }
 
 - (void)setupHeader
