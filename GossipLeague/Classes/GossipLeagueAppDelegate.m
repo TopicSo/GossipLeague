@@ -2,7 +2,7 @@
 #import "GossipLeagueAppDelegate.h"
 #import "LeagueVC.h"
 #import "GamesVC.h"
-#import "ComperatorVC.h"
+#import "ComparatorVC.h"
 #import "PlayerEntity.h"
 
 #import <AVFoundation/AVFoundation.h>
@@ -94,7 +94,7 @@
     self.tabBarController.viewControllers = @[
                                               [self createNavigationChartsController],
                                               [self createNavigationGamesController],
-                                              [self createNavigationComperatorController]
+                                              [self createNavigationComparatorController]
                                               ];
    [self easterEggPEPE];
 }
@@ -113,12 +113,12 @@
     return navigationGamesController;
 }
 
-- (UINavigationController *)createNavigationComperatorController
+- (UINavigationController *)createNavigationComparatorController
 {
-    UINavigationController *navigationComperatorController = [[UINavigationController alloc] initWithRootViewController:[[ComperatorVC alloc] init]];
-    navigationComperatorController.tabBarItem.image = [UIImage imageNamed:@"vs"];
-    navigationComperatorController.tabBarItem.title = @"Comperator";
-    return navigationComperatorController;
+    UINavigationController *navigationComparatorController = [[UINavigationController alloc] initWithRootViewController:[[ComparatorVC alloc] init]];
+    navigationComparatorController.tabBarItem.image = [UIImage imageNamed:@"vs"];
+    navigationComparatorController.tabBarItem.title = @"Comparator";
+    return navigationComparatorController;
 }
 
 #pragma mark - Easter egg

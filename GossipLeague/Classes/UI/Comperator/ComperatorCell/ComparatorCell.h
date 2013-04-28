@@ -1,5 +1,5 @@
 //
-//  ComperatorCell.h
+//  ComparatorCell.h
 //  GossipLeague
 //
 //  Created by Valenti on 23/04/13.
@@ -10,7 +10,7 @@
 
 @class PlayerEntity;
 
-@interface ComperatorCell : UITableViewCell
+@interface ComparatorCell : UITableViewCell
 
 @property (nonatomic,strong) IBOutlet UILabel *labelName;
 @property (nonatomic,strong) IBOutlet UILabel *labelScore;

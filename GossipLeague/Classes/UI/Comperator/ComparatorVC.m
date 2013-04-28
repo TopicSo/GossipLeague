@@ -1,24 +1,24 @@
 //
-//  ComperatorViewController.m
+//  ComparatorViewController.m
 //  GossipLeague
 //
 //  Created by Valenti on 23/04/13.
 //  Copyright (c) 2013 Gossip. All rights reserved.
 //
 
-#import "ComperatorVC.h"
-#import "ComperatorCell.h"
+#import "ComparatorVC.h"
+#import "ComparatorCell.h"
 #import "PlayerEntity.h"
-#import "ComperatorDetailVC.h"
+#import "ComparatorDetailVC.h"
 
-@interface ComperatorVC ()
+@interface ComparatorVC ()
 
 @property (nonatomic,strong) IBOutlet UITableView   *playerTable;
 @property (nonatomic,strong) NSMutableArray         *playersArray;
 
 @end
 
-@implementation ComperatorVC
+@implementation ComparatorVC
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -92,19 +92,19 @@
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"ComperatorCell";
+    static NSString *CellIdentifier = @"ComparatorCell";
 	
-    ComperatorCell *cell = (ComperatorCell *) [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    ComparatorCell *cell = (ComparatorCell *) [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil)
     {
-		NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"ComperatorCell" owner:self options:nil];
+		NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"ComparatorCell" owner:self options:nil];
 		
 		for (id currentObject in topLevelObjects)
         {
 			if ([currentObject isKindOfClass:[UITableViewCell class]])
             {
-				cell =  (ComperatorCell *) currentObject;
+				cell =  (ComparatorCell *) currentObject;
 				break;
 			}
 		}
@@ -126,8 +126,8 @@
         PlayerEntity *player1 = [self.playersArray objectAtIndex:index1.row];
         PlayerEntity *player2 =[self.playersArray objectAtIndex:index2.row];
         
-        ComperatorDetailVC *comperatorDetailVC = [[ComperatorDetailVC alloc] initWithNibName:@"ComperatorDetailVC" bundle:nil player1:player1 player2:player2];
-        [self.navigationController pushViewController:comperatorDetailVC animated:YES];
+        ComparatorDetailVC *comparatorDetailVC = [[ComparatorDetailVC alloc] initWithNibName:@"ComparatorDetailVC" bundle:nil player1:player1 player2:player2];
+        [self.navigationController pushViewController:comparatorDetailVC animated:YES];
     }
 }
 
