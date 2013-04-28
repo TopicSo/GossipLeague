@@ -44,8 +44,6 @@ static NSString * const CellLeagueIdentifier = @"TableLeagueCell";
         NSMutableArray *parsedPlayers = [NSMutableArray array];
         
         for (NSDictionary *tmpPlayer in [data objectForKey:@"players"]) {
-            NSLog(@"tmpPlayer %@",tmpPlayer);
-            
             PlayerEntity *player = [MTLJSONAdapter modelOfClass:[PlayerEntity class] fromJSONDictionary:tmpPlayer error:nil];
             [parsedPlayers addObject:player];
         }

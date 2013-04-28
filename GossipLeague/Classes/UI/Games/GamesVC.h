@@ -10,4 +10,7 @@
 
 @interface GamesVC : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSArray *games;
+
 @end

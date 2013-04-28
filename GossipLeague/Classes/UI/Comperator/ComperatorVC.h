@@ -9,7 +9,4 @@
 #import <UIKit/UIKit.h>
 
 @interface ComperatorVC : UIViewController
-
-- (IBAction)goToResult:(id)sender;
-
 @end
