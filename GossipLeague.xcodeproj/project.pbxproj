@@ -40,6 +40,7 @@
 		5B018593172C1B40001C6F06 /* ComparatorInfoDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B018592172C1B40001C6F06 /* ComparatorInfoDetailCell.xib */; };
 		5B018596172C1B99001C6F06 /* ComparatorInfoDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B018595172C1B99001C6F06 /* ComparatorInfoDetailCell.m */; };
 		5B01859C172C2B2C001C6F06 /* ComparatorGamesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01859B172C2B2C001C6F06 /* ComparatorGamesVC.m */; };
+		5B0185A1172D40CC001C6F06 /* UserDetailGamesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01859F172D40CC001C6F06 /* UserDetailGamesVC.m */; };
 		5B798A4D17229EEA00C9BE1A /* GameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B798A4817229EEA00C9BE1A /* GameCell.m */; };
 		5B798A4E17229EEA00C9BE1A /* GameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B798A4917229EEA00C9BE1A /* GameCell.xib */; };
 		5B798A4F17229EEA00C9BE1A /* GamesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B798A4B17229EEA00C9BE1A /* GamesVC.m */; };
@@ -118,6 +119,8 @@
 		5B018595172C1B99001C6F06 /* ComparatorInfoDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComparatorInfoDetailCell.m; path = Comperator/ComperatorDetailVC/ComparatorInfoDetailCell.m; sourceTree = "<group>"; };
 		5B01859A172C2B2C001C6F06 /* ComparatorGamesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComparatorGamesVC.h; path = Comperator/ComperatorDetailVC/Games/ComparatorGamesVC.h; sourceTree = "<group>"; };
 		5B01859B172C2B2C001C6F06 /* ComparatorGamesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComparatorGamesVC.m; path = Comperator/ComperatorDetailVC/Games/ComparatorGamesVC.m; sourceTree = "<group>"; };
+		5B01859E172D40CC001C6F06 /* UserDetailGamesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDetailGamesVC.h; path = User/Games/UserDetailGamesVC.h; sourceTree = "<group>"; };
+		5B01859F172D40CC001C6F06 /* UserDetailGamesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDetailGamesVC.m; path = User/Games/UserDetailGamesVC.m; sourceTree = "<group>"; };
 		5B798A4717229EE900C9BE1A /* GameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameCell.h; path = GossipLeague/Classes/UI/Games/GameCell.h; sourceTree = SOURCE_ROOT; };
 		5B798A4817229EEA00C9BE1A /* GameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameCell.m; path = GossipLeague/Classes/UI/Games/GameCell.m; sourceTree = SOURCE_ROOT; };
 		5B798A4917229EEA00C9BE1A /* GameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GameCell.xib; path = GossipLeague/Classes/UI/Games/GameCell.xib; sourceTree = SOURCE_ROOT; };
@@ -246,6 +249,7 @@
 		360E9BDF1721E92F00522891 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				5B01859D172D40AF001C6F06 /* Games */,
 				5B798A5B17229F3A00C9BE1A /* UserDetailCell.h */,
 				5B798A5C17229F3A00C9BE1A /* UserDetailCell.m */,
 				5B798A5D17229F3A00C9BE1A /* UserDetailCell.xib */,
@@ -352,6 +356,15 @@
 			children = (
 				5B01859A172C2B2C001C6F06 /* ComparatorGamesVC.h */,
 				5B01859B172C2B2C001C6F06 /* ComparatorGamesVC.m */,
+			);
+			name = Games;
+			sourceTree = "<group>";
+		};
+		5B01859D172D40AF001C6F06 /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				5B01859E172D40CC001C6F06 /* UserDetailGamesVC.h */,
+				5B01859F172D40CC001C6F06 /* UserDetailGamesVC.m */,
 			);
 			name = Games;
 			sourceTree = "<group>";
@@ -541,6 +554,7 @@
 				CD43134017268632005D42E3 /* ComperatorDetailVC.m in Sources */,
 				5B018596172C1B99001C6F06 /* ComparatorInfoDetailCell.m in Sources */,
 				5B01859C172C2B2C001C6F06 /* ComparatorGamesVC.m in Sources */,
+				5B0185A1172D40CC001C6F06 /* UserDetailGamesVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
