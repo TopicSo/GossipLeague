@@ -45,7 +45,7 @@ static NSString * const CellGameIdentifier = @"CellGameIdentifier";
 
 - (void)reloadData
 {
-    OBRequest *request = [OBRequest requestWithType:OBRequestMethodTypeMethodGET resource:@"games/" parameters:nil isPublic:YES];
+    OBRequest *request = [OBRequest requestWithType:OBRequestMethodTypeMethodGET resource:@"games" parameters:nil isPublic:YES];
     
     [OBConnection makeRequest:request withCacheKey:NSStringFromClass([self class]) parseBlock:^id(NSDictionary *data) {
         NSMutableArray *parsedGames = [NSMutableArray array];
@@ -57,6 +57,7 @@ static NSString * const CellGameIdentifier = @"CellGameIdentifier";
         
         return parsedGames;
     } success:^(NSArray *parsedGames, BOOL cached) {
+        self.games = parsedGames;
         [self.tableView reloadData];
     } error:NULL];
 }

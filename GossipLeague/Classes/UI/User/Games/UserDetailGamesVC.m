@@ -41,6 +41,7 @@
         
         return parsedGames;
     } success:^(NSArray *parsedGames, BOOL cached) {
+        self.games = parsedGames;
         [self.tableView reloadData];
     } error:NULL];
 }
