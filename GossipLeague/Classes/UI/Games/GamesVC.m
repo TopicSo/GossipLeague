@@ -50,6 +50,8 @@ static NSString * const CellGameIdentifier = @"CellGameIdentifier";
     [OBConnection makeRequest:request withCacheKey:NSStringFromClass([self class]) parseBlock:^id(NSDictionary *data) {
         NSMutableArray *parsedGames = [NSMutableArray array];
         
+        self.games = [[NSArray alloc] init];
+        
         for (NSDictionary *tmpGame in [data objectForKey:@"games"]) {
             GameEntity *game = [MTLJSONAdapter modelOfClass:[GameEntity class] fromJSONDictionary:tmpGame error:nil];
             [parsedGames addObject:game];
@@ -57,6 +59,7 @@ static NSString * const CellGameIdentifier = @"CellGameIdentifier";
         
         return parsedGames;
     } success:^(NSArray *parsedGames, BOOL cached) {
+        self.games = parsedGames;
         [self.tableView reloadData];
     } error:NULL];
 }

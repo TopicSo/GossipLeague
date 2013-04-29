@@ -61,12 +61,12 @@
 		6372FF581613CC47002132AF /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6372FF571613CC47002132AF /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		743D7B6D157DA60100084B67 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 743D7B6C157DA60100084B67 /* CoreGraphics.framework */; };
 		97E18B1F1624CB5700B17A67 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E18B1E1624CB5700B17A67 /* CoreLocation.framework */; };
-		CD431334172678F9005D42E3 /* ComperatorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD431332172678F9005D42E3 /* ComperatorVC.m */; };
-		CD431335172678F9005D42E3 /* ComperatorVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD431333172678F9005D42E3 /* ComperatorVC.xib */; };
-		CD4313391726800B005D42E3 /* ComperatorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4313381726800B005D42E3 /* ComperatorCell.m */; };
-		CD43133B17268025005D42E3 /* ComperatorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD43133A17268025005D42E3 /* ComperatorCell.xib */; };
-		CD43134017268632005D42E3 /* ComperatorDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD43133E17268632005D42E3 /* ComperatorDetailVC.m */; };
-		CD43134117268632005D42E3 /* ComperatorDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD43133F17268632005D42E3 /* ComperatorDetailVC.xib */; };
+		CD431334172678F9005D42E3 /* ComparatorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD431332172678F9005D42E3 /* ComparatorVC.m */; };
+		CD431335172678F9005D42E3 /* ComparatorVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD431333172678F9005D42E3 /* ComparatorVC.xib */; };
+		CD4313391726800B005D42E3 /* ComparatorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4313381726800B005D42E3 /* ComparatorCell.m */; };
+		CD43133B17268025005D42E3 /* ComparatorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD43133A17268025005D42E3 /* ComparatorCell.xib */; };
+		CD43134017268632005D42E3 /* ComparatorDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD43133E17268632005D42E3 /* ComparatorDetailVC.m */; };
+		CD43134117268632005D42E3 /* ComparatorDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD43133F17268632005D42E3 /* ComparatorDetailVC.xib */; };
 		CD4313431726C3F0005D42E3 /* vs.png in Resources */ = {isa = PBXBuildFile; fileRef = CD4313421726C3F0005D42E3 /* vs.png */; };
 		E854EA5C4FFF41C88E4EB348 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 588C860EF36A46BFB9105A93 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -148,15 +148,15 @@
 		743D7B6C157DA60100084B67 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		97E18B1E1624CB5700B17A67 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B4452B5401F74F079D3003F5 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
-		CD431331172678F9005D42E3 /* ComperatorVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComperatorVC.h; path = Comperator/ComperatorVC.h; sourceTree = "<group>"; };
-		CD431332172678F9005D42E3 /* ComperatorVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComperatorVC.m; path = Comperator/ComperatorVC.m; sourceTree = "<group>"; };
-		CD431333172678F9005D42E3 /* ComperatorVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ComperatorVC.xib; path = Comperator/ComperatorVC.xib; sourceTree = "<group>"; };
-		CD4313371726800B005D42E3 /* ComperatorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComperatorCell.h; path = Comperator/ComperatorCell/ComperatorCell.h; sourceTree = "<group>"; };
-		CD4313381726800B005D42E3 /* ComperatorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComperatorCell.m; path = Comperator/ComperatorCell/ComperatorCell.m; sourceTree = "<group>"; };
-		CD43133A17268025005D42E3 /* ComperatorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ComperatorCell.xib; path = Comperator/ComperatorCell/ComperatorCell.xib; sourceTree = "<group>"; };
-		CD43133D17268632005D42E3 /* ComperatorDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComperatorDetailVC.h; path = Comperator/ComperatorDetailVC/ComperatorDetailVC.h; sourceTree = "<group>"; };
-		CD43133E17268632005D42E3 /* ComperatorDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComperatorDetailVC.m; path = Comperator/ComperatorDetailVC/ComperatorDetailVC.m; sourceTree = "<group>"; };
-		CD43133F17268632005D42E3 /* ComperatorDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ComperatorDetailVC.xib; path = Comperator/ComperatorDetailVC/ComperatorDetailVC.xib; sourceTree = "<group>"; };
+		CD431331172678F9005D42E3 /* ComparatorVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComparatorVC.h; path = Comperator/ComparatorVC.h; sourceTree = "<group>"; };
+		CD431332172678F9005D42E3 /* ComparatorVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComparatorVC.m; path = Comperator/ComparatorVC.m; sourceTree = "<group>"; };
+		CD431333172678F9005D42E3 /* ComparatorVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ComparatorVC.xib; path = Comperator/ComparatorVC.xib; sourceTree = "<group>"; };
+		CD4313371726800B005D42E3 /* ComparatorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComparatorCell.h; path = Comperator/ComperatorCell/ComparatorCell.h; sourceTree = "<group>"; };
+		CD4313381726800B005D42E3 /* ComparatorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComparatorCell.m; path = Comperator/ComperatorCell/ComparatorCell.m; sourceTree = "<group>"; };
+		CD43133A17268025005D42E3 /* ComparatorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ComparatorCell.xib; path = Comperator/ComperatorCell/ComparatorCell.xib; sourceTree = "<group>"; };
+		CD43133D17268632005D42E3 /* ComparatorDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComparatorDetailVC.h; path = Comperator/ComperatorDetailVC/ComparatorDetailVC.h; sourceTree = "<group>"; };
+		CD43133E17268632005D42E3 /* ComparatorDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComparatorDetailVC.m; path = Comperator/ComperatorDetailVC/ComparatorDetailVC.m; sourceTree = "<group>"; };
+		CD43133F17268632005D42E3 /* ComparatorDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ComparatorDetailVC.xib; path = Comperator/ComperatorDetailVC/ComparatorDetailVC.xib; sourceTree = "<group>"; };
 		CD4313421726C3F0005D42E3 /* vs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vs.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -284,7 +284,7 @@
 		36A1EBE817010D3800F7A57B /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				CD431330172678C9005D42E3 /* Comperator */,
+				CD431330172678C9005D42E3 /* Comparator */,
 				5BCC45E21721887700E8EE76 /* Games */,
 				5B798A46172299E600C9BE1A /* Chart */,
 				360E9BDF1721E92F00522891 /* User */,
@@ -396,40 +396,40 @@
 			path = GossipGamesVC;
 			sourceTree = "<group>";
 		};
-		CD431330172678C9005D42E3 /* Comperator */ = {
+		CD431330172678C9005D42E3 /* Comparator */ = {
 			isa = PBXGroup;
 			children = (
-				CD43133C1726860B005D42E3 /* ComperatorDetailVC */,
-				CD43133617267FE7005D42E3 /* ComperatorCell */,
-				CD431331172678F9005D42E3 /* ComperatorVC.h */,
-				CD431332172678F9005D42E3 /* ComperatorVC.m */,
-				CD431333172678F9005D42E3 /* ComperatorVC.xib */,
+				CD43133C1726860B005D42E3 /* ComparatorDetailVC */,
+				CD43133617267FE7005D42E3 /* ComparatorCell */,
+				CD431331172678F9005D42E3 /* ComparatorVC.h */,
+				CD431332172678F9005D42E3 /* ComparatorVC.m */,
+				CD431333172678F9005D42E3 /* ComparatorVC.xib */,
 			);
-			name = Comperator;
+			name = Comparator;
 			sourceTree = "<group>";
 		};
-		CD43133617267FE7005D42E3 /* ComperatorCell */ = {
+		CD43133617267FE7005D42E3 /* ComparatorCell */ = {
 			isa = PBXGroup;
 			children = (
-				CD4313371726800B005D42E3 /* ComperatorCell.h */,
-				CD4313381726800B005D42E3 /* ComperatorCell.m */,
-				CD43133A17268025005D42E3 /* ComperatorCell.xib */,
+				CD4313371726800B005D42E3 /* ComparatorCell.h */,
+				CD4313381726800B005D42E3 /* ComparatorCell.m */,
+				CD43133A17268025005D42E3 /* ComparatorCell.xib */,
 			);
-			name = ComperatorCell;
+			name = ComparatorCell;
 			sourceTree = "<group>";
 		};
-		CD43133C1726860B005D42E3 /* ComperatorDetailVC */ = {
+		CD43133C1726860B005D42E3 /* ComparatorDetailVC */ = {
 			isa = PBXGroup;
 			children = (
 				5B018599172C2B04001C6F06 /* Games */,
-				CD43133D17268632005D42E3 /* ComperatorDetailVC.h */,
-				CD43133E17268632005D42E3 /* ComperatorDetailVC.m */,
-				CD43133F17268632005D42E3 /* ComperatorDetailVC.xib */,
+				CD43133D17268632005D42E3 /* ComparatorDetailVC.h */,
+				CD43133E17268632005D42E3 /* ComparatorDetailVC.m */,
+				CD43133F17268632005D42E3 /* ComparatorDetailVC.xib */,
 				5B018594172C1B99001C6F06 /* ComparatorInfoDetailCell.h */,
 				5B018595172C1B99001C6F06 /* ComparatorInfoDetailCell.m */,
 				5B018592172C1B40001C6F06 /* ComparatorInfoDetailCell.xib */,
 			);
-			name = ComperatorDetailVC;
+			name = ComparatorDetailVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -502,9 +502,9 @@
 				5B798A6217229F3B00C9BE1A /* UserDetailCell.xib in Resources */,
 				5B798A6417229F3B00C9BE1A /* UserDetailVC.xib in Resources */,
 				5B798A6A1722AB1600C9BE1A /* theme.mp3 in Resources */,
-				CD431335172678F9005D42E3 /* ComperatorVC.xib in Resources */,
-				CD43133B17268025005D42E3 /* ComperatorCell.xib in Resources */,
-				CD43134117268632005D42E3 /* ComperatorDetailVC.xib in Resources */,
+				CD431335172678F9005D42E3 /* ComparatorVC.xib in Resources */,
+				CD43133B17268025005D42E3 /* ComparatorCell.xib in Resources */,
+				CD43134117268632005D42E3 /* ComparatorDetailVC.xib in Resources */,
 				CD4313431726C3F0005D42E3 /* vs.png in Resources */,
 				5B018593172C1B40001C6F06 /* ComparatorInfoDetailCell.xib in Resources */,
 			);
@@ -549,9 +549,9 @@
 				5B798A5917229F2000C9BE1A /* LeagueVC.m in Sources */,
 				5B798A6117229F3B00C9BE1A /* UserDetailCell.m in Sources */,
 				5B798A6317229F3B00C9BE1A /* UserDetailVC.m in Sources */,
-				CD431334172678F9005D42E3 /* ComperatorVC.m in Sources */,
-				CD4313391726800B005D42E3 /* ComperatorCell.m in Sources */,
-				CD43134017268632005D42E3 /* ComperatorDetailVC.m in Sources */,
+				CD431334172678F9005D42E3 /* ComparatorVC.m in Sources */,
+				CD4313391726800B005D42E3 /* ComparatorCell.m in Sources */,
+				CD43134017268632005D42E3 /* ComparatorDetailVC.m in Sources */,
 				5B018596172C1B99001C6F06 /* ComparatorInfoDetailCell.m in Sources */,
 				5B01859C172C2B2C001C6F06 /* ComparatorGamesVC.m in Sources */,
 				5B0185A1172D40CC001C6F06 /* UserDetailGamesVC.m in Sources */,
