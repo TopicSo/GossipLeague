@@ -1,4 +1,5 @@
 #import <Parse/Parse.h>
+#import "OBTabBarController.h"
 #import "GossipLeagueAppDelegate.h"
 #import "LeagueVC.h"
 #import "GamesVC.h"
@@ -9,6 +10,12 @@
 
 @interface GossipLeagueAppDelegate ()
 @property (nonatomic, strong) AVAudioPlayer *player;
+
+// Navigation
+@property (nonatomic, strong) UINavigationController *rankingNavigationController;
+@property (nonatomic, strong) UINavigationController *gamesNavigationController;
+@property (nonatomic, strong) UINavigationController *comperatorNavigationController;
+
 @end
 
 
@@ -20,6 +27,7 @@
 
     [self setup:application];
     [self createGossipLeagueTabBarControlloer];
+    
     
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
@@ -88,40 +96,51 @@
 }
 
 #pragma mark - View Controllers
+
 - (void)createGossipLeagueTabBarControlloer
 {
-    self.tabBarController  = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = @[
-                                              [self createNavigationChartsController],
-                                              [self createNavigationGamesController],
-                                              [self createNavigationComperatorController]
-                                              ];
-   [self easterEggPEPE];
+    NSArray *viewControllers = [NSArray arrayWithObjects:self.rankingNavigationController, self.gamesNavigationController, self.comperatorNavigationController, nil];
+    
+    self.tabBarController  = [[OBTabBarController alloc] initWithViewControllers:viewControllers
+                                                                        delegate:self];
+
+    [self easterEggPEPE];
 }
 
-- (UINavigationController *)createNavigationChartsController
+#pragma mark - Lazy loading of view controllers
+
+- (UINavigationController *)rankingNavigationController
 {
-    UINavigationController *navigationChartsController = [[UINavigationController alloc] initWithRootViewController:[[LeagueVC alloc] init]];
-    navigationChartsController.tabBarItem.image = [UIImage imageNamed:@"sock"];
-    return navigationChartsController;
+    if (!_rankingNavigationController)
+    {
+        _rankingNavigationController = [[UINavigationController alloc] initWithRootViewController:[[LeagueVC alloc] init]];
+    }
+    
+    return _rankingNavigationController;
 }
 
-- (UINavigationController *)createNavigationGamesController
+- (UINavigationController *)gamesNavigationController
 {
-    UINavigationController *navigationGamesController = [[UINavigationController alloc] initWithRootViewController:[[GamesVC alloc] init]];
-    navigationGamesController.tabBarItem.image = [UIImage imageNamed:@"soccer"];
-    return navigationGamesController;
+    if (!_gamesNavigationController)
+    {
+        _gamesNavigationController = [[UINavigationController alloc] initWithRootViewController:[[GamesVC alloc] init]];
+    }
+    
+    return _gamesNavigationController;
 }
 
-- (UINavigationController *)createNavigationComperatorController
+- (UINavigationController *)comperatorNavigationController
 {
-    UINavigationController *navigationComperatorController = [[UINavigationController alloc] initWithRootViewController:[[ComperatorVC alloc] init]];
-    navigationComperatorController.tabBarItem.image = [UIImage imageNamed:@"vs"];
-    navigationComperatorController.tabBarItem.title = @"Comperator";
-    return navigationComperatorController;
+    if (!_comperatorNavigationController)
+    {
+        _comperatorNavigationController = [[UINavigationController alloc] initWithRootViewController:[[ComperatorVC alloc] init]];
+    }
+    
+    return _comperatorNavigationController;
 }
 
 #pragma mark - Easter egg
+
 - (void) easterEggPEPE
 {
     self.tabBarController.delegate = self;
@@ -160,6 +179,36 @@
         }
 
     }
+}
+
+#pragma mark - Tab Bar Controller Delegate
+
+- (UIImage *)imageTabAtIndex:(NSUInteger)index
+{
+    UIImage *image = nil;
+    switch (index) {
+        case 0:
+            image = [UIImage imageNamed:@"sock_inactive.png"];
+            break;
+        default:
+            image = [UIImage imageNamed:@"soccer_inactive.png"];
+            break;
+    }
+    return image;
+}
+
+- (UIImage *)highlightedImageTabAtIndex:(NSUInteger)index
+{
+    UIImage *highlightedImage = nil;
+    switch (index) {
+        case 0:
+            highlightedImage = [UIImage imageNamed:@"sock_active.png"];
+            break;
+        default:
+            highlightedImage = [UIImage imageNamed:@"soccer_active.png"];
+            break;
+    }
+    return highlightedImage;
 }
 
 @end

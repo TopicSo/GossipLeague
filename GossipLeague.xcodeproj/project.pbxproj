@@ -19,10 +19,6 @@
 		361E49FE172877EE000B0B41 /* UIColor+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 361E49FD172877EE000B0B41 /* UIColor+Colors.m */; };
 		361E4A0E17288194000B0B41 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 361E4A0017288193000B0B41 /* Icon.png */; };
 		361E4A0F17288194000B0B41 /* RobertoBaggio.png in Resources */ = {isa = PBXBuildFile; fileRef = 361E4A0317288193000B0B41 /* RobertoBaggio.png */; };
-		361E4A1017288194000B0B41 /* soccer.png in Resources */ = {isa = PBXBuildFile; fileRef = 361E4A0517288193000B0B41 /* soccer.png */; };
-		361E4A1117288194000B0B41 /* sock.png in Resources */ = {isa = PBXBuildFile; fileRef = 361E4A0617288193000B0B41 /* sock.png */; };
-		361E4A1217288194000B0B41 /* vs.png in Resources */ = {isa = PBXBuildFile; fileRef = 361E4A0717288193000B0B41 /* vs.png */; };
-		361E4A1317288194000B0B41 /* champions-theme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 361E4A0917288193000B0B41 /* champions-theme.mp3 */; };
 		361E4A1417288194000B0B41 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 361E4A0B17288194000B0B41 /* Default-568h@2x.png */; };
 		361E4A1517288194000B0B41 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 361E4A0C17288194000B0B41 /* Default.png */; };
 		361E4A1617288194000B0B41 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 361E4A0D17288194000B0B41 /* Default@2x.png */; };
@@ -37,6 +33,20 @@
 		36A1EC0817010D8200F7A57B /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36A1EC0517010D8200F7A57B /* MainWindow.xib */; };
 		36A1EC0B17010E0100F7A57B /* PlayerEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A1EC0A17010E0100F7A57B /* PlayerEntity.m */; };
 		36A1EC0E17010F8000F7A57B /* GameEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A1EC0D17010F8000F7A57B /* GameEntity.m */; };
+		36D0A936172C101B00693004 /* soccer_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 36D0A92C172C101A00693004 /* soccer_active.png */; };
+		36D0A937172C101B00693004 /* soccer_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36D0A92D172C101A00693004 /* soccer_active@2x.png */; };
+		36D0A938172C101B00693004 /* soccer_inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = 36D0A92E172C101A00693004 /* soccer_inactive.png */; };
+		36D0A939172C101B00693004 /* soccer_inactive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36D0A92F172C101A00693004 /* soccer_inactive@2x.png */; };
+		36D0A93A172C101B00693004 /* sock_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 36D0A930172C101A00693004 /* sock_active.png */; };
+		36D0A93B172C101B00693004 /* sock_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36D0A931172C101B00693004 /* sock_active@2x.png */; };
+		36D0A93C172C101B00693004 /* sock_inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = 36D0A932172C101B00693004 /* sock_inactive.png */; };
+		36D0A93D172C101B00693004 /* sock_inactive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36D0A933172C101B00693004 /* sock_inactive@2x.png */; };
+		36D0A942172C129600693004 /* OBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D0A941172C129600693004 /* OBTabBarController.m */; };
+		36D0A947172C186F00693004 /* vs_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 36D0A943172C186E00693004 /* vs_active.png */; };
+		36D0A948172C186F00693004 /* vs_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36D0A944172C186E00693004 /* vs_active@2x.png */; };
+		36D0A949172C186F00693004 /* vs_inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = 36D0A945172C186F00693004 /* vs_inactive.png */; };
+		36D0A94A172C186F00693004 /* vs_inactive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36D0A946172C186F00693004 /* vs_inactive@2x.png */; };
+		36D0A94C172C188200693004 /* champions-theme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 36D0A94B172C188200693004 /* champions-theme.mp3 */; };
 		36F3A8161721573E005E86ED /* OBCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F3A80F1721573E005E86ED /* OBCache.m */; };
 		36F3A8171721573E005E86ED /* OBConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F3A8111721573E005E86ED /* OBConnection.m */; };
 		36F3A8181721573E005E86ED /* OBRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F3A8131721573E005E86ED /* OBRequest.m */; };
@@ -87,10 +97,6 @@
 		361E49FD172877EE000B0B41 /* UIColor+Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Colors.m"; path = "UI-Additions/UIColor+Colors.m"; sourceTree = "<group>"; };
 		361E4A0017288193000B0B41 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		361E4A0317288193000B0B41 /* RobertoBaggio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RobertoBaggio.png; sourceTree = "<group>"; };
-		361E4A0517288193000B0B41 /* soccer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = soccer.png; sourceTree = "<group>"; };
-		361E4A0617288193000B0B41 /* sock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sock.png; sourceTree = "<group>"; };
-		361E4A0717288193000B0B41 /* vs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vs.png; sourceTree = "<group>"; };
-		361E4A0917288193000B0B41 /* champions-theme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "champions-theme.mp3"; sourceTree = "<group>"; };
 		361E4A0B17288194000B0B41 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		361E4A0C17288194000B0B41 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		361E4A0D17288194000B0B41 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -111,6 +117,21 @@
 		36A1EC0A17010E0100F7A57B /* PlayerEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerEntity.m; sourceTree = "<group>"; };
 		36A1EC0C17010F8000F7A57B /* GameEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameEntity.h; sourceTree = "<group>"; };
 		36A1EC0D17010F8000F7A57B /* GameEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameEntity.m; sourceTree = "<group>"; };
+		36D0A92C172C101A00693004 /* soccer_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = soccer_active.png; sourceTree = "<group>"; };
+		36D0A92D172C101A00693004 /* soccer_active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "soccer_active@2x.png"; sourceTree = "<group>"; };
+		36D0A92E172C101A00693004 /* soccer_inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = soccer_inactive.png; sourceTree = "<group>"; };
+		36D0A92F172C101A00693004 /* soccer_inactive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "soccer_inactive@2x.png"; sourceTree = "<group>"; };
+		36D0A930172C101A00693004 /* sock_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sock_active.png; sourceTree = "<group>"; };
+		36D0A931172C101B00693004 /* sock_active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sock_active@2x.png"; sourceTree = "<group>"; };
+		36D0A932172C101B00693004 /* sock_inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sock_inactive.png; sourceTree = "<group>"; };
+		36D0A933172C101B00693004 /* sock_inactive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sock_inactive@2x.png"; sourceTree = "<group>"; };
+		36D0A940172C129600693004 /* OBTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OBTabBarController.h; path = OBTabBarController/OBTabBarController.h; sourceTree = SOURCE_ROOT; };
+		36D0A941172C129600693004 /* OBTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OBTabBarController.m; path = OBTabBarController/OBTabBarController.m; sourceTree = SOURCE_ROOT; };
+		36D0A943172C186E00693004 /* vs_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vs_active.png; sourceTree = "<group>"; };
+		36D0A944172C186E00693004 /* vs_active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vs_active@2x.png"; sourceTree = "<group>"; };
+		36D0A945172C186F00693004 /* vs_inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vs_inactive.png; sourceTree = "<group>"; };
+		36D0A946172C186F00693004 /* vs_inactive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vs_inactive@2x.png"; sourceTree = "<group>"; };
+		36D0A94B172C188200693004 /* champions-theme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "champions-theme.mp3"; sourceTree = "<group>"; };
 		36F3A80E1721573E005E86ED /* OBCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBCache.h; sourceTree = "<group>"; };
 		36F3A80F1721573E005E86ED /* OBCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBCache.m; sourceTree = "<group>"; };
 		36F3A8101721573E005E86ED /* OBConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBConnection.h; sourceTree = "<group>"; };
@@ -299,9 +320,18 @@
 		361E4A0417288193000B0B41 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				361E4A0517288193000B0B41 /* soccer.png */,
-				361E4A0617288193000B0B41 /* sock.png */,
-				361E4A0717288193000B0B41 /* vs.png */,
+				36D0A92C172C101A00693004 /* soccer_active.png */,
+				36D0A92D172C101A00693004 /* soccer_active@2x.png */,
+				36D0A92E172C101A00693004 /* soccer_inactive.png */,
+				36D0A92F172C101A00693004 /* soccer_inactive@2x.png */,
+				36D0A930172C101A00693004 /* sock_active.png */,
+				36D0A931172C101B00693004 /* sock_active@2x.png */,
+				36D0A932172C101B00693004 /* sock_inactive.png */,
+				36D0A933172C101B00693004 /* sock_inactive@2x.png */,
+				36D0A943172C186E00693004 /* vs_active.png */,
+				36D0A944172C186E00693004 /* vs_active@2x.png */,
+				36D0A945172C186F00693004 /* vs_inactive.png */,
+				36D0A946172C186F00693004 /* vs_inactive@2x.png */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -309,7 +339,7 @@
 		361E4A0817288193000B0B41 /* Music */ = {
 			isa = PBXGroup;
 			children = (
-				361E4A0917288193000B0B41 /* champions-theme.mp3 */,
+				36D0A94B172C188200693004 /* champions-theme.mp3 */,
 			);
 			path = Music;
 			sourceTree = "<group>";
@@ -358,6 +388,7 @@
 		36A1EBE817010D3800F7A57B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				36D0A91C172BDC4500693004 /* OBTabBarController */,
 				361E49FB1728779D000B0B41 /* UI-Additions */,
 				CD431330172678C9005D42E3 /* Comperator */,
 				5BCC45E21721887700E8EE76 /* Games */,
@@ -392,6 +423,15 @@
 				36A1EBFF17010D7500F7A57B /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		36D0A91C172BDC4500693004 /* OBTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				36D0A940172C129600693004 /* OBTabBarController.h */,
+				36D0A941172C129600693004 /* OBTabBarController.m */,
+			);
+			name = OBTabBarController;
 			sourceTree = "<group>";
 		};
 		36F3A80D1721573E005E86ED /* OBConnection */ = {
@@ -548,16 +588,25 @@
 				CD43134117268632005D42E3 /* ComperatorDetailVC.xib in Resources */,
 				361E4A0E17288194000B0B41 /* Icon.png in Resources */,
 				361E4A0F17288194000B0B41 /* RobertoBaggio.png in Resources */,
-				361E4A1017288194000B0B41 /* soccer.png in Resources */,
-				361E4A1117288194000B0B41 /* sock.png in Resources */,
-				361E4A1217288194000B0B41 /* vs.png in Resources */,
-				361E4A1317288194000B0B41 /* champions-theme.mp3 in Resources */,
 				361E4A1417288194000B0B41 /* Default-568h@2x.png in Resources */,
 				361E4A1517288194000B0B41 /* Default.png in Resources */,
 				361E4A1617288194000B0B41 /* Default@2x.png in Resources */,
 				361E4A1B17288E6C000B0B41 /* AlfaSlabOne-Regular-OTF.otf in Resources */,
 				361E4A1C17288E6C000B0B41 /* FreightSans Bold.ttf in Resources */,
 				361E4A1D17288E6C000B0B41 /* FreightSans LightSC.ttf in Resources */,
+				36D0A936172C101B00693004 /* soccer_active.png in Resources */,
+				36D0A937172C101B00693004 /* soccer_active@2x.png in Resources */,
+				36D0A938172C101B00693004 /* soccer_inactive.png in Resources */,
+				36D0A939172C101B00693004 /* soccer_inactive@2x.png in Resources */,
+				36D0A93A172C101B00693004 /* sock_active.png in Resources */,
+				36D0A93B172C101B00693004 /* sock_active@2x.png in Resources */,
+				36D0A93C172C101B00693004 /* sock_inactive.png in Resources */,
+				36D0A93D172C101B00693004 /* sock_inactive@2x.png in Resources */,
+				36D0A947172C186F00693004 /* vs_active.png in Resources */,
+				36D0A948172C186F00693004 /* vs_active@2x.png in Resources */,
+				36D0A949172C186F00693004 /* vs_inactive.png in Resources */,
+				36D0A94A172C186F00693004 /* vs_inactive@2x.png in Resources */,
+				36D0A94C172C188200693004 /* champions-theme.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,6 +654,7 @@
 				CD43134017268632005D42E3 /* ComperatorDetailVC.m in Sources */,
 				361E49FE172877EE000B0B41 /* UIColor+Colors.m in Sources */,
 				361E4A2017288E89000B0B41 /* UIFont+Common.m in Sources */,
+				36D0A942172C129600693004 /* OBTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
