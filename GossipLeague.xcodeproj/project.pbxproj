@@ -16,16 +16,9 @@
 		09ABC07413A1D52D009C3FCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09ABC07313A1D52D009C3FCF /* Foundation.framework */; };
 		09BEF34C13D51C3F001BBCDB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09BEF34B13D51C3F001BBCDB /* Security.framework */; };
 		2FCDD6B014A573F500295AAC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FCDD6AF14A573F500295AAC /* QuartzCore.framework */; };
-		361E49FE172877EE000B0B41 /* UIColor+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 361E49FD172877EE000B0B41 /* UIColor+Colors.m */; };
-		361E4A0E17288194000B0B41 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 361E4A0017288193000B0B41 /* Icon.png */; };
-		361E4A0F17288194000B0B41 /* RobertoBaggio.png in Resources */ = {isa = PBXBuildFile; fileRef = 361E4A0317288193000B0B41 /* RobertoBaggio.png */; };
-		361E4A1417288194000B0B41 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 361E4A0B17288194000B0B41 /* Default-568h@2x.png */; };
-		361E4A1517288194000B0B41 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 361E4A0C17288194000B0B41 /* Default.png */; };
-		361E4A1617288194000B0B41 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 361E4A0D17288194000B0B41 /* Default@2x.png */; };
-		361E4A1B17288E6C000B0B41 /* AlfaSlabOne-Regular-OTF.otf in Resources */ = {isa = PBXBuildFile; fileRef = 361E4A1817288E6C000B0B41 /* AlfaSlabOne-Regular-OTF.otf */; };
-		361E4A1C17288E6C000B0B41 /* FreightSans Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 361E4A1917288E6C000B0B41 /* FreightSans Bold.ttf */; };
-		361E4A1D17288E6C000B0B41 /* FreightSans LightSC.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 361E4A1A17288E6C000B0B41 /* FreightSans LightSC.ttf */; };
-		361E4A2017288E89000B0B41 /* UIFont+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 361E4A1F17288E89000B0B41 /* UIFont+Common.m */; };
+		369C7F8F173130240095135D /* UIColor+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 369C7F8C173130240095135D /* UIColor+Colors.m */; };
+		369C7F90173130240095135D /* UIFont+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 369C7F8E173130240095135D /* UIFont+Common.m */; };
+		369C7F94173130550095135D /* OBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 369C7F93173130550095135D /* OBTabBarController.m */; };
 		36A1EBEF17010D3800F7A57B /* GossipLeagueAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A1EBE717010D3800F7A57B /* GossipLeagueAppDelegate.m */; };
 		36A1EC0017010D7500F7A57B /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36A1EBFC17010D7500F7A57B /* Entitlements.plist */; };
 		36A1EC0217010D7500F7A57B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A1EBFF17010D7500F7A57B /* main.m */; };
@@ -33,20 +26,6 @@
 		36A1EC0817010D8200F7A57B /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36A1EC0517010D8200F7A57B /* MainWindow.xib */; };
 		36A1EC0B17010E0100F7A57B /* PlayerEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A1EC0A17010E0100F7A57B /* PlayerEntity.m */; };
 		36A1EC0E17010F8000F7A57B /* GameEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A1EC0D17010F8000F7A57B /* GameEntity.m */; };
-		36D0A936172C101B00693004 /* soccer_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 36D0A92C172C101A00693004 /* soccer_active.png */; };
-		36D0A937172C101B00693004 /* soccer_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36D0A92D172C101A00693004 /* soccer_active@2x.png */; };
-		36D0A938172C101B00693004 /* soccer_inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = 36D0A92E172C101A00693004 /* soccer_inactive.png */; };
-		36D0A939172C101B00693004 /* soccer_inactive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36D0A92F172C101A00693004 /* soccer_inactive@2x.png */; };
-		36D0A93A172C101B00693004 /* sock_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 36D0A930172C101A00693004 /* sock_active.png */; };
-		36D0A93B172C101B00693004 /* sock_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36D0A931172C101B00693004 /* sock_active@2x.png */; };
-		36D0A93C172C101B00693004 /* sock_inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = 36D0A932172C101B00693004 /* sock_inactive.png */; };
-		36D0A93D172C101B00693004 /* sock_inactive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36D0A933172C101B00693004 /* sock_inactive@2x.png */; };
-		36D0A942172C129600693004 /* OBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D0A941172C129600693004 /* OBTabBarController.m */; };
-		36D0A947172C186F00693004 /* vs_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 36D0A943172C186E00693004 /* vs_active.png */; };
-		36D0A948172C186F00693004 /* vs_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36D0A944172C186E00693004 /* vs_active@2x.png */; };
-		36D0A949172C186F00693004 /* vs_inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = 36D0A945172C186F00693004 /* vs_inactive.png */; };
-		36D0A94A172C186F00693004 /* vs_inactive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 36D0A946172C186F00693004 /* vs_inactive@2x.png */; };
-		36D0A94C172C188200693004 /* champions-theme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 36D0A94B172C188200693004 /* champions-theme.mp3 */; };
 		36F3A8161721573E005E86ED /* OBCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F3A80F1721573E005E86ED /* OBCache.m */; };
 		36F3A8171721573E005E86ED /* OBConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F3A8111721573E005E86ED /* OBConnection.m */; };
 		36F3A8181721573E005E86ED /* OBRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F3A8131721573E005E86ED /* OBRequest.m */; };
@@ -54,6 +33,10 @@
 		36F3A81E17215789005E86ED /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F3A81C17215789005E86ED /* EGOCache.m */; };
 		36F3A81F17215789005E86ED /* README.mdown in Resources */ = {isa = PBXBuildFile; fileRef = 36F3A81D17215789005E86ED /* README.mdown */; };
 		4998650515BF305000803E05 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4998650415BF305000803E05 /* StoreKit.framework */; };
+		5B018593172C1B40001C6F06 /* ComparatorInfoDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B018592172C1B40001C6F06 /* ComparatorInfoDetailCell.xib */; };
+		5B018596172C1B99001C6F06 /* ComparatorInfoDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B018595172C1B99001C6F06 /* ComparatorInfoDetailCell.m */; };
+		5B01859C172C2B2C001C6F06 /* ComparatorGamesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01859B172C2B2C001C6F06 /* ComparatorGamesVC.m */; };
+		5B0185A1172D40CC001C6F06 /* UserDetailGamesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01859F172D40CC001C6F06 /* UserDetailGamesVC.m */; };
 		5B798A4D17229EEA00C9BE1A /* GameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B798A4817229EEA00C9BE1A /* GameCell.m */; };
 		5B798A4E17229EEA00C9BE1A /* GameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B798A4917229EEA00C9BE1A /* GameCell.xib */; };
 		5B798A4F17229EEA00C9BE1A /* GamesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B798A4B17229EEA00C9BE1A /* GamesVC.m */; };
@@ -73,12 +56,12 @@
 		6372FF581613CC47002132AF /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6372FF571613CC47002132AF /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		743D7B6D157DA60100084B67 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 743D7B6C157DA60100084B67 /* CoreGraphics.framework */; };
 		97E18B1F1624CB5700B17A67 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E18B1E1624CB5700B17A67 /* CoreLocation.framework */; };
-		CD431334172678F9005D42E3 /* ComperatorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD431332172678F9005D42E3 /* ComperatorVC.m */; };
-		CD431335172678F9005D42E3 /* ComperatorVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD431333172678F9005D42E3 /* ComperatorVC.xib */; };
-		CD4313391726800B005D42E3 /* ComperatorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4313381726800B005D42E3 /* ComperatorCell.m */; };
-		CD43133B17268025005D42E3 /* ComperatorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD43133A17268025005D42E3 /* ComperatorCell.xib */; };
-		CD43134017268632005D42E3 /* ComperatorDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD43133E17268632005D42E3 /* ComperatorDetailVC.m */; };
-		CD43134117268632005D42E3 /* ComperatorDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD43133F17268632005D42E3 /* ComperatorDetailVC.xib */; };
+		CD431334172678F9005D42E3 /* ComparatorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD431332172678F9005D42E3 /* ComparatorVC.m */; };
+		CD431335172678F9005D42E3 /* ComparatorVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD431333172678F9005D42E3 /* ComparatorVC.xib */; };
+		CD4313391726800B005D42E3 /* ComparatorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4313381726800B005D42E3 /* ComparatorCell.m */; };
+		CD43133B17268025005D42E3 /* ComparatorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD43133A17268025005D42E3 /* ComparatorCell.xib */; };
+		CD43134017268632005D42E3 /* ComparatorDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD43133E17268632005D42E3 /* ComparatorDetailVC.m */; };
+		CD43134117268632005D42E3 /* ComparatorDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD43133F17268632005D42E3 /* ComparatorDetailVC.xib */; };
 		E854EA5C4FFF41C88E4EB348 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 588C860EF36A46BFB9105A93 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -93,8 +76,6 @@
 		09ABC07313A1D52D009C3FCF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		09BEF34B13D51C3F001BBCDB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		2FCDD6AF14A573F500295AAC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		361E49FC172877EE000B0B41 /* UIColor+Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Colors.h"; path = "UI-Additions/UIColor+Colors.h"; sourceTree = "<group>"; };
-		361E49FD172877EE000B0B41 /* UIColor+Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Colors.m"; path = "UI-Additions/UIColor+Colors.m"; sourceTree = "<group>"; };
 		361E4A0017288193000B0B41 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		361E4A0317288193000B0B41 /* RobertoBaggio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RobertoBaggio.png; sourceTree = "<group>"; };
 		361E4A0B17288194000B0B41 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -103,8 +84,12 @@
 		361E4A1817288E6C000B0B41 /* AlfaSlabOne-Regular-OTF.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlfaSlabOne-Regular-OTF.otf"; sourceTree = "<group>"; };
 		361E4A1917288E6C000B0B41 /* FreightSans Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FreightSans Bold.ttf"; sourceTree = "<group>"; };
 		361E4A1A17288E6C000B0B41 /* FreightSans LightSC.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FreightSans LightSC.ttf"; sourceTree = "<group>"; };
-		361E4A1E17288E89000B0B41 /* UIFont+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIFont+Common.h"; path = "UI-Additions/UIFont+Common.h"; sourceTree = "<group>"; };
-		361E4A1F17288E89000B0B41 /* UIFont+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIFont+Common.m"; path = "UI-Additions/UIFont+Common.m"; sourceTree = "<group>"; };
+		369C7F8B173130240095135D /* UIColor+Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Colors.h"; sourceTree = "<group>"; };
+		369C7F8C173130240095135D /* UIColor+Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Colors.m"; sourceTree = "<group>"; };
+		369C7F8D173130240095135D /* UIFont+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Common.h"; sourceTree = "<group>"; };
+		369C7F8E173130240095135D /* UIFont+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Common.m"; sourceTree = "<group>"; };
+		369C7F92173130550095135D /* OBTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OBTabBarController.h; path = OBTabBarController/OBTabBarController.h; sourceTree = SOURCE_ROOT; };
+		369C7F93173130550095135D /* OBTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OBTabBarController.m; path = OBTabBarController/OBTabBarController.m; sourceTree = SOURCE_ROOT; };
 		36A1EBE617010D3800F7A57B /* GossipLeagueAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GossipLeagueAppDelegate.h; path = GossipLeague/Classes/GossipLeagueAppDelegate.h; sourceTree = SOURCE_ROOT; };
 		36A1EBE717010D3800F7A57B /* GossipLeagueAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GossipLeagueAppDelegate.m; path = GossipLeague/Classes/GossipLeagueAppDelegate.m; sourceTree = SOURCE_ROOT; };
 		36A1EBFC17010D7500F7A57B /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Entitlements.plist; path = GossipLeague/Entitlements.plist; sourceTree = "<group>"; };
@@ -125,8 +110,6 @@
 		36D0A931172C101B00693004 /* sock_active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sock_active@2x.png"; sourceTree = "<group>"; };
 		36D0A932172C101B00693004 /* sock_inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sock_inactive.png; sourceTree = "<group>"; };
 		36D0A933172C101B00693004 /* sock_inactive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sock_inactive@2x.png"; sourceTree = "<group>"; };
-		36D0A940172C129600693004 /* OBTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OBTabBarController.h; path = OBTabBarController/OBTabBarController.h; sourceTree = SOURCE_ROOT; };
-		36D0A941172C129600693004 /* OBTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OBTabBarController.m; path = OBTabBarController/OBTabBarController.m; sourceTree = SOURCE_ROOT; };
 		36D0A943172C186E00693004 /* vs_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vs_active.png; sourceTree = "<group>"; };
 		36D0A944172C186E00693004 /* vs_active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vs_active@2x.png"; sourceTree = "<group>"; };
 		36D0A945172C186F00693004 /* vs_inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vs_inactive.png; sourceTree = "<group>"; };
@@ -145,6 +128,13 @@
 		36F3A81D17215789005E86ED /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.mdown; sourceTree = "<group>"; };
 		4998650415BF305000803E05 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		588C860EF36A46BFB9105A93 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B018592172C1B40001C6F06 /* ComparatorInfoDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ComparatorInfoDetailCell.xib; path = Comperator/ComperatorDetailVC/ComparatorInfoDetailCell.xib; sourceTree = "<group>"; };
+		5B018594172C1B99001C6F06 /* ComparatorInfoDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComparatorInfoDetailCell.h; path = Comperator/ComperatorDetailVC/ComparatorInfoDetailCell.h; sourceTree = "<group>"; };
+		5B018595172C1B99001C6F06 /* ComparatorInfoDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComparatorInfoDetailCell.m; path = Comperator/ComperatorDetailVC/ComparatorInfoDetailCell.m; sourceTree = "<group>"; };
+		5B01859A172C2B2C001C6F06 /* ComparatorGamesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComparatorGamesVC.h; path = Comperator/ComperatorDetailVC/Games/ComparatorGamesVC.h; sourceTree = "<group>"; };
+		5B01859B172C2B2C001C6F06 /* ComparatorGamesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComparatorGamesVC.m; path = Comperator/ComperatorDetailVC/Games/ComparatorGamesVC.m; sourceTree = "<group>"; };
+		5B01859E172D40CC001C6F06 /* UserDetailGamesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDetailGamesVC.h; path = User/Games/UserDetailGamesVC.h; sourceTree = "<group>"; };
+		5B01859F172D40CC001C6F06 /* UserDetailGamesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDetailGamesVC.m; path = User/Games/UserDetailGamesVC.m; sourceTree = "<group>"; };
 		5B798A4717229EE900C9BE1A /* GameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameCell.h; path = GossipLeague/Classes/UI/Games/GameCell.h; sourceTree = SOURCE_ROOT; };
 		5B798A4817229EEA00C9BE1A /* GameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameCell.m; path = GossipLeague/Classes/UI/Games/GameCell.m; sourceTree = SOURCE_ROOT; };
 		5B798A4917229EEA00C9BE1A /* GameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GameCell.xib; path = GossipLeague/Classes/UI/Games/GameCell.xib; sourceTree = SOURCE_ROOT; };
@@ -171,15 +161,15 @@
 		743D7B6C157DA60100084B67 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		97E18B1E1624CB5700B17A67 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B4452B5401F74F079D3003F5 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
-		CD431331172678F9005D42E3 /* ComperatorVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComperatorVC.h; path = Comperator/ComperatorVC.h; sourceTree = "<group>"; };
-		CD431332172678F9005D42E3 /* ComperatorVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComperatorVC.m; path = Comperator/ComperatorVC.m; sourceTree = "<group>"; };
-		CD431333172678F9005D42E3 /* ComperatorVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ComperatorVC.xib; path = Comperator/ComperatorVC.xib; sourceTree = "<group>"; };
-		CD4313371726800B005D42E3 /* ComperatorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComperatorCell.h; path = Comperator/ComperatorCell/ComperatorCell.h; sourceTree = "<group>"; };
-		CD4313381726800B005D42E3 /* ComperatorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComperatorCell.m; path = Comperator/ComperatorCell/ComperatorCell.m; sourceTree = "<group>"; };
-		CD43133A17268025005D42E3 /* ComperatorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ComperatorCell.xib; path = Comperator/ComperatorCell/ComperatorCell.xib; sourceTree = "<group>"; };
-		CD43133D17268632005D42E3 /* ComperatorDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComperatorDetailVC.h; path = Comperator/ComperatorDetailVC/ComperatorDetailVC.h; sourceTree = "<group>"; };
-		CD43133E17268632005D42E3 /* ComperatorDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComperatorDetailVC.m; path = Comperator/ComperatorDetailVC/ComperatorDetailVC.m; sourceTree = "<group>"; };
-		CD43133F17268632005D42E3 /* ComperatorDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ComperatorDetailVC.xib; path = Comperator/ComperatorDetailVC/ComperatorDetailVC.xib; sourceTree = "<group>"; };
+		CD431331172678F9005D42E3 /* ComparatorVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComparatorVC.h; path = Comperator/ComparatorVC.h; sourceTree = "<group>"; };
+		CD431332172678F9005D42E3 /* ComparatorVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComparatorVC.m; path = Comperator/ComparatorVC.m; sourceTree = "<group>"; };
+		CD431333172678F9005D42E3 /* ComparatorVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ComparatorVC.xib; path = Comperator/ComparatorVC.xib; sourceTree = "<group>"; };
+		CD4313371726800B005D42E3 /* ComparatorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComparatorCell.h; path = Comperator/ComperatorCell/ComparatorCell.h; sourceTree = "<group>"; };
+		CD4313381726800B005D42E3 /* ComparatorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComparatorCell.m; path = Comperator/ComperatorCell/ComparatorCell.m; sourceTree = "<group>"; };
+		CD43133A17268025005D42E3 /* ComparatorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ComparatorCell.xib; path = Comperator/ComperatorCell/ComparatorCell.xib; sourceTree = "<group>"; };
+		CD43133D17268632005D42E3 /* ComparatorDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComparatorDetailVC.h; path = Comperator/ComperatorDetailVC/ComparatorDetailVC.h; sourceTree = "<group>"; };
+		CD43133E17268632005D42E3 /* ComparatorDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComparatorDetailVC.m; path = Comperator/ComperatorDetailVC/ComparatorDetailVC.m; sourceTree = "<group>"; };
+		CD43133F17268632005D42E3 /* ComparatorDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ComparatorDetailVC.xib; path = Comperator/ComperatorDetailVC/ComparatorDetailVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +261,7 @@
 		360E9BDF1721E92F00522891 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				5B01859D172D40AF001C6F06 /* Games */,
 				5B798A5B17229F3A00C9BE1A /* UserDetailCell.h */,
 				5B798A5C17229F3A00C9BE1A /* UserDetailCell.m */,
 				5B798A5D17229F3A00C9BE1A /* UserDetailCell.xib */,
@@ -279,17 +270,6 @@
 				5B798A6017229F3B00C9BE1A /* UserDetailVC.xib */,
 			);
 			name = User;
-			sourceTree = "<group>";
-		};
-		361E49FB1728779D000B0B41 /* UI-Additions */ = {
-			isa = PBXGroup;
-			children = (
-				361E49FC172877EE000B0B41 /* UIColor+Colors.h */,
-				361E49FD172877EE000B0B41 /* UIColor+Colors.m */,
-				361E4A1E17288E89000B0B41 /* UIFont+Common.h */,
-				361E4A1F17288E89000B0B41 /* UIFont+Common.m */,
-			);
-			name = "UI-Additions";
 			sourceTree = "<group>";
 		};
 		361E49FF17288193000B0B41 /* Icons */ = {
@@ -364,6 +344,26 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		369C7F8A173130240095135D /* UI-Additions */ = {
+			isa = PBXGroup;
+			children = (
+				369C7F8B173130240095135D /* UIColor+Colors.h */,
+				369C7F8C173130240095135D /* UIColor+Colors.m */,
+				369C7F8D173130240095135D /* UIFont+Common.h */,
+				369C7F8E173130240095135D /* UIFont+Common.m */,
+			);
+			path = "UI-Additions";
+			sourceTree = "<group>";
+		};
+		369C7F911731303A0095135D /* OBTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				369C7F92173130550095135D /* OBTabBarController.h */,
+				369C7F93173130550095135D /* OBTabBarController.m */,
+			);
+			name = OBTabBarController;
+			sourceTree = "<group>";
+		};
 		36A1EBE417010D3800F7A57B /* BLL */ = {
 			isa = PBXGroup;
 			children = (
@@ -388,9 +388,9 @@
 		36A1EBE817010D3800F7A57B /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				36D0A91C172BDC4500693004 /* OBTabBarController */,
-				361E49FB1728779D000B0B41 /* UI-Additions */,
-				CD431330172678C9005D42E3 /* Comperator */,
+				369C7F911731303A0095135D /* OBTabBarController */,
+				369C7F8A173130240095135D /* UI-Additions */,
+				CD431330172678C9005D42E3 /* Comparator */,
 				5BCC45E21721887700E8EE76 /* Games */,
 				5B798A46172299E600C9BE1A /* Chart */,
 				360E9BDF1721E92F00522891 /* User */,
@@ -425,15 +425,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		36D0A91C172BDC4500693004 /* OBTabBarController */ = {
-			isa = PBXGroup;
-			children = (
-				36D0A940172C129600693004 /* OBTabBarController.h */,
-				36D0A941172C129600693004 /* OBTabBarController.m */,
-			);
-			name = OBTabBarController;
-			sourceTree = "<group>";
-		};
 		36F3A80D1721573E005E86ED /* OBConnection */ = {
 			isa = PBXGroup;
 			children = (
@@ -462,6 +453,24 @@
 			path = OBConnection/EGOCache;
 			sourceTree = SOURCE_ROOT;
 		};
+		5B018599172C2B04001C6F06 /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				5B01859A172C2B2C001C6F06 /* ComparatorGamesVC.h */,
+				5B01859B172C2B2C001C6F06 /* ComparatorGamesVC.m */,
+			);
+			name = Games;
+			sourceTree = "<group>";
+		};
+		5B01859D172D40AF001C6F06 /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				5B01859E172D40CC001C6F06 /* UserDetailGamesVC.h */,
+				5B01859F172D40CC001C6F06 /* UserDetailGamesVC.m */,
+			);
+			name = Games;
+			sourceTree = "<group>";
+		};
 		5B798A46172299E600C9BE1A /* Chart */ = {
 			isa = PBXGroup;
 			children = (
@@ -489,36 +498,40 @@
 			path = GossipGamesVC;
 			sourceTree = "<group>";
 		};
-		CD431330172678C9005D42E3 /* Comperator */ = {
+		CD431330172678C9005D42E3 /* Comparator */ = {
 			isa = PBXGroup;
 			children = (
-				CD43133C1726860B005D42E3 /* ComperatorDetailVC */,
-				CD43133617267FE7005D42E3 /* ComperatorCell */,
-				CD431331172678F9005D42E3 /* ComperatorVC.h */,
-				CD431332172678F9005D42E3 /* ComperatorVC.m */,
-				CD431333172678F9005D42E3 /* ComperatorVC.xib */,
+				CD43133C1726860B005D42E3 /* ComparatorDetailVC */,
+				CD43133617267FE7005D42E3 /* ComparatorCell */,
+				CD431331172678F9005D42E3 /* ComparatorVC.h */,
+				CD431332172678F9005D42E3 /* ComparatorVC.m */,
+				CD431333172678F9005D42E3 /* ComparatorVC.xib */,
 			);
-			name = Comperator;
+			name = Comparator;
 			sourceTree = "<group>";
 		};
-		CD43133617267FE7005D42E3 /* ComperatorCell */ = {
+		CD43133617267FE7005D42E3 /* ComparatorCell */ = {
 			isa = PBXGroup;
 			children = (
-				CD4313371726800B005D42E3 /* ComperatorCell.h */,
-				CD4313381726800B005D42E3 /* ComperatorCell.m */,
-				CD43133A17268025005D42E3 /* ComperatorCell.xib */,
+				CD4313371726800B005D42E3 /* ComparatorCell.h */,
+				CD4313381726800B005D42E3 /* ComparatorCell.m */,
+				CD43133A17268025005D42E3 /* ComparatorCell.xib */,
 			);
-			name = ComperatorCell;
+			name = ComparatorCell;
 			sourceTree = "<group>";
 		};
-		CD43133C1726860B005D42E3 /* ComperatorDetailVC */ = {
+		CD43133C1726860B005D42E3 /* ComparatorDetailVC */ = {
 			isa = PBXGroup;
 			children = (
-				CD43133D17268632005D42E3 /* ComperatorDetailVC.h */,
-				CD43133E17268632005D42E3 /* ComperatorDetailVC.m */,
-				CD43133F17268632005D42E3 /* ComperatorDetailVC.xib */,
+				5B018599172C2B04001C6F06 /* Games */,
+				CD43133D17268632005D42E3 /* ComparatorDetailVC.h */,
+				CD43133E17268632005D42E3 /* ComparatorDetailVC.m */,
+				CD43133F17268632005D42E3 /* ComparatorDetailVC.xib */,
+				5B018594172C1B99001C6F06 /* ComparatorInfoDetailCell.h */,
+				5B018595172C1B99001C6F06 /* ComparatorInfoDetailCell.m */,
+				5B018592172C1B40001C6F06 /* ComparatorInfoDetailCell.xib */,
 			);
-			name = ComperatorDetailVC;
+			name = ComparatorDetailVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -583,30 +596,10 @@
 				5B798A5A17229F2000C9BE1A /* LeagueVC.xib in Resources */,
 				5B798A6217229F3B00C9BE1A /* UserDetailCell.xib in Resources */,
 				5B798A6417229F3B00C9BE1A /* UserDetailVC.xib in Resources */,
-				CD431335172678F9005D42E3 /* ComperatorVC.xib in Resources */,
-				CD43133B17268025005D42E3 /* ComperatorCell.xib in Resources */,
-				CD43134117268632005D42E3 /* ComperatorDetailVC.xib in Resources */,
-				361E4A0E17288194000B0B41 /* Icon.png in Resources */,
-				361E4A0F17288194000B0B41 /* RobertoBaggio.png in Resources */,
-				361E4A1417288194000B0B41 /* Default-568h@2x.png in Resources */,
-				361E4A1517288194000B0B41 /* Default.png in Resources */,
-				361E4A1617288194000B0B41 /* Default@2x.png in Resources */,
-				361E4A1B17288E6C000B0B41 /* AlfaSlabOne-Regular-OTF.otf in Resources */,
-				361E4A1C17288E6C000B0B41 /* FreightSans Bold.ttf in Resources */,
-				361E4A1D17288E6C000B0B41 /* FreightSans LightSC.ttf in Resources */,
-				36D0A936172C101B00693004 /* soccer_active.png in Resources */,
-				36D0A937172C101B00693004 /* soccer_active@2x.png in Resources */,
-				36D0A938172C101B00693004 /* soccer_inactive.png in Resources */,
-				36D0A939172C101B00693004 /* soccer_inactive@2x.png in Resources */,
-				36D0A93A172C101B00693004 /* sock_active.png in Resources */,
-				36D0A93B172C101B00693004 /* sock_active@2x.png in Resources */,
-				36D0A93C172C101B00693004 /* sock_inactive.png in Resources */,
-				36D0A93D172C101B00693004 /* sock_inactive@2x.png in Resources */,
-				36D0A947172C186F00693004 /* vs_active.png in Resources */,
-				36D0A948172C186F00693004 /* vs_active@2x.png in Resources */,
-				36D0A949172C186F00693004 /* vs_inactive.png in Resources */,
-				36D0A94A172C186F00693004 /* vs_inactive@2x.png in Resources */,
-				36D0A94C172C188200693004 /* champions-theme.mp3 in Resources */,
+				CD431335172678F9005D42E3 /* ComparatorVC.xib in Resources */,
+				CD43133B17268025005D42E3 /* ComparatorCell.xib in Resources */,
+				CD43134117268632005D42E3 /* ComparatorDetailVC.xib in Resources */,
+				5B018593172C1B40001C6F06 /* ComparatorInfoDetailCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,12 +642,15 @@
 				5B798A5917229F2000C9BE1A /* LeagueVC.m in Sources */,
 				5B798A6117229F3B00C9BE1A /* UserDetailCell.m in Sources */,
 				5B798A6317229F3B00C9BE1A /* UserDetailVC.m in Sources */,
-				CD431334172678F9005D42E3 /* ComperatorVC.m in Sources */,
-				CD4313391726800B005D42E3 /* ComperatorCell.m in Sources */,
-				CD43134017268632005D42E3 /* ComperatorDetailVC.m in Sources */,
-				361E49FE172877EE000B0B41 /* UIColor+Colors.m in Sources */,
-				361E4A2017288E89000B0B41 /* UIFont+Common.m in Sources */,
-				36D0A942172C129600693004 /* OBTabBarController.m in Sources */,
+				CD431334172678F9005D42E3 /* ComparatorVC.m in Sources */,
+				CD4313391726800B005D42E3 /* ComparatorCell.m in Sources */,
+				CD43134017268632005D42E3 /* ComparatorDetailVC.m in Sources */,
+				5B018596172C1B99001C6F06 /* ComparatorInfoDetailCell.m in Sources */,
+				5B01859C172C2B2C001C6F06 /* ComparatorGamesVC.m in Sources */,
+				5B0185A1172D40CC001C6F06 /* UserDetailGamesVC.m in Sources */,
+				369C7F8F173130240095135D /* UIColor+Colors.m in Sources */,
+				369C7F90173130240095135D /* UIFont+Common.m in Sources */,
+				369C7F94173130550095135D /* OBTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

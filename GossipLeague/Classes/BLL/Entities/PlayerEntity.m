@@ -27,4 +27,24 @@
              };
 }
 
+- (double)winGamesPor100
+{
+    return ((double)self.winGames/self.games) * 100;
+}
+
+- (double)drawGamesPor100
+{
+    return ((double)self.drawGames/self.games) * 100;
+}
+
+- (double)lostGamesPor100
+{
+    return ((double)self.lostGames/self.games) * 100;
+}
+
+- (double)goalsRatio
+{
+    return ((double)self.scoredGoals/self.concededGoals);
+}
+
 @end

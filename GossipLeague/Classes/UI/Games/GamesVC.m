@@ -12,18 +12,11 @@
 
 static NSString * const CellGameIdentifier = @"CellGameIdentifier";
 
-@interface GamesVC ()
-
-@property (strong, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) NSArray *games;
-
-@end
-
 @implementation GamesVC
 
 - (id)init
 {
-    self = [super init];
+    self = [super initWithNibName:@"GamesVC" bundle:nil];
     if (self) {
         self.title = @"Partidos";
     }
@@ -59,6 +52,8 @@ static NSString * const CellGameIdentifier = @"CellGameIdentifier";
     [OBConnection makeRequest:request withCacheKey:NSStringFromClass([self class]) parseBlock:^id(NSDictionary *data) {
         NSMutableArray *parsedGames = [NSMutableArray array];
         
+        self.games = [[NSArray alloc] init];
+        
         for (NSDictionary *tmpGame in [data objectForKey:@"games"]) {
             GameEntity *game = [MTLJSONAdapter modelOfClass:[GameEntity class] fromJSONDictionary:tmpGame error:nil];
             [parsedGames addObject:game];
@@ -66,6 +61,7 @@ static NSString * const CellGameIdentifier = @"CellGameIdentifier";
         
         return parsedGames;
     } success:^(NSArray *parsedGames, BOOL cached) {
+        self.games = parsedGames;
         [self.tableView reloadData];
     } error:NULL];
 }
@@ -115,6 +111,5 @@ static NSString * const CellGameIdentifier = @"CellGameIdentifier";
     refresh.attributedTitle = [[NSAttributedString alloc] initWithString:lastUpdated];
     [refresh endRefreshing];
 }
-
 
 @end

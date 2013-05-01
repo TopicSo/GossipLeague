@@ -3,7 +3,7 @@
 #import "GossipLeagueAppDelegate.h"
 #import "LeagueVC.h"
 #import "GamesVC.h"
-#import "ComperatorVC.h"
+#import "ComparatorVC.h"
 #import "PlayerEntity.h"
 
 #import <AVFoundation/AVFoundation.h>
@@ -133,7 +133,7 @@
 {
     if (!_comperatorNavigationController)
     {
-        _comperatorNavigationController = [[UINavigationController alloc] initWithRootViewController:[[ComperatorVC alloc] init]];
+        _comperatorNavigationController = [[UINavigationController alloc] initWithRootViewController:[[ComparatorVC alloc] init]];
     }
     
     return _comperatorNavigationController;

@@ -1,5 +1,5 @@
 //
-//  ComperatorViewController.h
+//  ComparatorViewController.h
 //  GossipLeague
 //
 //  Created by Valenti on 23/04/13.
@@ -8,8 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ComperatorVC : UIViewController
-
-- (IBAction)goToResult:(id)sender;
-
+@interface ComparatorVC : UIViewController
 @end

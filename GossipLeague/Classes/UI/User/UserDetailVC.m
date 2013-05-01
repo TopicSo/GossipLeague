@@ -9,7 +9,7 @@
 #import "UserDetailVC.h"
 #import "PlayerEntity.h"
 #import "UserDetailCell.h"
-#import <CommonCrypto/CommonDigest.h>
+#import "UserDetailGamesVC.h"
 
 #import "UIImageView+AFNetworking.h"
 
@@ -19,8 +19,6 @@ static NSString * const CellIUserdentifier = @"UserDetailCell";
 @property (nonatomic, strong) PlayerEntity *player;
 @property (strong, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *avatarImageView;
-@property (strong, nonatomic) IBOutlet UIView *containerView;
-@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
@@ -40,18 +38,37 @@ static NSString * const CellIUserdentifier = @"UserDetailCell";
 {
     [super viewDidLoad];
     
-    [self.scrollView addSubview:self.containerView];
-    self.scrollView.contentSize = self.containerView.bounds.size;
+    [self setupUIBar];
+    [self setupBasicInfomation];
+    [self setupTableView];
+}
+
+- (void)setupUIBar
+{
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithTitle:@"Games" style:UIBarButtonItemStyleBordered target:self action:@selector(goToGames)];
+    [self.navigationItem setRightBarButtonItem:barButton];
+}
+
+- (void)goToGames
+{
+    UserDetailGamesVC *userDetailGames = [[UserDetailGamesVC alloc] initWithPlayer:self.player];
+    [self.navigationController pushViewController:userDetailGames animated:YES];
+}
+
+- (void)setupBasicInfomation
+{
     self.usernameLabel.text = self.player.username;
     [self.avatarImageView setImageWithURL:[NSURL URLWithString:self.player.avatarURL]];
-    
+}
+
+- (void)setupTableView
+{
     self.tableView.backgroundView = nil;
     [self.tableView registerNib:[UINib nibWithNibName:@"UserDetailCell" bundle:nil]
          forCellReuseIdentifier:CellIUserdentifier];
 }
 
 #pragma mark - Table View Delegate
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 6;
@@ -73,9 +90,6 @@ static NSString * const CellIUserdentifier = @"UserDetailCell";
 - (void)viewDidUnload {
     [self setUsernameLabel:nil];
     [self setAvatarImageView:nil];
-    
-    [self setScrollView:nil];
-    [self setContainerView:nil];
     [self setTableView:nil];
     [super viewDidUnload];
 }
