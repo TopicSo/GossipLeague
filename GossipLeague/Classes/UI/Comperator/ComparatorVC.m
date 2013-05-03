@@ -7,7 +7,7 @@
 //
 
 #import "ComparatorVC.h"
-#import "ComparatorCell.h"
+#import "PlayerBasicCell.h"
 #import "PlayerEntity.h"
 #import "ComparatorDetailVC.h"
 
@@ -33,6 +33,7 @@
 {
     [super viewDidLoad];
     self.title = @"Comparator";
+    self.playerTable.backgroundColor = [UIColor colorBackgroundTableView];
     [self initializeRefreshControl];
     [self reloadData];
 }
@@ -51,7 +52,7 @@
 
 - (void)reloadData
 {
-    OBRequest *request = [OBRequest requestWithType:OBRequestMethodTypeMethodGET resource:@"players" parameters:nil isPublic:YES];
+    OBRequest *request = [OBRequest requestWithType:OBRequestMethodTypeMethodGET resource:@"players/ranking" parameters:nil isPublic:YES];
     
     [OBConnection makeRequest:request withCacheKey:NSStringFromClass([self class]) parseBlock:^id(NSDictionary *data) {
         NSMutableArray *parsedPlayers = [NSMutableArray array];
@@ -60,13 +61,13 @@
             PlayerEntity *player = [MTLJSONAdapter modelOfClass:[PlayerEntity class] fromJSONDictionary:tmpPlayer error:nil];
             [parsedPlayers addObject:player];
         }
-        
         return parsedPlayers;
     } success:^(NSArray *parsedPlayers, BOOL cached)
     {
         self.playersArray = [NSArray arrayWithArray:parsedPlayers];
-        [self.playerTable reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
-
+        if (!cached) {
+            [self.playerTable reloadData];
+        }
     } error:NULL];
 }
 
@@ -92,26 +93,26 @@
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"ComparatorCell";
+    static NSString *CellIdentifier = @"PlayerBasicCell";
 	
-    ComparatorCell *cell = (ComparatorCell *) [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    PlayerBasicCell *cell = (PlayerBasicCell *) [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil)
     {
-		NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"ComparatorCell" owner:self options:nil];
+		NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"PlayerBasicCell" owner:self options:nil];
 		
 		for (id currentObject in topLevelObjects)
         {
 			if ([currentObject isKindOfClass:[UITableViewCell class]])
             {
-				cell =  (ComparatorCell *) currentObject;
+				cell =  (PlayerBasicCell *) currentObject;
 				break;
 			}
 		}
 	}
     PlayerEntity *player =[self.playersArray objectAtIndex:indexPath.row];
     
-    [cell setPlayerToCell:player];
+    [cell setPlayer:player];
     
     return cell;
 }
@@ -144,15 +145,7 @@
 
 - (void)refreshContent:(UIRefreshControl *)refresh
 {
-    refresh.attributedTitle = [[NSAttributedString alloc] initWithString:@"Refreshing data..."];
-    
     [self reloadData];
-    
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"MMM d, h:mm a"];
-    NSString *lastUpdated = [NSString stringWithFormat:@"Last updated on %@",
-                             [formatter stringFromDate:[NSDate date]]];
-    refresh.attributedTitle = [[NSAttributedString alloc] initWithString:lastUpdated];
     [refresh endRefreshing];
 }
 

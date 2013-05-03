@@ -16,6 +16,7 @@
 static NSString * const CellIUserdentifier = @"UserDetailCell";
 
 @interface UserDetailVC ()
+@property (strong, nonatomic) IBOutlet UIView *userInfoView;
 @property (nonatomic, strong) PlayerEntity *player;
 @property (strong, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *avatarImageView;
@@ -57,6 +58,8 @@ static NSString * const CellIUserdentifier = @"UserDetailCell";
 
 - (void)setupBasicInfomation
 {
+    self.usernameLabel.font = [UIFont fontForUsernameInCell];
+    self.usernameLabel.textColor = [UIColor colorTableCellLabel];
     self.usernameLabel.text = self.player.username;
     [self.avatarImageView setImageWithURL:[NSURL URLWithString:self.player.avatarURL]];
 }
@@ -66,6 +69,8 @@ static NSString * const CellIUserdentifier = @"UserDetailCell";
     self.tableView.backgroundView = nil;
     [self.tableView registerNib:[UINib nibWithNibName:@"UserDetailCell" bundle:nil]
          forCellReuseIdentifier:CellIUserdentifier];
+    self.tableView.tableHeaderView = self.userInfoView;
+    self.tableView.backgroundColor = [UIColor colorBackgroundTableView];
 }
 
 #pragma mark - Table View Delegate
@@ -91,6 +96,7 @@ static NSString * const CellIUserdentifier = @"UserDetailCell";
     [self setUsernameLabel:nil];
     [self setAvatarImageView:nil];
     [self setTableView:nil];
+    [self setUserInfoView:nil];
     [super viewDidUnload];
 }
 @end

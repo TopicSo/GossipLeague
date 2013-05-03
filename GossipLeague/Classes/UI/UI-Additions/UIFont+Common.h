@@ -13,5 +13,5 @@
 + (UIFont *)fontForUsernameInCell;
 + (UIFont *)fontForDateInCell;
 + (UIFont *)fontForGoalsInCell;
-
++ (UIFont *)fontForNavBarTitle;
 @end

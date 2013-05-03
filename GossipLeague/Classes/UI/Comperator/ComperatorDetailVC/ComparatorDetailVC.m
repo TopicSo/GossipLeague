@@ -23,6 +23,7 @@ static NSString * const CellInformationIdentifier = @"ComparatorInfoDetailCell";
 @property (nonatomic,strong) PlayerEntity *player1;
 @property (nonatomic,strong) PlayerEntity *player2;
 
+@property (strong, nonatomic) IBOutlet UIView *comparatorFields;
 @property (nonatomic,strong) IBOutlet UIImageView *profilePlayer1;
 @property (nonatomic,strong) IBOutlet UIImageView *profilePlayer2;
 @property (weak, nonatomic) IBOutlet UILabel *namePlayer1;
@@ -70,6 +71,10 @@ static NSString * const CellInformationIdentifier = @"ComparatorInfoDetailCell";
 
 - (void)setupHeader
 {
+    self.namePlayer1.font = [UIFont fontForUsernameInCell];
+    self.namePlayer1.textColor = [UIColor colorTableCellLabel];
+    self.namePlayer2.font = [UIFont fontForUsernameInCell];
+    self.namePlayer2.textColor = [UIColor colorTableCellLabel];
     self.namePlayer1.text = self.player1.username;
     self.namePlayer2.text = self.player2.username;
     [self.profilePlayer1 setImageWithURL:[NSURL URLWithString:self.player1.avatarURL]];
@@ -81,6 +86,8 @@ static NSString * const CellInformationIdentifier = @"ComparatorInfoDetailCell";
     self.informationsTableView.rowHeight = 50;
     [self.informationsTableView registerNib:[UINib nibWithNibName:@"ComparatorInfoDetailCell" bundle:nil]
               forCellReuseIdentifier:CellInformationIdentifier];
+    self.informationsTableView.tableHeaderView = self.comparatorFields;
+    self.informationsTableView.backgroundColor = [UIColor colorBackgroundTableView];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -127,6 +134,7 @@ static NSString * const CellInformationIdentifier = @"ComparatorInfoDetailCell";
     [self setNamePlayer1:nil];
     [self setNamePlayer2:nil];
     [self setInformationsTableView:nil];
+    [self setComparatorFields:nil];
     [super viewDidUnload];
 }
 

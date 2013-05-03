@@ -16,6 +16,8 @@
 		09ABC07413A1D52D009C3FCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09ABC07313A1D52D009C3FCF /* Foundation.framework */; };
 		09BEF34C13D51C3F001BBCDB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09BEF34B13D51C3F001BBCDB /* Security.framework */; };
 		2FCDD6B014A573F500295AAC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FCDD6AF14A573F500295AAC /* QuartzCore.framework */; };
+		369BFF7A17342D41007B42FE /* navigationBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 369BFF7817342D41007B42FE /* navigationBar.png */; };
+		369BFF7B17342D41007B42FE /* navigationBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 369BFF7917342D41007B42FE /* navigationBar@2x.png */; };
 		369C7F8F173130240095135D /* UIColor+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 369C7F8C173130240095135D /* UIColor+Colors.m */; };
 		369C7F90173130240095135D /* UIFont+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 369C7F8E173130240095135D /* UIFont+Common.m */; };
 		369C7F94173130550095135D /* OBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 369C7F93173130550095135D /* OBTabBarController.m */; };
@@ -41,8 +43,6 @@
 		5B798A4E17229EEA00C9BE1A /* GameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B798A4917229EEA00C9BE1A /* GameCell.xib */; };
 		5B798A4F17229EEA00C9BE1A /* GamesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B798A4B17229EEA00C9BE1A /* GamesVC.m */; };
 		5B798A5017229EEA00C9BE1A /* GamesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B798A4C17229EEA00C9BE1A /* GamesVC.xib */; };
-		5B798A5717229F2000C9BE1A /* LeagueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B798A5217229F1B00C9BE1A /* LeagueCell.m */; };
-		5B798A5817229F2000C9BE1A /* LeagueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B798A5317229F1C00C9BE1A /* LeagueCell.xib */; };
 		5B798A5917229F2000C9BE1A /* LeagueVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B798A5517229F1D00C9BE1A /* LeagueVC.m */; };
 		5B798A5A17229F2000C9BE1A /* LeagueVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B798A5617229F1E00C9BE1A /* LeagueVC.xib */; };
 		5B798A6117229F3B00C9BE1A /* UserDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B798A5C17229F3A00C9BE1A /* UserDetailCell.m */; };
@@ -58,8 +58,8 @@
 		97E18B1F1624CB5700B17A67 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E18B1E1624CB5700B17A67 /* CoreLocation.framework */; };
 		CD431334172678F9005D42E3 /* ComparatorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD431332172678F9005D42E3 /* ComparatorVC.m */; };
 		CD431335172678F9005D42E3 /* ComparatorVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD431333172678F9005D42E3 /* ComparatorVC.xib */; };
-		CD4313391726800B005D42E3 /* ComparatorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4313381726800B005D42E3 /* ComparatorCell.m */; };
-		CD43133B17268025005D42E3 /* ComparatorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD43133A17268025005D42E3 /* ComparatorCell.xib */; };
+		CD4313391726800B005D42E3 /* PlayerBasicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4313381726800B005D42E3 /* PlayerBasicCell.m */; };
+		CD43133B17268025005D42E3 /* PlayerBasicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD43133A17268025005D42E3 /* PlayerBasicCell.xib */; };
 		CD43134017268632005D42E3 /* ComparatorDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CD43133E17268632005D42E3 /* ComparatorDetailVC.m */; };
 		CD43134117268632005D42E3 /* ComparatorDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD43133F17268632005D42E3 /* ComparatorDetailVC.xib */; };
 		E854EA5C4FFF41C88E4EB348 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 588C860EF36A46BFB9105A93 /* libPods.a */; };
@@ -84,6 +84,8 @@
 		361E4A1817288E6C000B0B41 /* AlfaSlabOne-Regular-OTF.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlfaSlabOne-Regular-OTF.otf"; sourceTree = "<group>"; };
 		361E4A1917288E6C000B0B41 /* FreightSans Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FreightSans Bold.ttf"; sourceTree = "<group>"; };
 		361E4A1A17288E6C000B0B41 /* FreightSans LightSC.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FreightSans LightSC.ttf"; sourceTree = "<group>"; };
+		369BFF7817342D41007B42FE /* navigationBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = navigationBar.png; path = NavBar/navigationBar.png; sourceTree = "<group>"; };
+		369BFF7917342D41007B42FE /* navigationBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navigationBar@2x.png"; path = "NavBar/navigationBar@2x.png"; sourceTree = "<group>"; };
 		369C7F8B173130240095135D /* UIColor+Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Colors.h"; sourceTree = "<group>"; };
 		369C7F8C173130240095135D /* UIColor+Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Colors.m"; sourceTree = "<group>"; };
 		369C7F8D173130240095135D /* UIFont+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Common.h"; sourceTree = "<group>"; };
@@ -141,9 +143,6 @@
 		5B798A4A17229EEA00C9BE1A /* GamesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GamesVC.h; path = GossipLeague/Classes/UI/Games/GamesVC.h; sourceTree = SOURCE_ROOT; };
 		5B798A4B17229EEA00C9BE1A /* GamesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GamesVC.m; path = GossipLeague/Classes/UI/Games/GamesVC.m; sourceTree = SOURCE_ROOT; };
 		5B798A4C17229EEA00C9BE1A /* GamesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GamesVC.xib; path = GossipLeague/Classes/UI/Games/GamesVC.xib; sourceTree = SOURCE_ROOT; };
-		5B798A5117229F1B00C9BE1A /* LeagueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeagueCell.h; path = Chart/LeagueCell.h; sourceTree = "<group>"; };
-		5B798A5217229F1B00C9BE1A /* LeagueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeagueCell.m; path = Chart/LeagueCell.m; sourceTree = "<group>"; };
-		5B798A5317229F1C00C9BE1A /* LeagueCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LeagueCell.xib; path = Chart/LeagueCell.xib; sourceTree = "<group>"; };
 		5B798A5417229F1C00C9BE1A /* LeagueVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeagueVC.h; path = Chart/LeagueVC.h; sourceTree = "<group>"; };
 		5B798A5517229F1D00C9BE1A /* LeagueVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeagueVC.m; path = Chart/LeagueVC.m; sourceTree = "<group>"; };
 		5B798A5617229F1E00C9BE1A /* LeagueVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LeagueVC.xib; path = Chart/LeagueVC.xib; sourceTree = "<group>"; };
@@ -164,9 +163,9 @@
 		CD431331172678F9005D42E3 /* ComparatorVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComparatorVC.h; path = Comperator/ComparatorVC.h; sourceTree = "<group>"; };
 		CD431332172678F9005D42E3 /* ComparatorVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComparatorVC.m; path = Comperator/ComparatorVC.m; sourceTree = "<group>"; };
 		CD431333172678F9005D42E3 /* ComparatorVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ComparatorVC.xib; path = Comperator/ComparatorVC.xib; sourceTree = "<group>"; };
-		CD4313371726800B005D42E3 /* ComparatorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComparatorCell.h; path = Comperator/ComperatorCell/ComparatorCell.h; sourceTree = "<group>"; };
-		CD4313381726800B005D42E3 /* ComparatorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComparatorCell.m; path = Comperator/ComperatorCell/ComparatorCell.m; sourceTree = "<group>"; };
-		CD43133A17268025005D42E3 /* ComparatorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ComparatorCell.xib; path = Comperator/ComperatorCell/ComparatorCell.xib; sourceTree = "<group>"; };
+		CD4313371726800B005D42E3 /* PlayerBasicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerBasicCell.h; path = Comperator/ComperatorCell/PlayerBasicCell.h; sourceTree = "<group>"; };
+		CD4313381726800B005D42E3 /* PlayerBasicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerBasicCell.m; path = Comperator/ComperatorCell/PlayerBasicCell.m; sourceTree = "<group>"; };
+		CD43133A17268025005D42E3 /* PlayerBasicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlayerBasicCell.xib; path = Comperator/ComperatorCell/PlayerBasicCell.xib; sourceTree = "<group>"; };
 		CD43133D17268632005D42E3 /* ComparatorDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComparatorDetailVC.h; path = Comperator/ComperatorDetailVC/ComparatorDetailVC.h; sourceTree = "<group>"; };
 		CD43133E17268632005D42E3 /* ComparatorDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComparatorDetailVC.m; path = Comperator/ComperatorDetailVC/ComparatorDetailVC.m; sourceTree = "<group>"; };
 		CD43133F17268632005D42E3 /* ComparatorDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ComparatorDetailVC.xib; path = Comperator/ComperatorDetailVC/ComparatorDetailVC.xib; sourceTree = "<group>"; };
@@ -283,6 +282,7 @@
 		361E4A0117288193000B0B41 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				369BFF7717342CFD007B42FE /* NavBar */,
 				361E4A0217288193000B0B41 /* Avatar */,
 				361E4A0417288193000B0B41 /* TabBar */,
 			);
@@ -342,6 +342,15 @@
 				361E4A1A17288E6C000B0B41 /* FreightSans LightSC.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		369BFF7717342CFD007B42FE /* NavBar */ = {
+			isa = PBXGroup;
+			children = (
+				369BFF7817342D41007B42FE /* navigationBar.png */,
+				369BFF7917342D41007B42FE /* navigationBar@2x.png */,
+			);
+			name = NavBar;
 			sourceTree = "<group>";
 		};
 		369C7F8A173130240095135D /* UI-Additions */ = {
@@ -474,9 +483,9 @@
 		5B798A46172299E600C9BE1A /* Chart */ = {
 			isa = PBXGroup;
 			children = (
-				5B798A5117229F1B00C9BE1A /* LeagueCell.h */,
-				5B798A5217229F1B00C9BE1A /* LeagueCell.m */,
-				5B798A5317229F1C00C9BE1A /* LeagueCell.xib */,
+				CD4313371726800B005D42E3 /* PlayerBasicCell.h */,
+				CD4313381726800B005D42E3 /* PlayerBasicCell.m */,
+				CD43133A17268025005D42E3 /* PlayerBasicCell.xib */,
 				5B798A5417229F1C00C9BE1A /* LeagueVC.h */,
 				5B798A5517229F1D00C9BE1A /* LeagueVC.m */,
 				5B798A5617229F1E00C9BE1A /* LeagueVC.xib */,
@@ -513,9 +522,6 @@
 		CD43133617267FE7005D42E3 /* ComparatorCell */ = {
 			isa = PBXGroup;
 			children = (
-				CD4313371726800B005D42E3 /* ComparatorCell.h */,
-				CD4313381726800B005D42E3 /* ComparatorCell.m */,
-				CD43133A17268025005D42E3 /* ComparatorCell.xib */,
 			);
 			name = ComparatorCell;
 			sourceTree = "<group>";
@@ -592,14 +598,15 @@
 				36F3A81F17215789005E86ED /* README.mdown in Resources */,
 				5B798A4E17229EEA00C9BE1A /* GameCell.xib in Resources */,
 				5B798A5017229EEA00C9BE1A /* GamesVC.xib in Resources */,
-				5B798A5817229F2000C9BE1A /* LeagueCell.xib in Resources */,
 				5B798A5A17229F2000C9BE1A /* LeagueVC.xib in Resources */,
 				5B798A6217229F3B00C9BE1A /* UserDetailCell.xib in Resources */,
 				5B798A6417229F3B00C9BE1A /* UserDetailVC.xib in Resources */,
 				CD431335172678F9005D42E3 /* ComparatorVC.xib in Resources */,
-				CD43133B17268025005D42E3 /* ComparatorCell.xib in Resources */,
+				CD43133B17268025005D42E3 /* PlayerBasicCell.xib in Resources */,
 				CD43134117268632005D42E3 /* ComparatorDetailVC.xib in Resources */,
 				5B018593172C1B40001C6F06 /* ComparatorInfoDetailCell.xib in Resources */,
+				369BFF7A17342D41007B42FE /* navigationBar.png in Resources */,
+				369BFF7B17342D41007B42FE /* navigationBar@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,12 +645,11 @@
 				36F3A81E17215789005E86ED /* EGOCache.m in Sources */,
 				5B798A4D17229EEA00C9BE1A /* GameCell.m in Sources */,
 				5B798A4F17229EEA00C9BE1A /* GamesVC.m in Sources */,
-				5B798A5717229F2000C9BE1A /* LeagueCell.m in Sources */,
 				5B798A5917229F2000C9BE1A /* LeagueVC.m in Sources */,
 				5B798A6117229F3B00C9BE1A /* UserDetailCell.m in Sources */,
 				5B798A6317229F3B00C9BE1A /* UserDetailVC.m in Sources */,
 				CD431334172678F9005D42E3 /* ComparatorVC.m in Sources */,
-				CD4313391726800B005D42E3 /* ComparatorCell.m in Sources */,
+				CD4313391726800B005D42E3 /* PlayerBasicCell.m in Sources */,
 				CD43134017268632005D42E3 /* ComparatorDetailVC.m in Sources */,
 				5B018596172C1B99001C6F06 /* ComparatorInfoDetailCell.m in Sources */,
 				5B01859C172C2B2C001C6F06 /* ComparatorGamesVC.m in Sources */,

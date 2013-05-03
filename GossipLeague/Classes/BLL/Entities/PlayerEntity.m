@@ -47,4 +47,8 @@
     return ((double)self.scoredGoals/self.concededGoals);
 }
 
+- (NSString *)stringScore
+{
+    return [NSString stringWithFormat:@"%.0f", self.score];
+}
 @end

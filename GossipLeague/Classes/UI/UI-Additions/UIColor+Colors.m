@@ -14,7 +14,7 @@
 
 + (UIColor *)colorBackgroundTableView
 {
-    return [UIColor colorWithRed:53/255.0 green:39/255.0 blue:35/255.0 alpha:1.0];
+    return [UIColor colorWithRed:63/255.0 green:49/255.0 blue:45/255.0 alpha:1.0];
 }
 
 + (UIColor *)colorTopShadowCell
@@ -25,6 +25,11 @@
 + (UIColor *)colorBottomShadowCell
 {
     return [UIColor colorWithRed:39/255.0 green:28/255.0 blue:25/255.0 alpha:1.0];
+}
+
++ (UIColor *)colorNavigationBar
+{
+    return [UIColor colorWithRed:56/255.0 green:156/255.0 blue:94/255.0 alpha:1.0];
 }
 
 #pragma mark - Cards
@@ -64,6 +69,11 @@
 + (UIColor *)colorDrawLabel
 {
     return [UIColor colorWithRed:224/255.0 green:223/255.0 blue:155/255.0 alpha:1.0];
+}
+
++ (UIColor *)colorTableCellLabel
+{
+    return [UIColor whiteColor];
 }
 
 @end

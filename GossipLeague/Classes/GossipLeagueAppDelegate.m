@@ -24,15 +24,14 @@
 #pragma mark - UIApplicationDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-
     [self setup:application];
     [self createGossipLeagueTabBarControlloer];
     
+    [self setupAppearance];
     
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
 
-    
     return YES;
 }
 
@@ -182,7 +181,6 @@
 }
 
 #pragma mark - Tab Bar Controller Delegate
-
 - (UIImage *)imageTabAtIndex:(NSUInteger)index
 {
     UIImage *image = nil;
@@ -209,6 +207,19 @@
             break;
     }
     return highlightedImage;
+}
+
+#pragma mark - Appereance
+- (void)setupAppearance
+{
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigationBar.png"] forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{
+                                     UITextAttributeFont: [UIFont fontForNavBarTitle]
+     }];
+    
+    [[UINavigationBar appearance] setTintColor:[UIColor colorNavigationBar]];
+    
+    [[UIRefreshControl appearance] setTintColor:[UIColor colorNavigationBar]];
 }
 
 @end

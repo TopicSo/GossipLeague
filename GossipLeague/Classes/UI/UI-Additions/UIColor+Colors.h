@@ -13,6 +13,7 @@
 + (UIColor *)colorBackgroundTableView;
 + (UIColor *)colorTopShadowCell;
 + (UIColor *)colorBottomShadowCell;
++ (UIColor *)colorNavigationBar;
 
 // card colors
 + (UIColor *)colorWinCard;
@@ -24,4 +25,5 @@
 + (UIColor *)colorWinLabel;
 + (UIColor *)colorLostLabel;
 + (UIColor *)colorDrawLabel;
++ (UIColor *)colorTableCellLabel;
 @end
