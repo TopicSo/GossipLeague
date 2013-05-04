@@ -67,7 +67,6 @@ static NSString * const CellLeagueIdentifier = @"PlayerBasicCell";
     NSUInteger row = indexPath.row;
     [cell setPlayer:[self.players objectAtIndex:row] position:row total:self.players.count];
 
-    
     return cell;
 }
 

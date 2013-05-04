@@ -33,15 +33,15 @@
 				<string key="IBProxiedObjectIdentifier">IBFirstResponder</string>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
-			<object class="IBUIView" id="992247284">
+			<object class="IBUIView" id="835520164">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">292</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="IBUIImageView" id="565814018">
-						<reference key="NSNextResponder" ref="992247284"/>
+						<reference key="NSNextResponder" ref="835520164"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{20, 20}, {130, 130}}</string>
-						<reference key="NSSuperview" ref="992247284"/>
+						<reference key="NSSuperview" ref="835520164"/>
 						<reference key="NSNextKeyView" ref="800457734"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
@@ -52,10 +52,10 @@
 						</object>
 					</object>
 					<object class="IBUIImageView" id="800457734">
-						<reference key="NSNextResponder" ref="992247284"/>
+						<reference key="NSNextResponder" ref="835520164"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{170, 20}, {130, 130}}</string>
-						<reference key="NSSuperview" ref="992247284"/>
+						<reference key="NSSuperview" ref="835520164"/>
 						<reference key="NSNextKeyView" ref="470440623"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
@@ -63,10 +63,10 @@
 						<reference key="IBUIImage" ref="552018739"/>
 					</object>
 					<object class="IBUILabel" id="470440623">
-						<reference key="NSNextResponder" ref="992247284"/>
+						<reference key="NSNextResponder" ref="835520164"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{20, 164}, {130, 21}}</string>
-						<reference key="NSSuperview" ref="992247284"/>
+						<reference key="NSSuperview" ref="835520164"/>
 						<reference key="NSNextKeyView" ref="603993896"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
@@ -95,10 +95,10 @@
 						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 					</object>
 					<object class="IBUILabel" id="603993896">
-						<reference key="NSNextResponder" ref="992247284"/>
+						<reference key="NSNextResponder" ref="835520164"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{170, 164}, {130, 21}}</string>
-						<reference key="NSSuperview" ref="992247284"/>
+						<reference key="NSSuperview" ref="835520164"/>
 						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
@@ -237,7 +237,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">comparatorFields</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="992247284"/>
+						<reference key="destination" ref="835520164"/>
 					</object>
 					<int key="connectionID">70</int>
 				</object>
@@ -293,7 +293,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">69</int>
-						<reference key="object" ref="992247284"/>
+						<reference key="object" ref="835520164"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="565814018"/>
 							<reference ref="800457734"/>
@@ -306,22 +306,22 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">14</int>
 						<reference key="object" ref="565814018"/>
-						<reference key="parent" ref="992247284"/>
+						<reference key="parent" ref="835520164"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">24</int>
 						<reference key="object" ref="800457734"/>
-						<reference key="parent" ref="992247284"/>
+						<reference key="parent" ref="835520164"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">48</int>
 						<reference key="object" ref="470440623"/>
-						<reference key="parent" ref="992247284"/>
+						<reference key="parent" ref="835520164"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">50</int>
 						<reference key="object" ref="603993896"/>
-						<reference key="parent" ref="992247284"/>
+						<reference key="parent" ref="835520164"/>
 					</object>
 				</array>
 			</object>

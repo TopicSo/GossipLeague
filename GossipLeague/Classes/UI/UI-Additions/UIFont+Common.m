@@ -29,6 +29,6 @@
 
 + (UIFont *)fontForNavBarTitle
 {
-    return [UIFont fontWithName:@"AlfaSlabOne-Regular" size:17.5];
+    return [UIFont fontWithName:@"AlfaSlabOne-Regular" size:17];
 }
 @end
