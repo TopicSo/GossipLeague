@@ -1,3 +1,6 @@
 [submodule "OBConnection"]
 	path = OBConnection
 	url = git@github.com:oriolblanc/OBConnection.git
+[submodule "OBTabBarController"]
+	path = OBTabBarController
+	url = https://github.com/oriolblanc/OBTabBarController.git

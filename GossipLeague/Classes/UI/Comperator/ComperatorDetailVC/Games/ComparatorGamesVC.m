@@ -32,8 +32,10 @@
     
     OBRequest *request = [OBRequest requestWithType:OBRequestMethodTypeMethodGET resource:resource parameters:nil isPublic:YES];
     
-    [OBConnection makeRequest:request withCacheKey:NSStringFromClass([self class]) parseBlock:^id(NSDictionary *data) {
+    [OBConnection makeRequest:request withCacheKey:resource parseBlock:^id(NSDictionary *data) {
         NSMutableArray *parsedGames = [NSMutableArray array];
+        
+        self.games = [[NSArray alloc] init];
         
         for (NSDictionary *tmpGame in [data objectForKey:@"games"]) {
             GameEntity *game = [MTLJSONAdapter modelOfClass:[GameEntity class] fromJSONDictionary:tmpGame error:nil];

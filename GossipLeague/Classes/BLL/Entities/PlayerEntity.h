@@ -28,5 +28,5 @@
 @property (nonatomic, assign, readonly) double lostGamesPor100;
 @property (nonatomic, assign, readonly) double drawGamesPor100;
 @property (nonatomic, assign, readonly) double goalsRatio;
-
+@property (nonatomic, assign, readonly) NSString *stringScore;
 @end

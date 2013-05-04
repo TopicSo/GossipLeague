@@ -1,11 +1,11 @@
 #import "LeagueVC.h"
 #import <Parse/Parse.h>
 #import <Parse/PFQueryTableViewController.h>
-#import "LeagueCell.h"
+#import "PlayerBasicCell.h"
 #import "PlayerEntity.h"
 #import "UserDetailVC.h"
 
-static NSString * const CellLeagueIdentifier = @"TableLeagueCell";
+static NSString * const CellLeagueIdentifier = @"PlayerBasicCell";
 
 @interface LeagueVC () <UITableViewDataSource, UIAccelerometerDelegate>
 
@@ -30,8 +30,9 @@ static NSString * const CellLeagueIdentifier = @"TableLeagueCell";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.tableView registerNib:[UINib nibWithNibName:@"LeagueCell" bundle:nil]
+    [self.tableView registerNib:[UINib nibWithNibName:@"PlayerBasicCell" bundle:nil]
          forCellReuseIdentifier:CellLeagueIdentifier];
+    self.tableView.backgroundColor = [UIColor colorBackgroundTableView];
     [self initializeRefreshControl];
     [self reloadData];
 }
@@ -62,10 +63,10 @@ static NSString * const CellLeagueIdentifier = @"TableLeagueCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    LeagueCell *cell = [tableView dequeueReusableCellWithIdentifier:CellLeagueIdentifier];
+    PlayerBasicCell *cell = [tableView dequeueReusableCellWithIdentifier:CellLeagueIdentifier];
     NSUInteger row = indexPath.row;
     [cell setPlayer:[self.players objectAtIndex:row] position:row total:self.players.count];
-    
+
     return cell;
 }
 
@@ -92,15 +93,8 @@ static NSString * const CellLeagueIdentifier = @"TableLeagueCell";
 
 - (void)refreshContent:(UIRefreshControl *)refresh
 {
-    refresh.attributedTitle = [[NSAttributedString alloc] initWithString:@"Refreshing data..."];
-
     [self reloadData];
 
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"MMM d, h:mm a"];
-    NSString *lastUpdated = [NSString stringWithFormat:@"Last updated on %@",
-                             [formatter stringFromDate:[NSDate date]]];
-    refresh.attributedTitle = [[NSAttributedString alloc] initWithString:lastUpdated];
     [refresh endRefreshing];
 }
 

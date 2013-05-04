@@ -11,3 +11,4 @@
 @implementation UserDetailCell
 
 @end
+

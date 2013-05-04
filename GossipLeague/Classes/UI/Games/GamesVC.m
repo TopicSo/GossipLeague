@@ -31,14 +31,16 @@ static NSString * const CellGameIdentifier = @"CellGameIdentifier";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     [self initializeRefreshControl];
     [self setupTableView];
     [self reloadData];
+    
+    self.tableView.backgroundColor = [UIColor colorBackgroundTableView];
 }
 
 - (void)setupTableView
 {
-    self.tableView.rowHeight = 50;
     [self.tableView registerNib:[UINib nibWithNibName:@"GameCell" bundle:nil]
          forCellReuseIdentifier:CellGameIdentifier];
 }
@@ -49,6 +51,8 @@ static NSString * const CellGameIdentifier = @"CellGameIdentifier";
     
     [OBConnection makeRequest:request withCacheKey:NSStringFromClass([self class]) parseBlock:^id(NSDictionary *data) {
         NSMutableArray *parsedGames = [NSMutableArray array];
+        
+        self.games = [[NSArray alloc] init];
         
         for (NSDictionary *tmpGame in [data objectForKey:@"games"]) {
             GameEntity *game = [MTLJSONAdapter modelOfClass:[GameEntity class] fromJSONDictionary:tmpGame error:nil];
@@ -75,18 +79,15 @@ static NSString * const CellGameIdentifier = @"CellGameIdentifier";
     return cell;
 }
 
-- (void)viewDidUnload {
+- (void)viewDidUnload
+{
     [self setTableView:nil];
+    
     [super viewDidUnload];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 #pragma mark - Refresh Control
+
 - (void)initializeRefreshControl
 {
     // Initialize Refresh Control
@@ -99,15 +100,7 @@ static NSString * const CellGameIdentifier = @"CellGameIdentifier";
 
 - (void)refreshContent:(UIRefreshControl *)refresh
 {
-    refresh.attributedTitle = [[NSAttributedString alloc] initWithString:@"Refreshing data..."];
-    
     [self reloadData];
-    
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"MMM d, h:mm a"];
-    NSString *lastUpdated = [NSString stringWithFormat:@"Last updated on %@",
-                             [formatter stringFromDate:[NSDate date]]];
-    refresh.attributedTitle = [[NSAttributedString alloc] initWithString:lastUpdated];
     [refresh endRefreshing];
 }
 

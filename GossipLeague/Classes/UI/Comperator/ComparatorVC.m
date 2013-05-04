@@ -1,24 +1,24 @@
 //
-//  ComperatorViewController.m
+//  ComparatorViewController.m
 //  GossipLeague
 //
 //  Created by Valenti on 23/04/13.
 //  Copyright (c) 2013 Gossip. All rights reserved.
 //
 
-#import "ComperatorVC.h"
-#import "ComperatorCell.h"
+#import "ComparatorVC.h"
+#import "PlayerBasicCell.h"
 #import "PlayerEntity.h"
-#import "ComperatorDetailVC.h"
+#import "ComparatorDetailVC.h"
 
-@interface ComperatorVC ()
+@interface ComparatorVC ()
 
 @property (nonatomic,strong) IBOutlet UITableView   *playerTable;
 @property (nonatomic,strong) NSMutableArray         *playersArray;
 
 @end
 
-@implementation ComperatorVC
+@implementation ComparatorVC
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,6 +33,7 @@
 {
     [super viewDidLoad];
     self.title = @"Comparator";
+    self.playerTable.backgroundColor = [UIColor colorBackgroundTableView];
     [self initializeRefreshControl];
     [self reloadData];
 }
@@ -51,7 +52,7 @@
 
 - (void)reloadData
 {
-    OBRequest *request = [OBRequest requestWithType:OBRequestMethodTypeMethodGET resource:@"players" parameters:nil isPublic:YES];
+    OBRequest *request = [OBRequest requestWithType:OBRequestMethodTypeMethodGET resource:@"players/ranking" parameters:nil isPublic:YES];
     
     [OBConnection makeRequest:request withCacheKey:NSStringFromClass([self class]) parseBlock:^id(NSDictionary *data) {
         NSMutableArray *parsedPlayers = [NSMutableArray array];
@@ -60,13 +61,13 @@
             PlayerEntity *player = [MTLJSONAdapter modelOfClass:[PlayerEntity class] fromJSONDictionary:tmpPlayer error:nil];
             [parsedPlayers addObject:player];
         }
-        
         return parsedPlayers;
     } success:^(NSArray *parsedPlayers, BOOL cached)
     {
         self.playersArray = [NSArray arrayWithArray:parsedPlayers];
-        [self.playerTable reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
-
+        if (!cached) {
+            [self.playerTable reloadData];
+        }
     } error:NULL];
 }
 
@@ -92,26 +93,26 @@
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"ComperatorCell";
+    static NSString *CellIdentifier = @"PlayerBasicCell";
 	
-    ComperatorCell *cell = (ComperatorCell *) [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    PlayerBasicCell *cell = (PlayerBasicCell *) [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil)
     {
-		NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"ComperatorCell" owner:self options:nil];
+		NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"PlayerBasicCell" owner:self options:nil];
 		
 		for (id currentObject in topLevelObjects)
         {
 			if ([currentObject isKindOfClass:[UITableViewCell class]])
             {
-				cell =  (ComperatorCell *) currentObject;
+				cell =  (PlayerBasicCell *) currentObject;
 				break;
 			}
 		}
 	}
     PlayerEntity *player =[self.playersArray objectAtIndex:indexPath.row];
     
-    [cell setPlayerToCell:player];
+    [cell setPlayer:player];
     
     return cell;
 }
@@ -126,8 +127,8 @@
         PlayerEntity *player1 = [self.playersArray objectAtIndex:index1.row];
         PlayerEntity *player2 =[self.playersArray objectAtIndex:index2.row];
         
-        ComperatorDetailVC *comperatorDetailVC = [[ComperatorDetailVC alloc] initWithNibName:@"ComperatorDetailVC" bundle:nil player1:player1 player2:player2];
-        [self.navigationController pushViewController:comperatorDetailVC animated:YES];
+        ComparatorDetailVC *comparatorDetailVC = [[ComparatorDetailVC alloc] initWithNibName:@"ComparatorDetailVC" bundle:nil player1:player1 player2:player2];
+        [self.navigationController pushViewController:comparatorDetailVC animated:YES];
     }
 }
 
@@ -144,15 +145,7 @@
 
 - (void)refreshContent:(UIRefreshControl *)refresh
 {
-    refresh.attributedTitle = [[NSAttributedString alloc] initWithString:@"Refreshing data..."];
-    
     [self reloadData];
-    
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"MMM d, h:mm a"];
-    NSString *lastUpdated = [NSString stringWithFormat:@"Last updated on %@",
-                             [formatter stringFromDate:[NSDate date]]];
-    refresh.attributedTitle = [[NSAttributedString alloc] initWithString:lastUpdated];
     [refresh endRefreshing];
 }
 

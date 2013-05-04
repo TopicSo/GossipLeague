@@ -1,14 +1,21 @@
 #import <Parse/Parse.h>
+#import "OBTabBarController.h"
 #import "GossipLeagueAppDelegate.h"
 #import "LeagueVC.h"
 #import "GamesVC.h"
-#import "ComperatorVC.h"
+#import "ComparatorVC.h"
 #import "PlayerEntity.h"
 
 #import <AVFoundation/AVFoundation.h>
 
 @interface GossipLeagueAppDelegate ()
 @property (nonatomic, strong) AVAudioPlayer *player;
+
+// Navigation
+@property (nonatomic, strong) UINavigationController *rankingNavigationController;
+@property (nonatomic, strong) UINavigationController *gamesNavigationController;
+@property (nonatomic, strong) UINavigationController *comperatorNavigationController;
+
 @end
 
 
@@ -17,14 +24,14 @@
 #pragma mark - UIApplicationDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-
     [self setup:application];
     [self createGossipLeagueTabBarControlloer];
+    
+    [self setupAppearance];
     
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
 
-    
     return YES;
 }
 
@@ -88,40 +95,51 @@
 }
 
 #pragma mark - View Controllers
+
 - (void)createGossipLeagueTabBarControlloer
 {
-    self.tabBarController  = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = @[
-                                              [self createNavigationChartsController],
-                                              [self createNavigationGamesController],
-                                              [self createNavigationComperatorController]
-                                              ];
-   [self easterEggPEPE];
+    NSArray *viewControllers = [NSArray arrayWithObjects:self.rankingNavigationController, self.gamesNavigationController, self.comperatorNavigationController, nil];
+    
+    self.tabBarController  = [[OBTabBarController alloc] initWithViewControllers:viewControllers
+                                                                        delegate:self];
+
+    [self easterEggPEPE];
 }
 
-- (UINavigationController *)createNavigationChartsController
+#pragma mark - Lazy loading of view controllers
+
+- (UINavigationController *)rankingNavigationController
 {
-    UINavigationController *navigationChartsController = [[UINavigationController alloc] initWithRootViewController:[[LeagueVC alloc] init]];
-    navigationChartsController.tabBarItem.image = [UIImage imageNamed:@"sock"];
-    return navigationChartsController;
+    if (!_rankingNavigationController)
+    {
+        _rankingNavigationController = [[UINavigationController alloc] initWithRootViewController:[[LeagueVC alloc] init]];
+    }
+    
+    return _rankingNavigationController;
 }
 
-- (UINavigationController *)createNavigationGamesController
+- (UINavigationController *)gamesNavigationController
 {
-    UINavigationController *navigationGamesController = [[UINavigationController alloc] initWithRootViewController:[[GamesVC alloc] init]];
-    navigationGamesController.tabBarItem.image = [UIImage imageNamed:@"soccer"];
-    return navigationGamesController;
+    if (!_gamesNavigationController)
+    {
+        _gamesNavigationController = [[UINavigationController alloc] initWithRootViewController:[[GamesVC alloc] init]];
+    }
+    
+    return _gamesNavigationController;
 }
 
-- (UINavigationController *)createNavigationComperatorController
+- (UINavigationController *)comperatorNavigationController
 {
-    UINavigationController *navigationComperatorController = [[UINavigationController alloc] initWithRootViewController:[[ComperatorVC alloc] init]];
-    navigationComperatorController.tabBarItem.image = [UIImage imageNamed:@"vs"];
-    navigationComperatorController.tabBarItem.title = @"Comperator";
-    return navigationComperatorController;
+    if (!_comperatorNavigationController)
+    {
+        _comperatorNavigationController = [[UINavigationController alloc] initWithRootViewController:[[ComparatorVC alloc] init]];
+    }
+    
+    return _comperatorNavigationController;
 }
 
 #pragma mark - Easter egg
+
 - (void) easterEggPEPE
 {
     self.tabBarController.delegate = self;
@@ -131,7 +149,7 @@
 {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"theme"
+        NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"champions-theme"
                                                                   ofType:@"mp3"];
         NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:soundFilePath];
         NSError *theError = nil;
@@ -160,6 +178,48 @@
         }
 
     }
+}
+
+#pragma mark - Tab Bar Controller Delegate
+- (UIImage *)imageTabAtIndex:(NSUInteger)index
+{
+    UIImage *image = nil;
+    switch (index) {
+        case 0:
+            image = [UIImage imageNamed:@"sock_inactive.png"];
+            break;
+        default:
+            image = [UIImage imageNamed:@"soccer_inactive.png"];
+            break;
+    }
+    return image;
+}
+
+- (UIImage *)highlightedImageTabAtIndex:(NSUInteger)index
+{
+    UIImage *highlightedImage = nil;
+    switch (index) {
+        case 0:
+            highlightedImage = [UIImage imageNamed:@"sock_active.png"];
+            break;
+        default:
+            highlightedImage = [UIImage imageNamed:@"soccer_active.png"];
+            break;
+    }
+    return highlightedImage;
+}
+
+#pragma mark - Appereance
+- (void)setupAppearance
+{
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigationBar.png"] forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{
+                                     UITextAttributeFont: [UIFont fontForNavBarTitle]
+     }];
+    
+    [[UINavigationBar appearance] setTintColor:[UIColor colorNavigationBar]];
+    
+    [[UIRefreshControl appearance] setTintColor:[UIColor colorNavigationBar]];
 }
 
 @end
