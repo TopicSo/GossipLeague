@@ -17,9 +17,9 @@
     return [UIFont fontWithName:@"FreightSansBold" size:18.0];
 }
 
-+ (UIFont *)fontForDateInCell
++ (UIFont *)fontForDetailInCell
 {
-    return [UIFont fontWithName:@"FreightSansLightSC" size:10.0];
+    return [UIFont fontWithName:@"FreightSansLightSC" size:13.0];
 }
 
 + (UIFont *)fontForGoalsInCell
