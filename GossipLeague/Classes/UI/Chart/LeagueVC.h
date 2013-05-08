@@ -6,6 +6,6 @@
 //  Copyright (c) 2013 Gossip. All rights reserved.
 //
 
-@interface LeagueVC : UIViewController
+@interface LeagueVC : UITableViewController
 
 @end
