@@ -11,7 +11,6 @@ static NSString * const CellLeagueIdentifier = @"PlayerBasicCell";
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *players;
-
 - (void)reloadData;
 
 @end
@@ -53,6 +52,8 @@ static NSString * const CellLeagueIdentifier = @"PlayerBasicCell";
     } success:^(NSArray *parsedPlayers, BOOL cached) {
         self.players = [NSArray arrayWithArray:parsedPlayers];
         [self.tableView reloadData];
+        
+        [self.refreshControl endRefreshing];
     } error:NULL];
 }
 
@@ -86,16 +87,13 @@ static NSString * const CellLeagueIdentifier = @"PlayerBasicCell";
 #pragma mark - Refresh Control
 - (void)initializeRefreshControl
 {
-    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
-    [refreshControl addTarget:self action:@selector(refreshContent:) forControlEvents:UIControlEventValueChanged];
-    [self.tableView addSubview:refreshControl];
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(refreshContent:) forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)refreshContent:(UIRefreshControl *)refresh
 {
     [self reloadData];
-
-    [refresh endRefreshing];
 }
 
 @end
