@@ -11,7 +11,7 @@
 @interface UIFont (Common)
 
 + (UIFont *)fontForUsernameInCell;
-+ (UIFont *)fontForDateInCell;
++ (UIFont *)fontForDetailInCell;
 + (UIFont *)fontForGoalsInCell;
 + (UIFont *)fontForNavBarTitle;
 @end
