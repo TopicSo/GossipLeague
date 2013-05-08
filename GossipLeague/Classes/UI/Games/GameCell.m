@@ -19,7 +19,8 @@
 @property (weak, nonatomic) IBOutlet UIView *topShadow;
 @property (weak, nonatomic) IBOutlet UIView *bottonShadow;
 @property (weak, nonatomic) IBOutlet UIView *scoreView;
-@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *localPointsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *visitorPointsLabel;
 
 // player A
 @property (weak, nonatomic) IBOutlet UILabel *playerALabel;
@@ -46,8 +47,11 @@
     
     // labels
     
-    self.dateLabel.font = [UIFont fontForDateInCell];
-    self.dateLabel.textColor = [UIColor colorDateLabel];
+    self.localPointsLabel.font = [UIFont fontForDetailInCell];
+    self.localPointsLabel.textColor = [UIColor colorDetailLabel];
+    
+    self.visitorPointsLabel.font = [UIFont fontForDetailInCell];
+    self.visitorPointsLabel.textColor = [UIColor colorDetailLabel];
     
     self.playerALabel.font = [UIFont fontForUsernameInCell];
     //self.playerALabel.backgroundColor = [UIColor colorBackgroundTableView];
@@ -96,19 +100,21 @@
     
     self.goalsALabel.text = [NSString stringWithFormat:@"%u", game.golsLocal];
     self.goalsBLabel.text = [NSString stringWithFormat:@"%u", game.golsVisitor];
-    self.dateLabel.text = [self.dateFormatter stringFromDate:game.playedOn];
+//    self.dateLabel.text = [self.dateFormatter stringFromDate:game.playedOn];
+    self.localPointsLabel.text = game.stringLocalPointsChange;
+    self.visitorPointsLabel.text = game.stringVisitorPointsChange;
 }
 
 #pragma mark - Getters
-- (NSDateFormatter *)dateFormatter
-{
-    if (!_dateFormatter) {
-        _dateFormatter = [[NSDateFormatter alloc] init];
-        [_dateFormatter setDateFormat:@"dd/MM/yyyy·hh:mm"];
-    }
-    
-    return _dateFormatter;
-}
+//- (NSDateFormatter *)dateFormatter
+//{
+//    if (!_dateFormatter) {
+//        _dateFormatter = [[NSDateFormatter alloc] init];
+//        [_dateFormatter setDateFormat:@"dd/MM/yyyy·hh:mm"];
+//    }
+//    
+//    return _dateFormatter;
+//}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {

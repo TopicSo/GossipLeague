@@ -51,7 +51,7 @@
 
 #pragma mark - Labels
 
-+ (UIColor *)colorDateLabel
++ (UIColor *)colorDetailLabel
 {
     return [UIColor colorWithRed:166/255.0 green:138/255.0 blue:131/255.0 alpha:1.0];
 }

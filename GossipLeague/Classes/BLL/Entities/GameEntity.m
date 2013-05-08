@@ -19,7 +19,9 @@
              @"visitor": @"visitor",
              @"golsLocal": @"localGoals",
              @"golsVisitor": @"visitorGoals",
-             @"playedOn": @"playedOn"
+             @"playedOn": @"playedOn",
+             @"localPointsChange": @"localPointsChange",
+             @"visitorPointsChange": @"visitorPointsChange"
              };
 }
 
@@ -49,6 +51,15 @@
     return dateFormatter;
 }
 
+- (NSString *)stringLocalPointsChange
+{
+    return [NSString stringWithFormat:@"%.0f", self.localPointsChange];
+}
+
+- (NSString *)stringVisitorPointsChange
+{
+    return [NSString stringWithFormat:@"%.0f", self.visitorPointsChange];
+}
 
 #pragma mark - Utils
 
