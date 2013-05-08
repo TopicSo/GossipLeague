@@ -63,7 +63,6 @@
 								<string key="NSFrame">{{0, 64}, {320, 1}}</string>
 								<reference key="NSSuperview" ref="727298430"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">3</int>
@@ -133,7 +132,7 @@
 							<object class="IBUILabel" id="612898973">
 								<reference key="NSNextResponder" ref="727298430"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{19, 11}, {95, 20}}</string>
+								<string key="NSFrame">{{19, 15}, {95, 20}}</string>
 								<reference key="NSSuperview" ref="727298430"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="539968116"/>
@@ -145,7 +144,7 @@
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<string key="IBUIText">localPointsChange</string>
-								<object class="NSColor" key="IBUITextColor" id="1071115873">
+								<object class="NSColor" key="IBUITextColor" id="557426733">
 									<int key="NSColorSpace">1</int>
 									<bytes key="NSRGB">MCAwIDAAA</bytes>
 									<string key="IBUIColorCocoaTouchKeyPath">darkTextColor</string>
@@ -153,21 +152,21 @@
 								<reference key="IBUIHighlightedColor" ref="219846539"/>
 								<int key="IBUIBaselineAdjustment">0</int>
 								<int key="IBUITextAlignment">2</int>
-								<object class="IBUIFontDescription" key="IBUIFontDescription" id="472590713">
+								<object class="IBUIFontDescription" key="IBUIFontDescription" id="912344785">
 									<int key="type">1</int>
 									<double key="pointSize">10</double>
 								</object>
-								<object class="NSFont" key="IBUIFont" id="972749173">
+								<object class="NSFont" key="IBUIFont" id="502685091">
 									<string key="NSName">Helvetica</string>
 									<double key="NSSize">10</double>
 									<int key="NSfFlags">16</int>
 								</object>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
-							<object class="IBUILabel" id="591605868">
+							<object class="IBUILabel" id="871979254">
 								<reference key="NSNextResponder" ref="727298430"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{205, 11}, {95, 20}}</string>
+								<string key="NSFrame">{{205, 15}, {95, 20}}</string>
 								<reference key="NSSuperview" ref="727298430"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="529075938"/>
@@ -179,11 +178,11 @@
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<string key="IBUIText">visitorPointsChange</string>
-								<reference key="IBUITextColor" ref="1071115873"/>
+								<reference key="IBUITextColor" ref="557426733"/>
 								<reference key="IBUIHighlightedColor" ref="219846539"/>
 								<int key="IBUIBaselineAdjustment">0</int>
-								<reference key="IBUIFontDescription" ref="472590713"/>
-								<reference key="IBUIFont" ref="972749173"/>
+								<reference key="IBUIFontDescription" ref="912344785"/>
+								<reference key="IBUIFont" ref="502685091"/>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
 							<object class="IBUIView" id="760694671">
@@ -244,7 +243,7 @@
 								<string key="NSFrame">{{163, 15}, {30, 35}}</string>
 								<reference key="NSSuperview" ref="727298430"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="591605868"/>
+								<reference key="NSNextKeyView" ref="871979254"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<reference key="IBUIBackgroundColor" ref="1029609781"/>
 								<bool key="IBUIOpaque">NO</bool>
@@ -352,7 +351,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">visitorPointsLabel</string>
 						<reference key="source" ref="631355608"/>
-						<reference key="destination" ref="591605868"/>
+						<reference key="destination" ref="871979254"/>
 					</object>
 					<int key="connectionID">129</int>
 				</object>
@@ -396,7 +395,7 @@
 							<reference ref="721852966"/>
 							<reference ref="491471541"/>
 							<reference ref="612898973"/>
-							<reference ref="591605868"/>
+							<reference ref="871979254"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -453,7 +452,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">127</int>
-						<reference key="object" ref="591605868"/>
+						<reference key="object" ref="871979254"/>
 						<reference key="parent" ref="631355608"/>
 						<string key="objectName">visitorPointsChange</string>
 					</object>
