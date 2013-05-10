@@ -21,7 +21,7 @@ static NSString * const CellLeagueIdentifier = @"PlayerBasicCell";
 {
     self = [super init];
     if (self) {
-        self.title = @"Liga Gossip HUB";
+        self.title = @"Liga Topic HUB";
     }
     return self;
 }
