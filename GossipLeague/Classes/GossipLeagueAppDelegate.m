@@ -3,6 +3,7 @@
 #import "GossipLeagueAppDelegate.h"
 #import "LeagueVC.h"
 #import "GamesVC.h"
+#import "AddGameVC.h"
 #import "ComparatorVC.h"
 #import "PlayerEntity.h"
 
@@ -122,7 +123,7 @@
 {
     if (!_gamesNavigationController)
     {
-        _gamesNavigationController = [[UINavigationController alloc] initWithRootViewController:[[GamesVC alloc] init]];
+        _gamesNavigationController = [[UINavigationController alloc] initWithRootViewController:[[AddGameVC alloc] init]];
     }
     
     return _gamesNavigationController;

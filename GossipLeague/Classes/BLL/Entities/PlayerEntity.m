@@ -44,7 +44,7 @@
 
 - (double)goalsRatio
 {
-    return ((double)self.scoredGoals/self.concededGoals);
+    return ((double)self.scoredGoals/self.games);
 }
 
 - (NSString *)stringScore
