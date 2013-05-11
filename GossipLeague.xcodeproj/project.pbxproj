@@ -16,6 +16,7 @@
 		09ABC07413A1D52D009C3FCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09ABC07313A1D52D009C3FCF /* Foundation.framework */; };
 		09BEF34C13D51C3F001BBCDB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09BEF34B13D51C3F001BBCDB /* Security.framework */; };
 		2FCDD6B014A573F500295AAC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FCDD6AF14A573F500295AAC /* QuartzCore.framework */; };
+		36793508173E4E890013B40B /* RankingEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 36793507173E4E890013B40B /* RankingEntity.m */; };
 		369BFFA017344F23007B42FE /* AlfaSlabOne-Regular-OTF.otf in Resources */ = {isa = PBXBuildFile; fileRef = 369BFF8217344F23007B42FE /* AlfaSlabOne-Regular-OTF.otf */; };
 		369BFFA117344F23007B42FE /* FreightSans Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 369BFF8317344F23007B42FE /* FreightSans Bold.ttf */; };
 		369BFFA217344F23007B42FE /* FreightSans LightSC.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 369BFF8417344F23007B42FE /* FreightSans LightSC.ttf */; };
@@ -97,6 +98,8 @@
 		09ABC07313A1D52D009C3FCF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		09BEF34B13D51C3F001BBCDB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		2FCDD6AF14A573F500295AAC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		36793506173E4E890013B40B /* RankingEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingEntity.h; sourceTree = "<group>"; };
+		36793507173E4E890013B40B /* RankingEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingEntity.m; sourceTree = "<group>"; };
 		369BFF8217344F23007B42FE /* AlfaSlabOne-Regular-OTF.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlfaSlabOne-Regular-OTF.otf"; sourceTree = "<group>"; };
 		369BFF8317344F23007B42FE /* FreightSans Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FreightSans Bold.ttf"; sourceTree = "<group>"; };
 		369BFF8417344F23007B42FE /* FreightSans LightSC.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FreightSans LightSC.ttf"; sourceTree = "<group>"; };
@@ -407,6 +410,8 @@
 		36A1EBE517010D3800F7A57B /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				36793506173E4E890013B40B /* RankingEntity.h */,
+				36793507173E4E890013B40B /* RankingEntity.m */,
 				36A1EC0917010E0100F7A57B /* PlayerEntity.h */,
 				36A1EC0A17010E0100F7A57B /* PlayerEntity.m */,
 				36A1EC0C17010F8000F7A57B /* GameEntity.h */,
@@ -699,6 +704,7 @@
 				369C7F8F173130240095135D /* UIColor+Colors.m in Sources */,
 				369C7F90173130240095135D /* UIFont+Common.m in Sources */,
 				369C7F94173130550095135D /* OBTabBarController.m in Sources */,
+				36793508173E4E890013B40B /* RankingEntity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
