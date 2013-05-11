@@ -31,6 +31,7 @@
     [self setupAppearance];
     
     self.window.rootViewController = self.tabBarController;
+    self.window.backgroundColor = [UIColor colorNavigationBar];
     [self.window makeKeyAndVisible];
 
     return YES;
