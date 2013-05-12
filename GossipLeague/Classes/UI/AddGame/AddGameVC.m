@@ -13,7 +13,7 @@
 
 static NSString * const CellLeagueIdentifier = @"PlayerBasicCell";
 
-@interface AddGameVC () <UITableViewDelegate, UITableViewDataSource>
+@interface AddGameVC () <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UIAlertViewDelegate>
 
 // Step 1
 @property (weak, nonatomic) IBOutlet UIView *step1View;
@@ -27,8 +27,14 @@ static NSString * const CellLeagueIdentifier = @"PlayerBasicCell";
 
 // Step 3
 @property (weak, nonatomic) IBOutlet UIView *step3View;
+@property (weak, nonatomic) IBOutlet UILabel *localPlayerLabel;
+@property (weak, nonatomic) IBOutlet UILabel *visitorPlayerLabel;
+@property (weak, nonatomic) IBOutlet UITextField *localGoalsTextField;
+@property (weak, nonatomic) IBOutlet UITextField *visitorGoalsTextField;
 
 @property (strong, nonatomic) NSArray *players;
+@property (weak, nonatomic) PlayerEntity *local;
+@property (weak, nonatomic) PlayerEntity *visitor;
 
 @end
 
@@ -97,8 +103,7 @@ static NSString * const CellLeagueIdentifier = @"PlayerBasicCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     PlayerBasicCell *cell = [tableView dequeueReusableCellWithIdentifier:CellLeagueIdentifier];
-    NSUInteger row = indexPath.row;
-    [cell setPlayer:[self.players objectAtIndex:row]];
+    [cell setPlayer:[self.players objectAtIndex:indexPath.row]];
     
     return cell;
 }
@@ -107,11 +112,23 @@ static NSString * const CellLeagueIdentifier = @"PlayerBasicCell";
 {
     if(tableView == self.localTableView)
     {
+        self.local = [self.players objectAtIndex:indexPath.row];
         [self goToStep2:YES];
     }
     else
     {
-        [self goToStep3:YES];
+        if ([self.local isEqual:[self.players objectAtIndex:indexPath.row]]) {
+            
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"forever alone" delegate:self cancelButtonTitle:@"Sure" otherButtonTitles:nil];
+            
+            [alert show];
+            [tableView deselectRowAtIndexPath:indexPath animated:YES];
+        }
+        else
+        {
+            self.visitor = [self.players objectAtIndex:indexPath.row];
+            [self goToStep3:YES];
+        }
     }
 }
 
@@ -119,19 +136,25 @@ static NSString * const CellLeagueIdentifier = @"PlayerBasicCell";
 
 - (void)setUpStep1
 {
-    self.step1TitleLabel.text = @"Select the local player:";
+    self.step1TitleLabel.text = [@"local" uppercaseString];
+    self.navigationItem.rightBarButtonItem = nil;
+    self.navigationItem.leftBarButtonItem = nil;
 }
 
 - (void)goToStep1:(BOOL)animated
 {
-    [UIView transitionFromView:self.step2View toView:self.step1View duration:0.5 options:UIViewAnimationOptionTransitionFlipFromRight completion:^(BOOL finished) {
+    [self setUpStep1];
+    
+    [UIView transitionFromView:self.step3View toView:self.step1View duration:0.5 options:UIViewAnimationOptionTransitionFlipFromRight completion:^(BOOL finished) {
         
     }];
 }
 
 - (void)setUpStep2
 {
-    self.step2TitleLabel.text = @"Select the visitor player:";
+    self.step2TitleLabel.text = [@"visitor" uppercaseString];
+    self.navigationItem.rightBarButtonItem = nil;
+    self.navigationItem.leftBarButtonItem = nil;
 }
 
 - (void)goToStep2:(BOOL)animated
@@ -145,26 +168,95 @@ static NSString * const CellLeagueIdentifier = @"PlayerBasicCell";
 
 - (void)setUpStep3
 {
+    // local
+    self.localPlayerLabel.text = self.local.username;
+    self.localPlayerLabel.font = [UIFont fontForGoalsInCell];
+    self.localGoalsTextField.font = [UIFont fontForGoalsInCell];
+    self.localGoalsTextField.backgroundColor = [UIColor colorDrawCard];
+    self.localGoalsTextField.layer.cornerRadius = 2.0f;
+    
+    // visitor
+    self.visitorPlayerLabel.text = self.visitor.username;
+    self.visitorPlayerLabel.font = [UIFont fontForGoalsInCell];
+    self.visitorGoalsTextField.font = [UIFont fontForGoalsInCell];
+    self.visitorGoalsTextField.backgroundColor = [UIColor colorDrawCard];
+    self.visitorGoalsTextField.layer.cornerRadius = 2.0f;
+    
+    UIBarButtonItem *resetBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(reset)];
+    self.navigationItem.leftBarButtonItem = resetBarButtonItem;
+    
+    UIBarButtonItem *addGameBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addGame)];
+    self.navigationItem.rightBarButtonItem = addGameBarButtonItem;
 }
 
 - (void)goToStep3:(BOOL)animated
 {
     [self setUpStep3];
     
-    [UIView transitionFromView:self.step2View toView:self.step3View duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished) {
+    [UIView transitionFromView:self.step2View toView:self.step1View duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished) {
         
     }];
 }
 
-#pragma mark - Memory Management
+#pragma mark - Actions
 
-- (void)didReceiveMemoryWarning
+- (void)addGame
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSString *message = [NSString stringWithFormat:@"%@ %@: %d %d", self.local.username, self.visitor.username, [self.localGoalsTextField.text intValue], [self.visitorGoalsTextField.text intValue]];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:message delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Add", nil];
+    
+    [alert show];
 }
 
-- (void)viewDidUnload {
+- (void)reset
+{
+    self.local = nil;
+    self.visitor = nil;
+    
+    [self goToStep1:YES];
+}
+
+#pragma mark - UIAlertViewDelegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if(buttonIndex != alertView.cancelButtonIndex)
+    {
+        NSLog(@"add game");
+    }
+}
+
+#pragma mark - UITextFieldDelegate
+
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    NSString *goals = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    
+    UITextField *otherTextField = textField == self.localGoalsTextField ? self.visitorGoalsTextField : self.localGoalsTextField;
+
+    if([goals intValue] == [otherTextField.text intValue])
+    {
+        textField.backgroundColor = [UIColor colorDrawCard];
+        otherTextField.backgroundColor = [UIColor colorDrawCard];
+    }
+    else if([goals intValue] > [otherTextField.text intValue])
+    {
+        textField.backgroundColor = [UIColor colorWinCard];
+        otherTextField.backgroundColor = [UIColor colorLostCard];
+    }
+    else if([goals intValue] < [otherTextField.text intValue])
+    {
+        textField.backgroundColor = [UIColor colorLostCard];
+        otherTextField.backgroundColor = [UIColor colorWinCard];
+    }
+    
+    return YES;
+}
+
+#pragma mark - Memory Management
+
+- (void)viewDidUnload
+{
     [self setStep1TitleLabel:nil];
     [self setLocalTableView:nil];
     [self setVisitorTableView:nil];
@@ -172,6 +264,11 @@ static NSString * const CellLeagueIdentifier = @"PlayerBasicCell";
     [self setStep2View:nil];
     [self setStep2TitleLabel:nil];
     [self setStep3View:nil];
+    [self setLocalPlayerLabel:nil];
+    [self setVisitorPlayerLabel:nil];
+    [self setLocalGoalsTextField:nil];
+    [self setVisitorGoalsTextField:nil];
     [super viewDidUnload];
 }
+
 @end
