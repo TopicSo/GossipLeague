@@ -40,6 +40,7 @@
 - (void)setup:(UIApplication *)application
 {
     [OBConnection registerWithBaseUrl:[NSURL URLWithString:@"http://gossip-league-api.herokuapp.com"]];
+    //[OBConnection registerWithBaseUrl:[NSURL URLWithString:@"http://localhost:9000"]];
     [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
      UIRemoteNotificationTypeAlert|
      UIRemoteNotificationTypeSound];
@@ -124,7 +125,7 @@
 {
     if (!_gamesNavigationController)
     {
-        _gamesNavigationController = [[UINavigationController alloc] initWithRootViewController:[[AddGameVC alloc] init]];
+        _gamesNavigationController = [[UINavigationController alloc] initWithRootViewController:[[GamesVC alloc] init]];
     }
     
     return _gamesNavigationController;

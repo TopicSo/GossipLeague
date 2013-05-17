@@ -138,14 +138,13 @@ static NSString * const CellLeagueIdentifier = @"PlayerBasicCell";
 {
     self.step1TitleLabel.text = [@"local" uppercaseString];
     self.navigationItem.rightBarButtonItem = nil;
-    self.navigationItem.leftBarButtonItem = nil;
 }
 
 - (void)goToStep1:(BOOL)animated
 {
     [self setUpStep1];
     
-    [UIView transitionFromView:self.step3View toView:self.step1View duration:0.5 options:UIViewAnimationOptionTransitionFlipFromRight completion:^(BOOL finished) {
+    [UIView transitionFromView:self.step3View toView:self.step2View duration:0.5 options:UIViewAnimationOptionTransitionFlipFromRight completion:^(BOOL finished) {
         
     }];
 }
@@ -154,7 +153,6 @@ static NSString * const CellLeagueIdentifier = @"PlayerBasicCell";
 {
     self.step2TitleLabel.text = [@"visitor" uppercaseString];
     self.navigationItem.rightBarButtonItem = nil;
-    self.navigationItem.leftBarButtonItem = nil;
 }
 
 - (void)goToStep2:(BOOL)animated
@@ -182,9 +180,6 @@ static NSString * const CellLeagueIdentifier = @"PlayerBasicCell";
     self.visitorGoalsTextField.backgroundColor = [UIColor colorDrawCard];
     self.visitorGoalsTextField.layer.cornerRadius = 2.0f;
     
-    UIBarButtonItem *resetBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(reset)];
-    self.navigationItem.leftBarButtonItem = resetBarButtonItem;
-    
     UIBarButtonItem *addGameBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addGame)];
     self.navigationItem.rightBarButtonItem = addGameBarButtonItem;
 }
@@ -193,7 +188,7 @@ static NSString * const CellLeagueIdentifier = @"PlayerBasicCell";
 {
     [self setUpStep3];
     
-    [UIView transitionFromView:self.step2View toView:self.step1View duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished) {
+    [UIView transitionFromView:self.step2View toView:self.step3View duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished) {
         
     }];
 }
@@ -208,14 +203,6 @@ static NSString * const CellLeagueIdentifier = @"PlayerBasicCell";
     [alert show];
 }
 
-- (void)reset
-{
-    self.local = nil;
-    self.visitor = nil;
-    
-    [self goToStep1:YES];
-}
-
 #pragma mark - UIAlertViewDelegate
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
@@ -223,6 +210,19 @@ static NSString * const CellLeagueIdentifier = @"PlayerBasicCell";
     if(buttonIndex != alertView.cancelButtonIndex)
     {
         NSLog(@"add game");
+        OBRequestParameters *parameters = [OBRequestParameters emptyRequestParameters];
+        [parameters setValue:self.local.username forKey:@"localPlayer"];
+        [parameters setValue:self.visitor.username forKey:@"visitorPlayer"];
+        [parameters setValue:self.localGoalsTextField.text forKey:@"localsGoals"];
+        [parameters setValue:self.visitorGoalsTextField.text forKey:@"visitorGoals"];
+        
+        OBRequest *request = [OBRequest requestWithType:OBRequestMethodTypeMethodPOST resource:@"games" parameters:parameters isPublic:YES];
+        
+        [OBConnection makeRequest:request success:^(id data, BOOL cached) {
+            NSLog(@"success");
+        } error:^(id data, NSError *error) {
+            NSLog(@"error");
+        }];
     }
 }
 

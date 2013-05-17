@@ -16,6 +16,7 @@
 		09ABC07413A1D52D009C3FCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09ABC07313A1D52D009C3FCF /* Foundation.framework */; };
 		09BEF34C13D51C3F001BBCDB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09BEF34B13D51C3F001BBCDB /* Security.framework */; };
 		2FCDD6B014A573F500295AAC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FCDD6AF14A573F500295AAC /* QuartzCore.framework */; };
+		36209A86173F9E4600F2C8BD /* RankingEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 36209A85173F9E4600F2C8BD /* RankingEntity.m */; };
 		366D09D4173C42430031FC53 /* AddGameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 366D09D2173C42430031FC53 /* AddGameVC.m */; };
 		366D09D5173C42430031FC53 /* AddGameVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 366D09D3173C42430031FC53 /* AddGameVC.xib */; };
 		369BFFA017344F23007B42FE /* AlfaSlabOne-Regular-OTF.otf in Resources */ = {isa = PBXBuildFile; fileRef = 369BFF8217344F23007B42FE /* AlfaSlabOne-Regular-OTF.otf */; };
@@ -99,6 +100,8 @@
 		09ABC07313A1D52D009C3FCF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		09BEF34B13D51C3F001BBCDB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		2FCDD6AF14A573F500295AAC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		36209A84173F9E4600F2C8BD /* RankingEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingEntity.h; sourceTree = "<group>"; };
+		36209A85173F9E4600F2C8BD /* RankingEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingEntity.m; sourceTree = "<group>"; };
 		366D09D1173C42430031FC53 /* AddGameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddGameVC.h; path = AddGame/AddGameVC.h; sourceTree = "<group>"; };
 		366D09D2173C42430031FC53 /* AddGameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddGameVC.m; path = AddGame/AddGameVC.m; sourceTree = "<group>"; };
 		366D09D3173C42430031FC53 /* AddGameVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddGameVC.xib; path = AddGame/AddGameVC.xib; sourceTree = "<group>"; };
@@ -422,6 +425,8 @@
 		36A1EBE517010D3800F7A57B /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				36209A84173F9E4600F2C8BD /* RankingEntity.h */,
+				36209A85173F9E4600F2C8BD /* RankingEntity.m */,
 				36A1EC0917010E0100F7A57B /* PlayerEntity.h */,
 				36A1EC0A17010E0100F7A57B /* PlayerEntity.m */,
 				36A1EC0C17010F8000F7A57B /* GameEntity.h */,
@@ -717,6 +722,7 @@
 				369C7F90173130240095135D /* UIFont+Common.m in Sources */,
 				369C7F94173130550095135D /* OBTabBarController.m in Sources */,
 				366D09D4173C42430031FC53 /* AddGameVC.m in Sources */,
+				36209A86173F9E4600F2C8BD /* RankingEntity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -793,7 +799,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Oriol Blanc Gimeno";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -807,7 +813,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = GossipLeague;
 				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "EB2A0EEB-1842-4812-A817-9FEE9273185C";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;

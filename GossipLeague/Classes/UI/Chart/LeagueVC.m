@@ -3,6 +3,7 @@
 #import <Parse/PFQueryTableViewController.h>
 #import "PlayerBasicCell.h"
 #import "PlayerEntity.h"
+#import "RankingEntity.h"
 #import "UserDetailVC.h"
 
 static NSString * const CellLeagueIdentifier = @"PlayerBasicCell";
@@ -10,7 +11,7 @@ static NSString * const CellLeagueIdentifier = @"PlayerBasicCell";
 @interface LeagueVC () <UITableViewDataSource, UIAccelerometerDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) NSArray *players;
+@property (strong, nonatomic) RankingEntity *ranking;
 - (void)reloadData;
 
 @end
@@ -38,45 +39,73 @@ static NSString * const CellLeagueIdentifier = @"PlayerBasicCell";
 
 - (void)reloadData
 {
-    OBRequest *request = [OBRequest requestWithType:OBRequestMethodTypeMethodGET resource:@"players/ranking" parameters:nil isPublic:YES];
+    NSString *resource = @"players/ranking?divisions=true";
+    OBRequest *request = [OBRequest requestWithType:OBRequestMethodTypeMethodGET resource:resource parameters:nil isPublic:YES];
     
-    [OBConnection makeRequest:request withCacheKey:NSStringFromClass([self class]) parseBlock:^id(NSDictionary *data) {
-        NSMutableArray *parsedPlayers = [NSMutableArray array];
+    [OBConnection makeRequest:request withCacheKey:resource parseBlock:^id(NSDictionary *data) {
         
-        for (NSDictionary *tmpPlayer in [data objectForKey:@"players"]) {
-            PlayerEntity *player = [MTLJSONAdapter modelOfClass:[PlayerEntity class] fromJSONDictionary:tmpPlayer error:nil];
-            [parsedPlayers addObject:player];
-        }
+        RankingEntity *ranking = [MTLJSONAdapter modelOfClass:[RankingEntity class] fromJSONDictionary:data error:nil];
         
-        return parsedPlayers;
-    } success:^(NSArray *parsedPlayers, BOOL cached) {
-        self.players = [NSArray arrayWithArray:parsedPlayers];
+        return ranking;
+    } success:^(RankingEntity *ranking, BOOL cached) {
+        self.ranking = ranking;
         [self.tableView reloadData];
         
         [self.refreshControl endRefreshing];
     } error:NULL];
 }
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return self.ranking.countDivisions;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.players.count;
+    NSArray *players = section == 0 ? self.ranking.rankedPlayers : self.ranking.unclassifiedPlayers;
+    
+    return players.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     PlayerBasicCell *cell = [tableView dequeueReusableCellWithIdentifier:CellLeagueIdentifier];
+    
     NSUInteger row = indexPath.row;
-    [cell setPlayer:[self.players objectAtIndex:row] position:row total:self.players.count];
+    NSUInteger section = indexPath.section;
+    
+    if (section == 0)
+    {
+        [cell setPlayer:[self.ranking.rankedPlayers objectAtIndex:row] position:row total:self.ranking.rankedPlayers.count];
+    }
+    else
+    {
+        [cell setPlayer:[self.ranking.unclassifiedPlayers objectAtIndex:row]];
 
+    }
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    PlayerEntity *player = [self.players objectAtIndex:indexPath.row];
+    NSArray *players = indexPath.section == 0 ? self.ranking.rankedPlayers : self.ranking.unclassifiedPlayers;
+    PlayerEntity *player = [players objectAtIndex:indexPath.row];
     UserDetailVC *userDetailVC = [[UserDetailVC alloc] initWithPlayer:player];
     [self.navigationController pushViewController:userDetailVC animated:YES];
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    if (section == 0)
+    {
+        return @"Ranking";
+    }
+    else
+    {
+        return [NSString stringWithFormat:@"Unclassified: Less than %d games", self.ranking.breakEvenPoint];
+    }
 }
 
 - (void)viewDidUnload {
