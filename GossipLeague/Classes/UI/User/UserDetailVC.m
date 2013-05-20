@@ -16,8 +16,10 @@
 static NSString * const CellIUserdentifier = @"UserDetailCell";
 
 @interface UserDetailVC ()
+
+@property (strong, nonatomic) PlayerEntity *player;
+
 @property (strong, nonatomic) IBOutlet UIView *userInfoView;
-@property (nonatomic, strong) PlayerEntity *player;
 @property (strong, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *avatarImageView;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
@@ -28,10 +30,11 @@ static NSString * const CellIUserdentifier = @"UserDetailCell";
 
 - (id)initWithPlayer:(PlayerEntity *)player;
 {
-    self = [super init];
-    if (self) {
+    if (self = [super init])
+    {
         self.player = player;
     }
+    
     return self;
 }
 
@@ -39,7 +42,6 @@ static NSString * const CellIUserdentifier = @"UserDetailCell";
 {
     [super viewDidLoad];
     
-    [self setupUIBar];
     [self setupBasicInfomation];
     [self setupTableView];
 }
@@ -49,12 +51,6 @@ static NSString * const CellIUserdentifier = @"UserDetailCell";
     [super viewWillAppear:animated];
     
     [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:animated];
-}
-
-- (void)setupUIBar
-{
-    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithTitle:@"Games" style:UIBarButtonItemStyleBordered target:self action:@selector(goToGames)];
-    [self.navigationItem setRightBarButtonItem:barButton];
 }
 
 - (void)goToGames
