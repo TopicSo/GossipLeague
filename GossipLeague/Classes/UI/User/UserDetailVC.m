@@ -53,9 +53,9 @@ static NSString * const CellIUserdentifier = @"UserDetailCell";
     [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:animated];
 }
 
-- (void)goToGames
+- (void)goToGamesWithType:(GameType)type
 {
-    UserDetailGamesVC *userDetailGames = [[UserDetailGamesVC alloc] initWithPlayer:self.player];
+    UserDetailGamesVC *userDetailGames = [[UserDetailGamesVC alloc] initWithPlayer:self.player gameType:type];
     [self.navigationController pushViewController:userDetailGames animated:YES];
 }
 
@@ -102,19 +102,19 @@ static NSString * const CellIUserdentifier = @"UserDetailCell";
     switch (indexPath.row) {
             
         case 0:
-            [self goToGames];
+            [self goToGamesWithType:GameTypeAll];
             break;
             
         case 1:
-            [self goToGames];
+            [self goToGamesWithType:GameTypeWon];
             break;
             
         case 2:
-            [self goToGames];
+            [self goToGamesWithType:GameTypeDrawn];
             break;
             
         case 3:
-            [self goToGames];
+            [self goToGamesWithType:GameTypeLost];
             break;
             
         default:
