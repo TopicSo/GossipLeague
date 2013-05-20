@@ -44,6 +44,13 @@ static NSString * const CellIUserdentifier = @"UserDetailCell";
     [self setupTableView];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:animated];
+}
+
 - (void)setupUIBar
 {
     UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithTitle:@"Games" style:UIBarButtonItemStyleBordered target:self action:@selector(goToGames)];
@@ -88,8 +95,35 @@ static NSString * const CellIUserdentifier = @"UserDetailCell";
     
     cell.leftLabel.text = leftValues[indexPath.row];
     cell.rightLabel.text = [rightValues[indexPath.row] description];
+    cell.accessoryType = indexPath.row <= 3 ? UITableViewCellAccessoryDisclosureIndicator : UITableViewCellAccessoryNone;
+    cell.selectionStyle = indexPath.row <= 3 ? UITableViewCellSelectionStyleGray : UITableViewCellSelectionStyleNone;
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    switch (indexPath.row) {
+            
+        case 0:
+            [self goToGames];
+            break;
+            
+        case 1:
+            [self goToGames];
+            break;
+            
+        case 2:
+            [self goToGames];
+            break;
+            
+        case 3:
+            [self goToGames];
+            break;
+            
+        default:
+            break;
+    }
 }
 
 - (void)viewDidUnload {
