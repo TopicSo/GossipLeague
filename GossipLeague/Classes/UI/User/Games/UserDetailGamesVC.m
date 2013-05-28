@@ -38,19 +38,19 @@ static NSUInteger const kRecsPerPage = 60;
     switch (self.gameType)
     {
         case GameTypeAll:
-            resourceResult = @"games?";
+            resourceResult = @"games?player1Id=";
             break;
             
         case GameTypeWon:
-            resourceResult = @"games/wins?";
+            resourceResult = @"games/wins?playerId=";
             break;
             
         case GameTypeDrawn:
-            resourceResult = @"games/draws?";
+            resourceResult = @"games/draws?playerId=";
             break;
             
         case GameTypeLost:
-            resourceResult = @"games/losts?";            
+            resourceResult = @"games/losts?playerId=";            
             break;
     }
     
@@ -59,7 +59,7 @@ static NSUInteger const kRecsPerPage = 60;
 
 - (void)reloadData
 {
-    NSString *resource = [NSString stringWithFormat:@"%@playerId=%@&recsPerPage=%lu", [self resourceForType] ,self.player.idUser, (unsigned long)kRecsPerPage];
+    NSString *resource = [NSString stringWithFormat:@"%@%@&recsPerPage=%lu", [self resourceForType] ,self.player.idUser, (unsigned long)kRecsPerPage];
     
     OBRequest *request = [OBRequest requestWithType:OBRequestMethodTypeMethodGET resource:resource parameters:nil isPublic:YES];
     
