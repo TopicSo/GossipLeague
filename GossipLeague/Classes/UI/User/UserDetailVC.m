@@ -16,8 +16,10 @@
 static NSString * const CellIUserdentifier = @"UserDetailCell";
 
 @interface UserDetailVC ()
+
+@property (strong, nonatomic) PlayerEntity *player;
+
 @property (strong, nonatomic) IBOutlet UIView *userInfoView;
-@property (nonatomic, strong) PlayerEntity *player;
 @property (strong, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *avatarImageView;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
@@ -28,10 +30,11 @@ static NSString * const CellIUserdentifier = @"UserDetailCell";
 
 - (id)initWithPlayer:(PlayerEntity *)player;
 {
-    self = [super init];
-    if (self) {
+    if (self = [super init])
+    {
         self.player = player;
     }
+    
     return self;
 }
 
@@ -39,20 +42,20 @@ static NSString * const CellIUserdentifier = @"UserDetailCell";
 {
     [super viewDidLoad];
     
-    [self setupUIBar];
     [self setupBasicInfomation];
     [self setupTableView];
 }
 
-- (void)setupUIBar
+- (void)viewWillAppear:(BOOL)animated
 {
-    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithTitle:@"Games" style:UIBarButtonItemStyleBordered target:self action:@selector(goToGames)];
-    [self.navigationItem setRightBarButtonItem:barButton];
+    [super viewWillAppear:animated];
+    
+    [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:animated];
 }
 
-- (void)goToGames
+- (void)goToGamesWithType:(GameType)type
 {
-    UserDetailGamesVC *userDetailGames = [[UserDetailGamesVC alloc] initWithPlayer:self.player];
+    UserDetailGamesVC *userDetailGames = [[UserDetailGamesVC alloc] initWithPlayer:self.player gameType:type];
     [self.navigationController pushViewController:userDetailGames animated:YES];
 }
 
@@ -83,13 +86,40 @@ static NSString * const CellIUserdentifier = @"UserDetailCell";
 {
     UserDetailCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIUserdentifier];
     
-    NSArray *leftValues = @[@"Games", @"Wins", @"Draws", @"Losts", @"Goals Scored", @"Goals Conceded"];
+    NSArray *leftValues = @[@"Games", @"Wins", @"Draws", @"Losses", @"Goals Scored", @"Goals Conceded"];
     NSArray *rightValues = @[@(self.player.games), @(self.player.winGames), @(self.player.drawGames), @(self.player.lostGames), @(self.player.scoredGoals), @(self.player.concededGoals)];
     
     cell.leftLabel.text = leftValues[indexPath.row];
     cell.rightLabel.text = [rightValues[indexPath.row] description];
+    cell.accessoryType = indexPath.row <= 3 ? UITableViewCellAccessoryDisclosureIndicator : UITableViewCellAccessoryNone;
+    cell.selectionStyle = indexPath.row <= 3 ? UITableViewCellSelectionStyleGray : UITableViewCellSelectionStyleNone;
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    switch (indexPath.row) {
+            
+        case 0:
+            [self goToGamesWithType:GameTypeAll];
+            break;
+            
+        case 1:
+            [self goToGamesWithType:GameTypeWon];
+            break;
+            
+        case 2:
+            [self goToGamesWithType:GameTypeDrawn];
+            break;
+            
+        case 3:
+            [self goToGamesWithType:GameTypeLost];
+            break;
+            
+        default:
+            break;
+    }
 }
 
 - (void)viewDidUnload {

@@ -10,24 +10,56 @@
 #import "PlayerEntity.h"
 #import "GameEntity.h"
 
+static NSUInteger const kRecsPerPage = 60;
+
 @interface UserDetailGamesVC ()
+
 @property (nonatomic, retain) PlayerEntity *player;
+@property (nonatomic) GameType gameType;
+
 @end
 
 @implementation UserDetailGamesVC
 
-- (id)initWithPlayer:(PlayerEntity *)player
+- (id)initWithPlayer:(PlayerEntity *)player gameType:(GameType)type
 {
-    self = [self init];
-    if (self) {
+    if (self = [self init])
+    {
         self.player = player;
+        self.gameType = type;
     }
     return self;
 }
 
+- (NSString *)resourceForType
+{
+    NSString *resourceResult;
+    
+    switch (self.gameType)
+    {
+        case GameTypeAll:
+            resourceResult = @"games?player1Id=";
+            break;
+            
+        case GameTypeWon:
+            resourceResult = @"games/wins?playerId=";
+            break;
+            
+        case GameTypeDrawn:
+            resourceResult = @"games/draws?playerId=";
+            break;
+            
+        case GameTypeLost:
+            resourceResult = @"games/losts?playerId=";            
+            break;
+    }
+    
+    return resourceResult;
+}
+
 - (void)reloadData
 {
-    NSString *resource = [NSString stringWithFormat:@"games?player1Id=%@", self.player.idUser];
+    NSString *resource = [NSString stringWithFormat:@"%@%@&recsPerPage=%lu", [self resourceForType] ,self.player.idUser, (unsigned long)kRecsPerPage];
     
     OBRequest *request = [OBRequest requestWithType:OBRequestMethodTypeMethodGET resource:resource parameters:nil isPublic:YES];
     

@@ -824,8 +824,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Oriol Blanc Gimeno";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Oriol Blanc Gimeno";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -837,8 +837,8 @@
 				INFOPLIST_FILE = "GossipLeague/GossipLeague-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = GossipLeague;
-				PROVISIONING_PROFILE = "EB2A0EEB-1842-4812-A817-9FEE9273185C";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "EB2A0EEB-1842-4812-A817-9FEE9273185C";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
