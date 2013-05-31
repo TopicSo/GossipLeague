@@ -101,7 +101,7 @@ static NSString * const CellInformationIdentifier = @"ComparatorInfoDetailCell";
                               @"Games",
                               @"Wins",
                               @"Draws",
-                              @"Losts",
+                              @"Losses",
                               @"Goals Ratio"];
     
     NSArray *player1Values = @[

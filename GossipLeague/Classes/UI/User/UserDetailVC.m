@@ -86,7 +86,7 @@ static NSString * const CellIUserdentifier = @"UserDetailCell";
 {
     UserDetailCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIUserdentifier];
     
-    NSArray *leftValues = @[@"Games", @"Wins", @"Draws", @"Losts", @"Goals Scored", @"Goals Conceded"];
+    NSArray *leftValues = @[@"Games", @"Wins", @"Draws", @"Losses", @"Goals Scored", @"Goals Conceded"];
     NSArray *rightValues = @[@(self.player.games), @(self.player.winGames), @(self.player.drawGames), @(self.player.lostGames), @(self.player.scoredGoals), @(self.player.concededGoals)];
     
     cell.leftLabel.text = leftValues[indexPath.row];
