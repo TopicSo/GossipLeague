@@ -1,0 +1,10 @@
+# Define project language
+language: objective-c
+
+# Update Git Submodules
+before_install:
+  - git submodule update --init --recursive
+  
+# Travis CI automatically runs pod install during the install phase,
+# so we don't have to do anything else to setup the project deps.
+  
