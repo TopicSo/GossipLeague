@@ -213,7 +213,7 @@ static NSString * const CellLeagueIdentifier = @"PlayerBasicCell";
         OBRequestParameters *parameters = [OBRequestParameters emptyRequestParameters];
         [parameters setValue:self.local.username forKey:@"localPlayer"];
         [parameters setValue:self.visitor.username forKey:@"visitorPlayer"];
-        [parameters setValue:self.localGoalsTextField.text forKey:@"localsGoals"];
+        [parameters setValue:self.localGoalsTextField.text forKey:@"localGoals"];
         [parameters setValue:self.visitorGoalsTextField.text forKey:@"visitorGoals"];
         
         OBRequest *request = [OBRequest requestWithType:OBRequestMethodTypeMethodPOST resource:@"games" parameters:parameters isPublic:YES];

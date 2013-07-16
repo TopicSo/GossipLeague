@@ -184,6 +184,7 @@
 }
 
 #pragma mark - Tab Bar Controller Delegate
+
 - (UIImage *)imageTabAtIndex:(NSUInteger)index
 {
     UIImage *image = nil;
@@ -213,6 +214,7 @@
 }
 
 #pragma mark - Appereance
+
 - (void)setupAppearance
 {
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigationBar.png"] forBarMetrics:UIBarMetricsDefault];

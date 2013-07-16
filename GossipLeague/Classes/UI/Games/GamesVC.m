@@ -7,6 +7,7 @@
 //
 
 #import "GamesVC.h"
+#import "AddGameVC.h"
 #import "GameEntity.h"
 #import "GameCell.h"
 
@@ -37,6 +38,16 @@ static NSString * const CellGameIdentifier = @"CellGameIdentifier";
     [self reloadData];
     
     self.tableView.backgroundColor = [UIColor colorBackgroundTableView];
+    
+    UIBarButtonItem *addGameBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addGame)];
+    self.navigationItem.rightBarButtonItem = addGameBarButtonItem;
+}
+
+
+- (void)addGame
+{
+    AddGameVC *addGame = [[AddGameVC alloc] init];
+    [self.navigationController pushViewController:addGame animated:YES];
 }
 
 - (void)setupTableView

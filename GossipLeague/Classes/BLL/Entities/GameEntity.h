@@ -27,7 +27,6 @@ typedef NS_ENUM(NSUInteger, GameResult) {
 @property (nonatomic, assign) double        localPointsChange;
 @property (nonatomic, assign) double        visitorPointsChange;
 
-
 - (GameResult)gameResult;
 - (NSString *)stringLocalPointsChange;
 - (NSString *)stringVisitorPointsChange;
