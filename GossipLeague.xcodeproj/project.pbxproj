@@ -50,12 +50,6 @@
 		36A1EC0817010D8200F7A57B /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36A1EC0517010D8200F7A57B /* MainWindow.xib */; };
 		36A1EC0B17010E0100F7A57B /* PlayerEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A1EC0A17010E0100F7A57B /* PlayerEntity.m */; };
 		36A1EC0E17010F8000F7A57B /* GameEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A1EC0D17010F8000F7A57B /* GameEntity.m */; };
-		36F3A8161721573E005E86ED /* OBCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F3A80F1721573E005E86ED /* OBCache.m */; };
-		36F3A8171721573E005E86ED /* OBConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F3A8111721573E005E86ED /* OBConnection.m */; };
-		36F3A8181721573E005E86ED /* OBRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F3A8131721573E005E86ED /* OBRequest.m */; };
-		36F3A8191721573E005E86ED /* OBRequestParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F3A8151721573E005E86ED /* OBRequestParameters.m */; };
-		36F3A81E17215789005E86ED /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F3A81C17215789005E86ED /* EGOCache.m */; };
-		36F3A81F17215789005E86ED /* README.mdown in Resources */ = {isa = PBXBuildFile; fileRef = 36F3A81D17215789005E86ED /* README.mdown */; };
 		4998650515BF305000803E05 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4998650415BF305000803E05 /* StoreKit.framework */; };
 		5B018593172C1B40001C6F06 /* ComparatorInfoDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B018592172C1B40001C6F06 /* ComparatorInfoDetailCell.xib */; };
 		5B018596172C1B99001C6F06 /* ComparatorInfoDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B018595172C1B99001C6F06 /* ComparatorInfoDetailCell.m */; };
@@ -141,17 +135,6 @@
 		36A1EC0A17010E0100F7A57B /* PlayerEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerEntity.m; sourceTree = "<group>"; };
 		36A1EC0C17010F8000F7A57B /* GameEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameEntity.h; sourceTree = "<group>"; };
 		36A1EC0D17010F8000F7A57B /* GameEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameEntity.m; sourceTree = "<group>"; };
-		36F3A80E1721573E005E86ED /* OBCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBCache.h; sourceTree = "<group>"; };
-		36F3A80F1721573E005E86ED /* OBCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBCache.m; sourceTree = "<group>"; };
-		36F3A8101721573E005E86ED /* OBConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBConnection.h; sourceTree = "<group>"; };
-		36F3A8111721573E005E86ED /* OBConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBConnection.m; sourceTree = "<group>"; };
-		36F3A8121721573E005E86ED /* OBRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBRequest.h; sourceTree = "<group>"; };
-		36F3A8131721573E005E86ED /* OBRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBRequest.m; sourceTree = "<group>"; };
-		36F3A8141721573E005E86ED /* OBRequestParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBRequestParameters.h; sourceTree = "<group>"; };
-		36F3A8151721573E005E86ED /* OBRequestParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBRequestParameters.m; sourceTree = "<group>"; };
-		36F3A81B17215789005E86ED /* EGOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOCache.h; sourceTree = "<group>"; };
-		36F3A81C17215789005E86ED /* EGOCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOCache.m; sourceTree = "<group>"; };
-		36F3A81D17215789005E86ED /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.mdown; sourceTree = "<group>"; };
 		4998650415BF305000803E05 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		588C860EF36A46BFB9105A93 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B018592172C1B40001C6F06 /* ComparatorInfoDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ComparatorInfoDetailCell.xib; path = Comperator/ComperatorDetailVC/ComparatorInfoDetailCell.xib; sourceTree = "<group>"; };
@@ -400,7 +383,6 @@
 		36A1EBE417010D3800F7A57B /* BLL */ = {
 			isa = PBXGroup;
 			children = (
-				36F3A80D1721573E005E86ED /* OBConnection */,
 				36A1EBE517010D3800F7A57B /* Entities */,
 			);
 			name = BLL;
@@ -459,34 +441,6 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
-		};
-		36F3A80D1721573E005E86ED /* OBConnection */ = {
-			isa = PBXGroup;
-			children = (
-				36F3A81A17215789005E86ED /* EGOCache */,
-				36F3A80E1721573E005E86ED /* OBCache.h */,
-				36F3A80F1721573E005E86ED /* OBCache.m */,
-				36F3A8101721573E005E86ED /* OBConnection.h */,
-				36F3A8111721573E005E86ED /* OBConnection.m */,
-				36F3A8121721573E005E86ED /* OBRequest.h */,
-				36F3A8131721573E005E86ED /* OBRequest.m */,
-				36F3A8141721573E005E86ED /* OBRequestParameters.h */,
-				36F3A8151721573E005E86ED /* OBRequestParameters.m */,
-			);
-			name = OBConnection;
-			path = OBConnection/OBConnection;
-			sourceTree = SOURCE_ROOT;
-		};
-		36F3A81A17215789005E86ED /* EGOCache */ = {
-			isa = PBXGroup;
-			children = (
-				36F3A81B17215789005E86ED /* EGOCache.h */,
-				36F3A81C17215789005E86ED /* EGOCache.m */,
-				36F3A81D17215789005E86ED /* README.mdown */,
-			);
-			name = EGOCache;
-			path = OBConnection/EGOCache;
-			sourceTree = SOURCE_ROOT;
 		};
 		5B018599172C2B04001C6F06 /* Games */ = {
 			isa = PBXGroup;
@@ -621,7 +575,6 @@
 				36A1EC0017010D7500F7A57B /* Entitlements.plist in Resources */,
 				36A1EC0717010D8200F7A57B /* InfoPlist.strings in Resources */,
 				36A1EC0817010D8200F7A57B /* MainWindow.xib in Resources */,
-				36F3A81F17215789005E86ED /* README.mdown in Resources */,
 				5B798A4E17229EEA00C9BE1A /* GameCell.xib in Resources */,
 				5B798A5017229EEA00C9BE1A /* GamesVC.xib in Resources */,
 				5B798A5A17229F2000C9BE1A /* LeagueVC.xib in Resources */,
@@ -685,11 +638,6 @@
 				36A1EC0217010D7500F7A57B /* main.m in Sources */,
 				36A1EC0B17010E0100F7A57B /* PlayerEntity.m in Sources */,
 				36A1EC0E17010F8000F7A57B /* GameEntity.m in Sources */,
-				36F3A8161721573E005E86ED /* OBCache.m in Sources */,
-				36F3A8171721573E005E86ED /* OBConnection.m in Sources */,
-				36F3A8181721573E005E86ED /* OBRequest.m in Sources */,
-				36F3A8191721573E005E86ED /* OBRequestParameters.m in Sources */,
-				36F3A81E17215789005E86ED /* EGOCache.m in Sources */,
 				5B798A4D17229EEA00C9BE1A /* GameCell.m in Sources */,
 				5B798A4F17229EEA00C9BE1A /* GamesVC.m in Sources */,
 				5B798A5917229F2000C9BE1A /* LeagueVC.m in Sources */,
@@ -738,7 +686,6 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -761,7 +708,6 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -780,7 +726,6 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -794,7 +739,6 @@
 				INFOPLIST_FILE = "GossipLeague/GossipLeague-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = GossipLeague;
-				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -806,7 +750,6 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -819,7 +762,6 @@
 				INFOPLIST_FILE = "GossipLeague/GossipLeague-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = GossipLeague;
-				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
