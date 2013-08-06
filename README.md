@@ -1,4 +1,4 @@
 GossipLeague
 ============
 
-[![Build Status](https://travis-ci.org/xavierjurado/GossipLeague.png)](https://travis-ci.org/xavierjurado/GossipLeague)
+[![Build Status](https://travis-ci.org/oriolblanc/GossipLeague.png)](https://travis-ci.org/oriolblanc/GossipLeague)
